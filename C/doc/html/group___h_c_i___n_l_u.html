@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云NLU能力API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i___n_l_u.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云NLU能力API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html">NLU_RECOG_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NLU 识别结果  <a href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaa2d3e83f84434930e29b24817b77d701"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#gaa2d3e83f84434930e29b24817b77d701">hci_nlu_init</a> (_MUST_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:gaa2d3e83f84434930e29b24817b77d701"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云NLU能力 初始化  <a href="#gaa2d3e83f84434930e29b24817b77d701">更多...</a><br/></td></tr>
+<tr class="separator:gaa2d3e83f84434930e29b24817b77d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga244d616e34fa52d06821e47bc55703e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#ga244d616e34fa52d06821e47bc55703e6">hci_nlu_session_start</a> (_MUST_ _IN_ const char *pszConfig, _MUST_ _OUT_ int *pnSessionId)</td></tr>
+<tr class="memdesc:ga244d616e34fa52d06821e47bc55703e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始会话  <a href="#ga244d616e34fa52d06821e47bc55703e6">更多...</a><br/></td></tr>
+<tr class="separator:ga244d616e34fa52d06821e47bc55703e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99bc86f4c57c76d55cc38aa10f26d81c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#ga99bc86f4c57c76d55cc38aa10f26d81c">hci_nlu_recog</a> (_MUST_ _IN_ int nSessionId, _MUST_ _IN_ char *pvText, _OPT_ _IN_ const char *pszConfig, _MUST_ _OUT_ <a class="el" href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html">NLU_RECOG_RESULT</a> *psNluRecogResult)</td></tr>
+<tr class="memdesc:ga99bc86f4c57c76d55cc38aa10f26d81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">进行意图识别操作  <a href="#ga99bc86f4c57c76d55cc38aa10f26d81c">更多...</a><br/></td></tr>
+<tr class="separator:ga99bc86f4c57c76d55cc38aa10f26d81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0617e1e2763cc1e24041967fd8fdc5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#gaa0617e1e2763cc1e24041967fd8fdc5b">hci_nlu_session_stop</a> (_MUST_ _IN_ int nSessionId)</td></tr>
+<tr class="memdesc:gaa0617e1e2763cc1e24041967fd8fdc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束会话  <a href="#gaa0617e1e2763cc1e24041967fd8fdc5b">更多...</a><br/></td></tr>
+<tr class="separator:gaa0617e1e2763cc1e24041967fd8fdc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19780444be8fa0d7033f433dee3032c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#ga19780444be8fa0d7033f433dee3032c8">hci_nlu_release</a> ()</td></tr>
+<tr class="memdesc:ga19780444be8fa0d7033f433dee3032c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云NLU能力 反初始化  <a href="#ga19780444be8fa0d7033f433dee3032c8">更多...</a><br/></td></tr>
+<tr class="separator:ga19780444be8fa0d7033f433dee3032c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4840ff9bd0569bb10a29d1f754a49f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___n_l_u.html#gaa4840ff9bd0569bb10a29d1f754a49f6">hci_nlu_free_recog_result</a> (_MUST_ _IN_ <a class="el" href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html">NLU_RECOG_RESULT</a> *psNluRecogResult)</td></tr>
+<tr class="memdesc:gaa4840ff9bd0569bb10a29d1f754a49f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放意图识别结果内存  <a href="#gaa4840ff9bd0569bb10a29d1f754a49f6">更多...</a><br/></td></tr>
+<tr class="separator:gaa4840ff9bd0569bb10a29d1f754a49f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gaa4840ff9bd0569bb10a29d1f754a49f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_free_recog_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html">NLU_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psNluRecogResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放意图识别结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psNluRecogResult</td><td>需要释放的识别结果内存 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa2d3e83f84434930e29b24817b77d701"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云NLU能力 初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>初始化配置串，ASCII字符串，可为NULL或以'\0'结束 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a959d77eca886dd2b5d75ddab5525a1bd">HCI_ERR_NLU_ALREADY_INIT</a></td><td>已经初始化过了 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法、或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地能力引擎缺失必要的库资源 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041">HCI_ERR_CONFIG_DATAPATH_MISSING</a></td><td>本地引擎资源路径未配置 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>未找到授权能力项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>能力与Key不匹配 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>dataPath </td><td>opt/myapp/nlu_data/ </td><td>空 </td><td>意图识别本地资源所在路径 </td><td>如果不使用本地意图识别能力，可以不传此项  </td></tr>
+<tr>
+<td>initCapKeys </td><td>nlu.local </td><td>空 </td><td>初始化所需的本地能力，检查云端能力使用权限 </td><td>多个能力以';'隔开  </td></tr>
+<tr>
+<td>fileFlag </td><td>none, android_so </td><td>none </td><td>获取本地文件名的特殊标记 </td><td>参见下面的注释  </td></tr>
+</table>
+</dd></dl>
+<p><b>Android特殊配置</b> <br/>
+ 当fileFlag为android_so时，加载本地资源文件时会将正常的库文件名更改为so文件名进行加载。 例如，当使用的库为file.dat时，则实际打开的文件名为libfile.dat.so，这样在Android系统下， 开发者可以按照此规则将本地资源改名后, 放在libs目录下打包入apk。在安装后，这些资源文件 就会放置在/data/data/包名/lib目录下。则可以直接将dataPath配置项指为此目录即可。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga99bc86f4c57c76d55cc38aa10f26d81c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_recog </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ char *&#160;</td>
+          <td class="paramname"><em>pvText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_n_l_u___r_e_c_o_g___r_e_s_u_l_t.html">NLU_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psNluRecogResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>进行意图识别操作 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pvText</td><td>要识别的文本数据，UTF-8编码，以'\0'结束 </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>识别参数配置串，ASCII字符串，可为NULL或以'\0'结束 </td></tr>
+    <tr><td class="paramname">psNluRecogResult</td><td>意图识别结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd">HCI_ERR_NLU_NOT_INIT</a></td><td>HCI NLU尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法、或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session无效 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>未找到授权能力项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>配置参数，引擎不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acfbff1df3e2294cc5004f2fd90191165">HCI_ERR_NLU_ENGINE_FAILED</a></td><td>本地引擎合成失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回合成失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>intention </td><td>weather </td><td>无 </td><td>意图识别领域 </td><td>指定意图识别的领域，领域可以组合  </td></tr>
+<tr>
+<td>needcontent </td><td>yes,no </td><td>yes </td><td>是否返回内容 </td><td>yes: 返回内容<br/>
+ no: 仅返回意图结果   </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga19780444be8fa0d7033f433dee3032c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云NLU能力 反初始化 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd">HCI_ERR_NLU_NOT_INIT</a></td><td>HCI NLU尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4f6673aeae1ff4d5529509773be11c68">HCI_ERR_ACTIVE_SESSION_EXIST</a></td><td>尚有未stop的Sesssion，无法结束 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga244d616e34fa52d06821e47bc55703e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_session_start </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ int *&#160;</td>
+          <td class="paramname"><em>pnSessionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开始会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>会话配置串，ASCII字符串，以'\0'结束 </td></tr>
+    <tr><td class="paramname">pnSessionId</td><td>成功时返回会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd">HCI_ERR_NLU_NOT_INIT</a></td><td>HCI NLU尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法、或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae3aaa1bfb8f3e65736afe3e4132d231c">HCI_ERR_CONFIG_CAPKEY_MISSING</a></td><td>缺少必需的capKey配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>能力与Key不匹配 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abfd66e608f5855b1968b315bfd95da32">HCI_ERR_TOO_MANY_SESSION</a></td><td>创建的Session数量超出授权限制或最大值(256),本地能力需要打开本地资源文件，最终能够成功打开的本地Session个数与本地系统对同时打开文件个数的限制有关。 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>未找到授权能力项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041">HCI_ERR_CONFIG_DATAPATH_MISSING</a></td><td>本地引擎资源路径未配置 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a511f2b09462450c510c7bd9c5c9742bb">HCI_ERR_NLU_ENGINE_SESSION_START_FAILED</a></td><td>NLU本地引擎开启会话失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>配置参数，引擎不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地能力引擎缺失必要的库资源 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>capKey </td><td>nlu.cloud </td><td>无 </td><td>意图识别能力key </td><td>参见 <a class="el" href="hci_nlu_page.html">NLU能力描述</a> 。每个session只能定义一种能力，并且过程中不能改变。  </td></tr>
+</table>
+<br/>
+<br/>
+ 另外，这里还可以传入合成的配置项，作为默认配置项。参见 <a class="el" href="group___h_c_i___n_l_u.html#ga99bc86f4c57c76d55cc38aa10f26d81c" title="进行意图识别操作">hci_nlu_recog()</a> 。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa0617e1e2763cc1e24041967fd8fdc5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_nlu_session_stop </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd">HCI_ERR_NLU_NOT_INIT</a></td><td>HCI NLU尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

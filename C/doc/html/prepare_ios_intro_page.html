@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): iOS平台</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('prepare_ios_intro_page.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">iOS平台 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="ios_support_os"></a>
+1. 兼容性</h1>
+<p>支持iOS 5.1.1 及以上系统。支持的指令集armv7、armv7s、arm64。</p>
+<h1><a class="anchor" id="ios_dev_env"></a>
+2. 开发环境搭建</h1>
+<p>支持3.2.6以上版本的xcode，请到苹果官方网站https://developer.apple.com/xcode/ 下载。</p>
+<h1><a class="anchor" id="ios_using_lib"></a>
+3. 引入SDK文件以及工程设置</h1>
+<p>首先将灵云SDK提供的头文件(.h)和静态库(.a)文件拷贝到您的工程目录下，并在工程中引入灵云SDK提供的头文件和静态库文件。 灵云SDK提供的静态库文件包括了模拟器和真机两种环境下所使用的静态库文件，已经合并为一个通用的.a文件， 因此只需将通用.a文件拖拽至工程中即可。</p>
+<p>具体需要引入的文件和开发者所需要使用的能力有关。 SDK会尝试统计用户位置信息数据，因此需要在开发工程中引入CoreLocation.framework，并在工程中添加位置权限相关说明。</p>
+<p>工程设置：</p>
+<ul>
+<li>Build Settings选项中的C++ Standard Library 选择成“libstdc++(GNU C++ standard library)”</li>
+</ul>
+<h2><a class="anchor" id="ios_asr_lib"></a>
+3.1 ASR能力</h2>
+<p><b>3.1.1 基础API</b></p>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__asr_8h_source.html" title="HCI_ASR SDK 头文件">hci_asr.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_asr_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_asr_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li>libjtopus_device_simulator_iOS5.1.1.a</li>
+<li>libjtspeex_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别</b></li>
+<li>libhci_asr_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_asr_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_asr_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_asr_cloud_local_adapter_device_simulator_iOS5.1.1.a（既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<p>本地资源文件：</p>
+<ul>
+<li>使用本地语音识别能力，需要相应的资源文件。具体可参照 <a class="el" href="hci_asr_page.html">ASR能力描述</a> 进行选择。</li>
+</ul>
+<p><b>3.1.2 ASR录音机</b></p>
+<p>如果使用ASR录音机，在上述基础API所依赖的文件外，还需要增加下列文件</p>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__asr__recorder_8h_source.html" title="HCI_ASR_RECORDER SDK 头文件">hci_asr_recorder.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li>libhci_asr_recorder_device_simulator_iOS5.1.1.a</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>AudioToolbox.framework</li>
+<li>AVFoundation.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_tts_lib"></a>
+3.2 TTS能力</h2>
+<p><b>3.2.1 基础API</b></p>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__tts_8h_source.html" title="HCI_TTS SDK 头文件">hci_tts.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_tts_device_simulator_iOS5.1.1.a</li>
+<li><b>云端合成</b></li>
+<li>libhci_tts_cloud_synth_device_simulator_iOS5.1.1.a</li>
+<li>libjtopus_device_simulator_iOS5.1.1.a 或者 libjtspeex_device_simulator_iOS5.1.1.a (根据所使用的编解码格式进行选择)</li>
+<li><b>本地非V6合成</b></li>
+<li>libhci_tts_local_synth_device_simulator_iOS5.1.1.a</li>
+<li><b>本地V6合成</b></li>
+<li>libhci_tts_local_v6_synth_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_tts_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端合成）</li>
+<li>libhci_tts_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地非V6合成）</li>
+<li>libhci_tts_only_local_v6_adapter_device_simulator_iOS5.1.1.a（只使用本地V6合成）</li>
+<li>libhci_tts_cloud_local_adapter_device_simulator_iOS5.1.1.a(既使用云端合成，又使用本地非V6合成)</li>
+<li>libhci_tts_cloud_local_v6_adapter_device_simulator_iOS5.1.1.a(既使用云端合成，又使用本地V6合成)</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<p>本地资源文件：</p>
+<ul>
+<li>使用本地语音合成能力，需要相应的资源文件。具体可参照 <a class="el" href="hci_tts_page.html">TTS能力描述</a> 进行选择。</li>
+</ul>
+<p><b>3.2.2 TTS播放器</b></p>
+<p>如果使用TTS播放器，在上述基础API所依赖的文件外，还需要增加下列文件</p>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__tts__player_8h_source.html" title="HCI_TTS_PLAYER SDK 头文件">hci_tts_player.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li>libhci_tts_player_device_simulator_iOS5.1.1.a</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>AudioToolbox.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_hwr_lib"></a>
+3.3 HWR能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__hwr_8h_source.html" title="HCI_HWR SDK 公共头文件">hci_hwr.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_hwr_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_hwr_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别</b></li>
+<li>libhci_hwr_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>联想和笔形</b></li>
+<li>libhci_hwr_funcs_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_hwr_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_hwr_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_hwr_only_funcs_adapter_device_simulator_iOS5.1.1.a（只使用联想和笔形）</li>
+<li>libhci_hwr_cloud_local_adapter_device_simulator_iOS5.1.1.a（既使用云端识别，又使用本地识别）</li>
+<li>libhci_hwr_local_funcs_adapter_device_simulator_iOS5.1.1.a （既使用本地识别，又使用联想和笔形）</li>
+<li>libhci_hwr_cloud_funcs_adapter_device_simulator_iOS5.1.1.a （既使用云端识别，又使用联想和笔形）</li>
+<li>libhci_hwr_cloud_local_funcs_adapter_device_simulator_iOS5.1.1.a（使用云端识别，本地识别，同时又使用联想和笔形）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<p>本地资源文件：</p>
+<ul>
+<li>使用本地手写识别能力，需要相应的资源文件。具体可参照 <a class="el" href="hci_hwr_page.html">HWR能力描述</a> 进行选择。</li>
+</ul>
+<h2><a class="anchor" id="ios_ocr_lib"></a>
+3.4 OCR能力</h2>
+<p><b>3.4.1 基础API</b> 灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__ocr_8h_source.html" title="HCI_OCR SDK 头文件">hci_ocr.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libjtz_device_simulator_iOS5.1.1.a</li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_ocr_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_ocr_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别</b></li>
+<li>libhci_ocr_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_ocr_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_ocr_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_ocr_cloud_local_adapter_device_simulator_iOS5.1.1.a （既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>libz.dylib</li>
+<li>libc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<p>本地资源文件：</p>
+<ul>
+<li>使用本地光学字符识别能力，需要相应的资源文件。具体可参照 <a class="el" href="hci_ocr_page.html">OCR能力描述</a> 进行选择。</li>
+</ul>
+<p><b>3.4.2 OCR拍图器</b></p>
+<p>如果使用OCR拍图器，在上述基础API所依赖的文件外，还需要增加下列文件</p>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__ocr__capture_8h_source.html" title="HCI_ocr_capture SDK 头文件">hci_ocr_capture.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li>libhci_ocr_capture_device_simulator_iOS5.1.1.a</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>CoreVideo.framework</li>
+<li>AVFoundation.framework</li>
+<li>CoreMedia.framework</li>
+<li>CoreGraphics.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_mt_lib"></a>
+3.5 MT能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__mt_8h_source.html" title="HCI_MT SDK 头文件">hci_mt.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_mt_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_mt_cloud_trans_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别(暂不支持)</b></li>
+<li>libhci_mt_local_trans_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_mt_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_mt_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_mt_cloud_local_adapter_device_simulator_iOS5.1.1.a （既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_nlu_lib"></a>
+3.6 NLU能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__nlu_8h_source.html" title="HCI_NLU SDK 头文件">hci_nlu.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_nlu_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_nlu_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别(暂不支持)</b></li>
+<li>libhci_nlu_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_nlu_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_nlu_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_nlu_cloud_local_adapter_device_simulator_iOS5.1.1.a （既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_kb_lib"></a>
+3.7 KB能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__kb_8h_source.html" title="HCI_KB SDK 头文件">hci_kb.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_kb_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别(暂不支持)</b></li>
+<li>libhci_kb_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别</b></li>
+<li>libhci_kb_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_kb_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_kb_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_kb_cloud_local_adapter_device_simulator_iOS5.1.1.a （既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_vpr_lib"></a>
+3.8 VPR能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__vpr_8h_source.html" title="HCI_VPR SDK 头文件">hci_vpr.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_vpr_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_vpr_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li>libjtopus_device_simulator_iOS5.1.1.a</li>
+<li>libjtspeex_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别(暂不支持)</b></li>
+<li>libhci_vpr_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_vpr_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_vpr_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_vpr_cloud_local_adapter_device_simulator_iOS5.1.1.a（既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<h2><a class="anchor" id="ios_fpr_lib"></a>
+3.9 FPR能力</h2>
+<p>灵云SDK头文件：</p>
+<ul>
+<li><a class="el" href="hci__fpr_8h_source.html" title="HCI_FPR SDK 头文件">hci_fpr.h</a></li>
+<li><a class="el" href="hci__sys_8h_source.html" title="HCI_SYS 公共头文件">hci_sys.h</a></li>
+</ul>
+<p>灵云SDK库文件：</p>
+<ul>
+<li><b>必选模块</b></li>
+<li>libcurl_device_simulator_iOS5.1.1.a</li>
+<li>libhci_sys_device_simulator_iOS5.1.1.a</li>
+<li>libhci_fpr_device_simulator_iOS5.1.1.a</li>
+<li><b>云端识别</b></li>
+<li>libhci_fpr_cloud_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>本地识别</b></li>
+<li>libhci_fpr_local_recog_device_simulator_iOS5.1.1.a</li>
+<li><b>适配器选择(只选其一)</b></li>
+<li>libhci_fpr_only_cloud_adapter_device_simulator_iOS5.1.1.a（只使用云端识别）</li>
+<li>libhci_fpr_only_local_adapter_device_simulator_iOS5.1.1.a（只使用本地识别）</li>
+<li>libhci_fpr_cloud_local_adapter_device_simulator_iOS5.1.1.a（既使用云端识别，又使用本地识别）</li>
+</ul>
+<p>iOS系统库文件：</p>
+<ul>
+<li>UIKit.framework</li>
+<li>Foundation.framework</li>
+<li>libstdc++.dylib</li>
+<li>CoreLocation.framework</li>
+<li>SystemConfiguration.framework</li>
+</ul>
+<h2><a class="anchor" id="win_common_lib"></a>
+3.10 注意</h2>
+<ul>
+<li>libjtopus_device_simulator_iOS5.1.1.a是opus编码库，libjtspeex_device_simulator_iOS5.1.1.a是speex编码库，仅在使用云端ASR、TTS或者VPR时候用于音频压缩。 应用可以根据需要的编码方式（请参见 <a class="el" href="codec_intro_page.html">音频编解码库</a> ），选择其中合适的编码库，这样可以减少应用包的大小．</li>
+</ul>
+<h1><a class="anchor" id="ios_local_res"></a>
+4. 本地资源文件</h1>
+<p>当使用本地能力时，需要在本地存放资源文件，并在能力初始化时通过指定dataPath告知资源所在路径。</p>
+<p>每种本地能力，所需要的资源文件并不相同，在实际使用时，可以只拷贝所使用能力对应的资源文件， 这样可以减少所占用的外部存储空间。具体每种本地能力所需要的本地资源文件，请参见 <a class="el" href="caplist_page.html">能力列表</a> 。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="hci_dev_content.html">开发指南</a></li><li class="navelem"><a class="el" href="prepare_intro_page.html">环境准备</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云系统API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i___s_y_s.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云系统API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t___i_t_e_m.html">CHECK_UPDATE_RESULT_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新文件项  <a href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html">CHECK_UPDATE_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查更新函数的返回结果  <a href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___p_r_o_p_e_r_t_y___i_t_e_m.html">CAPABILITY_PROPERTY_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">能力的属性项  <a href="struct_c_a_p_a_b_i_l_i_t_y___p_r_o_p_e_r_t_y___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html">CAPABILITY_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">能力项条目  <a href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html">CAPABILITY_LIST</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">能力列表  <a href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaecfc3c54bd29ad5964e1c1c3ccbf89df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaecfc3c54bd29ad5964e1c1c3ccbf89df"></a>
+typedef long long&#160;</td><td class="memItemRight" valign="bottom"><b>int64</b></td></tr>
+<tr class="separator:gaecfc3c54bd29ad5964e1c1c3ccbf89df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga9f643809ebea695fef3003df5d31b591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ac36cb661a67a3bf993984ab2a5e83575">HCI_ERR_UNKNOWN</a> = -1, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a> = 0, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae3aaa1bfb8f3e65736afe3e4132d231c">HCI_ERR_CONFIG_CAPKEY_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041">HCI_ERR_CONFIG_DATAPATH_MISSING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a86e6d4d4fad3d79630fb46c7d5aa4643">HCI_ERR_NOT_LOCAL_CAPKEY</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abfd66e608f5855b1968b315bfd95da32">HCI_ERR_TOO_MANY_SESSION</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4f6673aeae1ff4d5529509773be11c68">HCI_ERR_ACTIVE_SESSION_EXIST</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a124497386a9f5375eb21675b526d60f0">HCI_ERR_START_LOG_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff2b8908152e03ce6954ad67028adad1">HCI_ERR_LOAD_CODEC_DLL</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a1e50753954f6714d876cd244a7b952ac">HCI_ERR_TXACCOUNT_NOT_FOUND</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a> = 100, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aab79f8e6f501b6c1075ac9329e4e38b8">HCI_ERR_SYS_ALREADY_INIT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a06cf5f9f2c2e912bbabb81bdcd1e465c">HCI_ERR_SYS_CONFIG_AUTHPATH_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae8beb2cbb53dfa6daab62b450284c601">HCI_ERR_SYS_CONFIG_CLOUDURL_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af516c283da90f31dad15a1affee64e15">HCI_ERR_SYS_CONFIG_USERID_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a1a2b419859839567cbd8209d2d190aa2">HCI_ERR_SYS_CONFIG_PASSWORD_MISSING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a41b2aa5499b4ff8a400de16e54a1eea0">HCI_ERR_SYS_CONFIG_PLATFORMID_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a1b026e53ef6f5824b5037c2d94f7a4d7">HCI_ERR_SYS_CONFIG_DEVELOPERID_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9e948d763579de1a7c65037e92812958">HCI_ERR_SYS_CONFIG_DEVELOPERKEY_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591adc131e3067104c7698f6256d47d0016b">HCI_ERR_SYS_CONFIG_APPNO_MISSING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a96647459ac7616961e85b8d9cbf0f206">HCI_ERR_SYS_USERINFO_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3ede50b7f4fdd603b8578148ffc4b536">HCI_ERR_SYS_AUTHFILE_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae7fbab799f2592987dcc48359e57b75b">HCI_ERR_SYS_CHECKAUTH_RESPONSE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a046be963e2d137b31039aca64140e205">HCI_ERR_SYS_REGISTER_RESPONSE_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ad52f56e0cac401330201e870b0c2071e">HCI_ERR_SYS_USING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591afcc35c27cc936ab4cda835241e894177">HCI_ERR_SYS_CONFIG_APPKEY_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6aa428d5ebafbb2859f94ed87399f006">HCI_ERR_ASR_NOT_INIT</a> = 200, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af9f7d3a93482d89cef1efb068491e604">HCI_ERR_ASR_ALREADY_INIT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4ddde95f0c40dfca89665838b2a40f51">HCI_ERR_ASR_CONFIRM_NO_TASK</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5dcfb35050cff10965434fe142bd2ea2">HCI_ERR_ASR_PARAM_CHECK_FLAG_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a16f8fc864ada6b9f4648f91c816fc9c2">HCI_ERR_ASR_GRAMMAR_DATA_TOO_LARGE</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8d1c0201324e29d5376c79c2af819fe8">HCI_ERR_ASR_ENGINE_NOT_INIT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a09f53470e4fa08b14475f00b876848cd">HCI_ERR_ASR_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6c2ac7c59570fb811fdebab7218db69c">HCI_ERR_ASR_OPEN_GRAMMAR_FILE</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abebd35fb7a5216c37c44e996d423a207">HCI_ERR_ASR_LOAD_GRAMMAR_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a858fc5b4b52fc71c3572eeccd5b83935">HCI_ERR_ASR_ENGINE_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591add87d3cc7be0cc1c9473e6eaeea9743a">HCI_ERR_ASR_GRAMMAR_ID_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa297a6611736be218bd6b09d1e7b5f10">HCI_ERR_ASR_REALTIME_WAITING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a0be90ff0beea6432fe4af5466619edf8">HCI_ERR_ASR_GRAMMAR_OVERLOAD</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a13a493dfa07299c1a8dc33d51f78e017">HCI_ERR_ASR_GRAMMAR_USING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6a3eaf6f2d7421a0a25f550d835d697e">HCI_ERR_ASR_REALTIME_END</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6f3cd4c1a8367ec5abd3bc691f098d84">HCI_ERR_ASR_UPLOAD_NO_DATA</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a> = 300, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a832ef7c13cbde671e5cc0f65c6f616af">HCI_ERR_HWR_ALREADY_INIT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6ec54ee98979eab1cbc96776463522bb">HCI_ERR_HWR_CONFIRM_NO_TASK</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae05f31dc92349860aab97f64314b53d9">HCI_ERR_HWR_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a33de410a70a7b574dd05c505f91fff80">HCI_ERR_HWR_UPLOAD_NO_DATA</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7d4579beec063a88f037cafd4349147d">HCI_ERR_HWR_ENGINE_SESSION_START_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa6bbcd1943fc0a3aa6e12f2e5aefbb6c">HCI_ERR_HWR_ENGINE_NOT_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4b697d62629355c1ca74d53ddbd83070">HCI_ERR_HWR_CONFIG_SUBLANG_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae4e8027c5a28a865d2b5e838068b853c">HCI_ERR_HWR_TOO_MANY_DOMAIN</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a> = 400, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7087f3ac6a49ee17e6547e682a184a8d">HCI_ERR_OCR_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af9dcb107665ae5c90b3768f605684606">HCI_ERR_OCR_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b">HCI_ERR_OCR_ENGINE_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9eba2976eeb8cb75d13e120ce4e3515c">HCI_ERR_OCR_ENGINE_NOT_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a166911928c8bc127190633e1fe315f23">HCI_ERR_OCR_LOAD_IMAGE</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a07174cd0c75d2d4870c13c56d7b6fa5b">HCI_ERR_OCR_SAVE_IMAGE</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa5409a94cb7ec2ea829586cb57e4e651">HCI_ERR_OCR_IMAGE_NOT_SET</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a31cbea20aa70774fda828f6ae250777f">HCI_ERR_OCR_LOAD_TEMPLATE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aac336d34b5559174632cf83955388df2">HCI_ERR_OCR_TEMPLATE_OVERLOAD</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7a46c9fcc237513ca99dbd94db8fdb96">HCI_ERR_OCR_TEMPLATE_ID_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a92b9ce1c3f8d8344bcd44243044c1a7d">HCI_ERR_OCR_TEMPLATE_USING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aabff6320d9a7f68b916eb71dc2224fdb">HCI_ERR_OCR_DETECT_CORNER_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a0c2b35bbbb869b34a3f0b354c5603219">HCI_ERR_OCR_NORMALIZE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9b9dc7b95e59c4f6b5fb478a1e56601f">HCI_ERR_OCR_RECOGNIZABLE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aeae3cec8e1c1107b22a3146a4f47ec3b">HCI_ERR_OCR_IMAGE_NOT_CLEAR</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358f0bbc1d82cd2eebae738bb641c27e">HCI_ERR_TTS_NOT_INIT</a> = 500, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ac53bb8c2e5901f4204ec0d5359377ee9">HCI_ERR_TTS_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9c350c2345c5741f14f0ed319e81eed8">HCI_ERR_TTS_SESSION_BUSY</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a0889a34f7d0d7f6d56bb9ba5b0135c5b">HCI_ERR_TTS_ENGINE_SESSION_START_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae4cec98a3d21040a73de901d45409452">HCI_ERR_TTS_ENGINE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a166026c6b3ef912abad3411694935067">HCI_ERR_TTS_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7300c0b7bbba22214aa21ab729fcae7a">HCI_ERR_TTS_ENGINE_NOT_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a30a84063b995ae462add247aa53f44ea">HCI_ERR_MT_NOT_INIT</a> = 600, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a33920c622e772f28d725c2855ce5b16b">HCI_ERR_MT_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd">HCI_ERR_NLU_NOT_INIT</a> = 700, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a959d77eca886dd2b5d75ddab5525a1bd">HCI_ERR_NLU_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a511f2b09462450c510c7bd9c5c9742bb">HCI_ERR_NLU_ENGINE_SESSION_START_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acfbff1df3e2294cc5004f2fd90191165">HCI_ERR_NLU_ENGINE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acc29ea508bb5cfeac9662e1a1de1ab78">HCI_ERR_KB_NOT_INIT</a> = 800, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae97a7ccf76ae2e719a9f6850494583db">HCI_ERR_KB_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3111f6f71d6f34822ab06b46143de30d">HCI_ERR_KB_ENGINE_SESSION_START_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa13c9188868e829ecd53d480617bc61b">HCI_ERR_KB_ENGINE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67eb2a5c92bd7a20bbf78f97563db0b5">HCI_ERR_KB_SYLLABLE_INVALID</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8d8beb8de7f226ef6b86739e9263e5ee">HCI_ERR_KB_UDB_WORD_EXIST</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ac8bf262f40010f0d5af4cefd2394bb58">HCI_ERR_KB_CONFIRM_NO_TASK</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af49ded0eb893aa5df6cfd68a8400b0ac">HCI_ERR_VPR_NOT_INIT</a> = 900, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4342418bca029870df828ec6c9677674">HCI_ERR_VPR_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a1a1b9051d2c88f4fc815ff6829ec0edd">HCI_ERR_VPR_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a118119718ef9cebff74868538e88a849">HCI_ERR_VPR_ENGINE_FAILED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2c6b92c4e4aa74e0d7047964cc67f9a9">HCI_ERR_VPR_USERID_NOT_EXIST</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ac02bd045e66ee98e94aad88403937e4b">HCI_ERR_VPR_ENGINE_SESSION_START_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa56cc33e9dd931aca668e03b17b639a3">HCI_ERR_VPR_CONFIG_USER_ID_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a15fd4d8e9eeec500d3be5fe7f2e1e464">HCI_ERR_FPR_NOT_INIT</a> = 1000, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a46f9bd9ae4b0edba571fc27a6babf09e">HCI_ERR_FPR_ALREADY_INIT</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9b2605faa4d1e4c2862a081ca547371a">HCI_ERR_FPR_ENGINE_INIT_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3cc2c52a83a0547f8f8404df2ec7e2ca">HCI_ERR_FPR_ENGINE_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b3cd41a07d2dfdcf1eda719aadd3896">HCI_ERR_FPR_USERID_NOT_EXIST</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ada141c44ed4865e259a20632de36ebf1">HCI_ERR_FPR_ENGINE_SESSION_START_FAILED</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a946ca1defd83264e17bdd04e39455699">HCI_ERR_FPR_CONFIG_USER_ID_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ab9611732f24eddc2f9d5725edb10b875">HCI_ERR_FPR_CONFIG_DPI_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abe849b7f8c2c20a340fc6be91e75117a">HCI_ERR_FPR_CONFIG_BGCOLOR_MISSING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a91e23a2c4612f80d09739136c7330c29">HCI_ERR_FPR_CONFIG_WIDTH_MISSING</a>, 
+<a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa8a85c47f66559f9b737baaa7292ce4a">HCI_ERR_FPR_CONFIG_HEIGHT_MISSING</a>
+<br/>
+ }</td></tr>
+<tr class="separator:ga9f643809ebea695fef3003df5d31b591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaaecd0af75009a2c0cacae0dde986eeb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#gaaecd0af75009a2c0cacae0dde986eeb1">hci_init</a> (_MUST_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:gaaecd0af75009a2c0cacae0dde986eeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云系统SDK 公共初始化  <a href="#gaaecd0af75009a2c0cacae0dde986eeb1">更多...</a><br/></td></tr>
+<tr class="separator:gaaecd0af75009a2c0cacae0dde986eeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga432df9ea27c8eb63990424572179fa56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga432df9ea27c8eb63990424572179fa56">hci_check_auth</a> ()</td></tr>
+<tr class="memdesc:ga432df9ea27c8eb63990424572179fa56"><td class="mdescLeft">&#160;</td><td class="mdescRight">手动访问云授权  <a href="#ga432df9ea27c8eb63990424572179fa56">更多...</a><br/></td></tr>
+<tr class="separator:ga432df9ea27c8eb63990424572179fa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d2d515c5ab1986f39f9b86c00d3267d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga9d2d515c5ab1986f39f9b86c00d3267d">hci_get_auth_expire_time</a> (_MUST_ _OUT_ int64 *pnExpireTime)</td></tr>
+<tr class="memdesc:ga9d2d515c5ab1986f39f9b86c00d3267d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得授权过期时间  <a href="#ga9d2d515c5ab1986f39f9b86c00d3267d">更多...</a><br/></td></tr>
+<tr class="separator:ga9d2d515c5ab1986f39f9b86c00d3267d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3da635f49817b4b1ee3285e18ae5c2e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga3da635f49817b4b1ee3285e18ae5c2e3">hci_check_update</a> (_MUST_ _IN_ const char *pszLocalCapKey, _MUST_ _IN_ const char *pszDataPath, _MUST_ _OUT_ <a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html">CHECK_UPDATE_RESULT</a> *psCheckUpdateResult)</td></tr>
+<tr class="memdesc:ga3da635f49817b4b1ee3285e18ae5c2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查使用某个本地能力是否缺少某些资源文件或者资源文件是否有版本更新  <a href="#ga3da635f49817b4b1ee3285e18ae5c2e3">更多...</a><br/></td></tr>
+<tr class="separator:ga3da635f49817b4b1ee3285e18ae5c2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac408ae251051cf0b03362e8f8bf02c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#gaac408ae251051cf0b03362e8f8bf02c5">hci_free_update_result</a> (_MUST_ _IN_ <a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html">CHECK_UPDATE_RESULT</a> *psCheckUpdateResult)</td></tr>
+<tr class="memdesc:gaac408ae251051cf0b03362e8f8bf02c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放更新文件列表占用的内存  <a href="#gaac408ae251051cf0b03362e8f8bf02c5">更多...</a><br/></td></tr>
+<tr class="separator:gaac408ae251051cf0b03362e8f8bf02c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51a96814e5ec67344c20e705777e55a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga51a96814e5ec67344c20e705777e55a3">hci_get_capability_list</a> (_OPT_ _IN_ const char *pszHciType, _MUST_ _OUT_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html">CAPABILITY_LIST</a> *psCapabilityList)</td></tr>
+<tr class="memdesc:ga51a96814e5ec67344c20e705777e55a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取某种HCI类型可用的能力列表  <a href="#ga51a96814e5ec67344c20e705777e55a3">更多...</a><br/></td></tr>
+<tr class="separator:ga51a96814e5ec67344c20e705777e55a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8edae17221f22eb4b89feb497e434f67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga8edae17221f22eb4b89feb497e434f67">hci_free_capability_list</a> (_MUST_ _IN_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html">CAPABILITY_LIST</a> *psCapabilityList)</td></tr>
+<tr class="memdesc:ga8edae17221f22eb4b89feb497e434f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放能力列表的内存  <a href="#ga8edae17221f22eb4b89feb497e434f67">更多...</a><br/></td></tr>
+<tr class="separator:ga8edae17221f22eb4b89feb497e434f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga855e3a7c3ad52bfe8abfea468c074700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga855e3a7c3ad52bfe8abfea468c074700">hci_get_capability</a> (_MUST_ _IN_ const char *pszKey, _MUST_ _OUT_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html">CAPABILITY_ITEM</a> *psCapabilityItem)</td></tr>
+<tr class="memdesc:ga855e3a7c3ad52bfe8abfea468c074700"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据能力Key获取其能力项条目  <a href="#ga855e3a7c3ad52bfe8abfea468c074700">更多...</a><br/></td></tr>
+<tr class="separator:ga855e3a7c3ad52bfe8abfea468c074700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c17d9e5f91fe9b29ba224e1948b5097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga4c17d9e5f91fe9b29ba224e1948b5097">hci_free_capability_item</a> (_MUST_ _IN_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html">CAPABILITY_ITEM</a> *psCapabilityItem)</td></tr>
+<tr class="memdesc:ga4c17d9e5f91fe9b29ba224e1948b5097"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放能力项条目的内存  <a href="#ga4c17d9e5f91fe9b29ba224e1948b5097">更多...</a><br/></td></tr>
+<tr class="separator:ga4c17d9e5f91fe9b29ba224e1948b5097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28ac7c671024342418bc6f2081500718"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga28ac7c671024342418bc6f2081500718">hci_upload_user_history</a> ()</td></tr>
+<tr class="memdesc:ga28ac7c671024342418bc6f2081500718"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传本地用户录入数据  <a href="#ga28ac7c671024342418bc6f2081500718">更多...</a><br/></td></tr>
+<tr class="separator:ga28ac7c671024342418bc6f2081500718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6358dadc2aa92c031f29685de2146c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#gab6358dadc2aa92c031f29685de2146c1">hci_release</a> ()</td></tr>
+<tr class="memdesc:gab6358dadc2aa92c031f29685de2146c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云系统SDK 反初始化  <a href="#gab6358dadc2aa92c031f29685de2146c1">更多...</a><br/></td></tr>
+<tr class="separator:gab6358dadc2aa92c031f29685de2146c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1131cbde9e661b38291768d5217727fd"><td class="memItemLeft" align="right" valign="top">const char *HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga1131cbde9e661b38291768d5217727fd">hci_get_error_info</a> (<a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> nErrorCode)</td></tr>
+<tr class="memdesc:ga1131cbde9e661b38291768d5217727fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取错误码对应的详细错误信息  <a href="#ga1131cbde9e661b38291768d5217727fd">更多...</a><br/></td></tr>
+<tr class="separator:ga1131cbde9e661b38291768d5217727fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2196ba9adb31db3bc8da340ac0ac1e21"><td class="memItemLeft" align="right" valign="top">const char *HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___s_y_s.html#ga2196ba9adb31db3bc8da340ac0ac1e21">hci_get_sdk_version</a> ()</td></tr>
+<tr class="memdesc:ga2196ba9adb31db3bc8da340ac0ac1e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取sdk版本信息  <a href="#ga2196ba9adb31db3bc8da340ac0ac1e21">更多...</a><br/></td></tr>
+<tr class="separator:ga2196ba9adb31db3bc8da340ac0ac1e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="ga9f643809ebea695fef3003df5d31b591"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>*HCI_ERR_CODE 返回错误码定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ac36cb661a67a3bf993984ab2a5e83575"></a>HCI_ERR_UNKNOWN</em>&nbsp;</td><td class="fielddoc">
+<p>-1: 未知错误，通常不会出现 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018"></a>HCI_ERR_NONE</em>&nbsp;</td><td class="fielddoc">
+<p>0: 正确 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552"></a>HCI_ERR_PARAM_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>1: 函数的传入参数错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3"></a>HCI_ERR_OUT_OF_MEMORY</em>&nbsp;</td><td class="fielddoc">
+<p>2: 申请内存失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc"></a>HCI_ERR_CONFIG_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>3: 配置串参数错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae3aaa1bfb8f3e65736afe3e4132d231c"></a>HCI_ERR_CONFIG_CAPKEY_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>4: 缺少必需的capKey配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38"></a>HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</em>&nbsp;</td><td class="fielddoc">
+<p>5: CAPKEY与当前引擎不匹配 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041"></a>HCI_ERR_CONFIG_DATAPATH_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>6: 缺少必需的dataPath配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950"></a>HCI_ERR_CONFIG_UNSUPPORT</em>&nbsp;</td><td class="fielddoc">
+<p>7: 配置项不支持 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c"></a>HCI_ERR_SERVICE_CONNECT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>8: 连接服务器失败，服务器无响应 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207"></a>HCI_ERR_SERVICE_TIMEOUT</em>&nbsp;</td><td class="fielddoc">
+<p>9: 服务器访问超时 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178"></a>HCI_ERR_SERVICE_DATA_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>10: 服务器返回的数据格式不正确 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849"></a>HCI_ERR_SERVICE_RESPONSE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>11: 服务器返回操作失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695"></a>HCI_ERR_CAPKEY_NOT_FOUND</em>&nbsp;</td><td class="fielddoc">
+<p>12: 没有找到指定的能力 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a86e6d4d4fad3d79630fb46c7d5aa4643"></a>HCI_ERR_NOT_LOCAL_CAPKEY</em>&nbsp;</td><td class="fielddoc">
+<p>13: 不是本地能力的KEY </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720"></a>HCI_ERR_LOCAL_LIB_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>14: 本地能力引擎缺失必要的库资源 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca"></a>HCI_ERR_URL_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>15: 找不到对应的网络服务地址（可能是HCI能力服务地址，下载资源库地址等） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a"></a>HCI_ERR_SESSION_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>16: 无效的会话 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591abfd66e608f5855b1968b315bfd95da32"></a>HCI_ERR_TOO_MANY_SESSION</em>&nbsp;</td><td class="fielddoc">
+<p>17: 开启会话过多(目前每种HCI能力的最大会话数为256) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a4f6673aeae1ff4d5529509773be11c68"></a>HCI_ERR_ACTIVE_SESSION_EXIST</em>&nbsp;</td><td class="fielddoc">
+<p>18: 还有会话没有停止 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a124497386a9f5375eb21675b526d60f0"></a>HCI_ERR_START_LOG_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>19: 启动日志错误, 可能是日志配置参数错误，路径不存在或者没有写权限等造成 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71"></a>HCI_ERR_DATA_SIZE_TOO_LARGE</em>&nbsp;</td><td class="fielddoc">
+<p>20: 传入的数据量超过可处理的上限 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aff2b8908152e03ce6954ad67028adad1"></a>HCI_ERR_LOAD_CODEC_DLL</em>&nbsp;</td><td class="fielddoc">
+<p>21: 加载codec编码库失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87"></a>HCI_ERR_UNSUPPORT</em>&nbsp;</td><td class="fielddoc">
+<p>22: 暂不支持 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2"></a>HCI_ERR_LOAD_FUNCTION_FROM_DLL</em>&nbsp;</td><td class="fielddoc">
+<p>23: 加载库失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a1e50753954f6714d876cd244a7b952ac"></a>HCI_ERR_TXACCOUNT_NOT_FOUND</em>&nbsp;</td><td class="fielddoc">
+<p>24: 天行账号获取失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2"></a>HCI_ERR_SYS_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>100: HCI_SYS未初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aab79f8e6f501b6c1075ac9329e4e38b8"></a>HCI_ERR_SYS_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>101: HCI_SYS多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a06cf5f9f2c2e912bbabb81bdcd1e465c"></a>HCI_ERR_SYS_CONFIG_AUTHPATH_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>102: 缺少必需的authPath配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae8beb2cbb53dfa6daab62b450284c601"></a>HCI_ERR_SYS_CONFIG_CLOUDURL_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>103: 缺少必需的cloudUrl配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af516c283da90f31dad15a1affee64e15"></a>HCI_ERR_SYS_CONFIG_USERID_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>104: 缺少必需的userId配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a1a2b419859839567cbd8209d2d190aa2"></a>HCI_ERR_SYS_CONFIG_PASSWORD_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>105: 缺少必需的password配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a41b2aa5499b4ff8a400de16e54a1eea0"></a>HCI_ERR_SYS_CONFIG_PLATFORMID_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>106: 缺少必需的platformId配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a1b026e53ef6f5824b5037c2d94f7a4d7"></a>HCI_ERR_SYS_CONFIG_DEVELOPERID_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>107: 缺少必需的developerId配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a9e948d763579de1a7c65037e92812958"></a>HCI_ERR_SYS_CONFIG_DEVELOPERKEY_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>108: 缺少必需的developerKey配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591adc131e3067104c7698f6256d47d0016b"></a>HCI_ERR_SYS_CONFIG_APPNO_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>109: 缺少必需的appNo配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a96647459ac7616961e85b8d9cbf0f206"></a>HCI_ERR_SYS_USERINFO_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>110: 读写用户信息文件错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a3ede50b7f4fdd603b8578148ffc4b536"></a>HCI_ERR_SYS_AUTHFILE_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>111: 读取授权文件错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae7fbab799f2592987dcc48359e57b75b"></a>HCI_ERR_SYS_CHECKAUTH_RESPONSE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>112: 服务器返回获取云端授权失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a046be963e2d137b31039aca64140e205"></a>HCI_ERR_SYS_REGISTER_RESPONSE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>113: 服务器返回注册用户失败（已废弃，废弃版本3.0） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ad52f56e0cac401330201e870b0c2071e"></a>HCI_ERR_SYS_USING</em>&nbsp;</td><td class="fielddoc">
+<p>114: 仍然有能力在使用（尚未反初始化） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591afcc35c27cc936ab4cda835241e894177"></a>HCI_ERR_SYS_CONFIG_APPKEY_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>115: 缺少必需的appkey配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a6aa428d5ebafbb2859f94ed87399f006"></a>HCI_ERR_ASR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>200: HCI_ASR没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af9f7d3a93482d89cef1efb068491e604"></a>HCI_ERR_ASR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>201: HCI_ASR多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a4ddde95f0c40dfca89665838b2a40f51"></a>HCI_ERR_ASR_CONFIRM_NO_TASK</em>&nbsp;</td><td class="fielddoc">
+<p>202: 使用confirm，但没有确认任务 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a5dcfb35050cff10965434fe142bd2ea2"></a>HCI_ERR_ASR_PARAM_CHECK_FLAG_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>203: 错误的CheckFlag项，例如已经检测到端点仍然再发送数据，或尚未开启端点检测就发送flag为（CHECK_FLAG_END，CHECK_FLAG_PROGRESS） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a16f8fc864ada6b9f4648f91c816fc9c2"></a>HCI_ERR_ASR_GRAMMAR_DATA_TOO_LARGE</em>&nbsp;</td><td class="fielddoc">
+<p>204: 语法数据太大 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8d1c0201324e29d5376c79c2af819fe8"></a>HCI_ERR_ASR_ENGINE_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>205: ASR本地引擎尚未初始化(已废弃，废弃版本3.8) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a09f53470e4fa08b14475f00b876848cd"></a>HCI_ERR_ASR_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>206: ASR本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a6c2ac7c59570fb811fdebab7218db69c"></a>HCI_ERR_ASR_OPEN_GRAMMAR_FILE</em>&nbsp;</td><td class="fielddoc">
+<p>207: 读取语法文件失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591abebd35fb7a5216c37c44e996d423a207"></a>HCI_ERR_ASR_LOAD_GRAMMAR_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>208: 加载语法文件失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a858fc5b4b52fc71c3572eeccd5b83935"></a>HCI_ERR_ASR_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>209: ASR本地引擎识别失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591add87d3cc7be0cc1c9473e6eaeea9743a"></a>HCI_ERR_ASR_GRAMMAR_ID_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>210: 语法ID无效 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa297a6611736be218bd6b09d1e7b5f10"></a>HCI_ERR_ASR_REALTIME_WAITING</em>&nbsp;</td><td class="fielddoc">
+<p>211: 实时识别时未检测到音频末端，继续等待数据 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a0be90ff0beea6432fe4af5466619edf8"></a>HCI_ERR_ASR_GRAMMAR_OVERLOAD</em>&nbsp;</td><td class="fielddoc">
+<p>212: 加载语法数量已达上限 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a13a493dfa07299c1a8dc33d51f78e017"></a>HCI_ERR_ASR_GRAMMAR_USING</em>&nbsp;</td><td class="fielddoc">
+<p>213: 该语法正在使用中 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a6a3eaf6f2d7421a0a25f550d835d697e"></a>HCI_ERR_ASR_REALTIME_END</em>&nbsp;</td><td class="fielddoc">
+<p>214: 实时识别时检测到末端，或者缓冲区满，需要使用NULL获取结果 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a6f3cd4c1a8367ec5abd3bc691f098d84"></a>HCI_ERR_ASR_UPLOAD_NO_DATA</em>&nbsp;</td><td class="fielddoc">
+<p>215: 上传本地数据时，无用于上传的数据 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964"></a>HCI_ERR_HWR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>300: HCI_HWR没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a832ef7c13cbde671e5cc0f65c6f616af"></a>HCI_ERR_HWR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>301: HCI_HWR多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a6ec54ee98979eab1cbc96776463522bb"></a>HCI_ERR_HWR_CONFIRM_NO_TASK</em>&nbsp;</td><td class="fielddoc">
+<p>302: 使用confirm，但没有确认任务 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae05f31dc92349860aab97f64314b53d9"></a>HCI_ERR_HWR_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>303: HWR本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680"></a>HCI_ERR_HWR_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>304: HWR本地引擎操作（识别、获取拼音、获取联想结果）失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a33de410a70a7b574dd05c505f91fff80"></a>HCI_ERR_HWR_UPLOAD_NO_DATA</em>&nbsp;</td><td class="fielddoc">
+<p>305: 没有可用于上传的数据 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a7d4579beec063a88f037cafd4349147d"></a>HCI_ERR_HWR_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>306: HWR本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa6bbcd1943fc0a3aa6e12f2e5aefbb6c"></a>HCI_ERR_HWR_ENGINE_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>307: SDK初始化时未传入本地能力却在创建会话时使用了本地能力(已废弃，废弃版本3.8) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a4b697d62629355c1ca74d53ddbd83070"></a>HCI_ERR_HWR_CONFIG_SUBLANG_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>308: 单字能力、多语种字典时，未传入sublang </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae4e8027c5a28a865d2b5e838068b853c"></a>HCI_ERR_HWR_TOO_MANY_DOMAIN</em>&nbsp;</td><td class="fielddoc">
+<p>309: 传入了领域数目超过了4个 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326"></a>HCI_ERR_OCR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>400: HCI_OCR没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a7087f3ac6a49ee17e6547e682a184a8d"></a>HCI_ERR_OCR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>401: HCI_OCR多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af9dcb107665ae5c90b3768f605684606"></a>HCI_ERR_OCR_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>402: OCR本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b"></a>HCI_ERR_OCR_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>403: OCR本地引擎操作（倾斜校正、版面分析、识别、预处理、压缩）失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a9eba2976eeb8cb75d13e120ce4e3515c"></a>HCI_ERR_OCR_ENGINE_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>404: SDK初始化时未传入本地能力却在创建会话时使用了本地能力(已废弃，废弃版本3.8) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a166911928c8bc127190633e1fe315f23"></a>HCI_ERR_OCR_LOAD_IMAGE</em>&nbsp;</td><td class="fielddoc">
+<p>405: 载入本地文件或者本地图片缓冲失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a07174cd0c75d2d4870c13c56d7b6fa5b"></a>HCI_ERR_OCR_SAVE_IMAGE</em>&nbsp;</td><td class="fielddoc">
+<p>406: 保存OCR_IMAGE到本地文件失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa5409a94cb7ec2ea829586cb57e4e651"></a>HCI_ERR_OCR_IMAGE_NOT_SET</em>&nbsp;</td><td class="fielddoc">
+<p>407: 未设置要处理的图片就进行了倾斜校正、版面分析、识别等操作 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a31cbea20aa70774fda828f6ae250777f"></a>HCI_ERR_OCR_LOAD_TEMPLATE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>408: 加载模板文件失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aac336d34b5559174632cf83955388df2"></a>HCI_ERR_OCR_TEMPLATE_OVERLOAD</em>&nbsp;</td><td class="fielddoc">
+<p>409: 加载模板数量已达上限（1024） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a7a46c9fcc237513ca99dbd94db8fdb96"></a>HCI_ERR_OCR_TEMPLATE_ID_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>410: 传入的模板ID不在加载的模板列表中 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a92b9ce1c3f8d8344bcd44243044c1a7d"></a>HCI_ERR_OCR_TEMPLATE_USING</em>&nbsp;</td><td class="fielddoc">
+<p>411: 还有会话在使用要卸载的模板 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aabff6320d9a7f68b916eb71dc2224fdb"></a>HCI_ERR_OCR_DETECT_CORNER_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>412: OCR获取切边信息失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a0c2b35bbbb869b34a3f0b354c5603219"></a>HCI_ERR_OCR_NORMALIZE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>413: OCR切边失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a9b9dc7b95e59c4f6b5fb478a1e56601f"></a>HCI_ERR_OCR_RECOGNIZABLE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>414: OCR识别判断返回失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aeae3cec8e1c1107b22a3146a4f47ec3b"></a>HCI_ERR_OCR_IMAGE_NOT_CLEAR</em>&nbsp;</td><td class="fielddoc">
+<p>415: OCR识别图片不清晰 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a358f0bbc1d82cd2eebae738bb641c27e"></a>HCI_ERR_TTS_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>500: HCI_TTS没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ac53bb8c2e5901f4204ec0d5359377ee9"></a>HCI_ERR_TTS_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>501: HCI_TTS多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a9c350c2345c5741f14f0ed319e81eed8"></a>HCI_ERR_TTS_SESSION_BUSY</em>&nbsp;</td><td class="fielddoc">
+<p>502: TTS会话正忙，例如在合成回调函数中又调用了合成 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a0889a34f7d0d7f6d56bb9ba5b0135c5b"></a>HCI_ERR_TTS_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>503: TTS本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae4cec98a3d21040a73de901d45409452"></a>HCI_ERR_TTS_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>504: TTS本地引擎合成失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a166026c6b3ef912abad3411694935067"></a>HCI_ERR_TTS_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>505: TTS(NU)本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a7300c0b7bbba22214aa21ab729fcae7a"></a>HCI_ERR_TTS_ENGINE_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>506: TTS(NU)本地引擎尚未初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a30a84063b995ae462add247aa53f44ea"></a>HCI_ERR_MT_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>600: HCI_MT没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a33920c622e772f28d725c2855ce5b16b"></a>HCI_ERR_MT_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>601: HCI_MT多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a3a81c0526658544765a8231eed2447cd"></a>HCI_ERR_NLU_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>700: HCI_NLU没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a959d77eca886dd2b5d75ddab5525a1bd"></a>HCI_ERR_NLU_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>701: HCI_NLU多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a511f2b09462450c510c7bd9c5c9742bb"></a>HCI_ERR_NLU_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>702: NLU本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591acfbff1df3e2294cc5004f2fd90191165"></a>HCI_ERR_NLU_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>703: NLU本地引擎识别失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591acc29ea508bb5cfeac9662e1a1de1ab78"></a>HCI_ERR_KB_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>800: HCI_KB没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ae97a7ccf76ae2e719a9f6850494583db"></a>HCI_ERR_KB_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>801: HCI_KB多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a3111f6f71d6f34822ab06b46143de30d"></a>HCI_ERR_KB_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>802: KB本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa13c9188868e829ecd53d480617bc61b"></a>HCI_ERR_KB_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>803: KB本地引擎识别失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a67eb2a5c92bd7a20bbf78f97563db0b5"></a>HCI_ERR_KB_SYLLABLE_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>804: 容错音节无法判断类型 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a8d8beb8de7f226ef6b86739e9263e5ee"></a>HCI_ERR_KB_UDB_WORD_EXIST</em>&nbsp;</td><td class="fielddoc">
+<p>805: 已经在用户词库中存在 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ac8bf262f40010f0d5af4cefd2394bb58"></a>HCI_ERR_KB_CONFIRM_NO_TASK</em>&nbsp;</td><td class="fielddoc">
+<p>806: 使用confirm，但没有确认任务 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591af49ded0eb893aa5df6cfd68a8400b0ac"></a>HCI_ERR_VPR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>900: HCI_VPR没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a4342418bca029870df828ec6c9677674"></a>HCI_ERR_VPR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>901: HCI_VPR多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a1a1b9051d2c88f4fc815ff6829ec0edd"></a>HCI_ERR_VPR_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>902: VPR本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a118119718ef9cebff74868538e88a849"></a>HCI_ERR_VPR_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>903: VPR本地引擎处理失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a2c6b92c4e4aa74e0d7047964cc67f9a9"></a>HCI_ERR_VPR_USERID_NOT_EXIST</em>&nbsp;</td><td class="fielddoc">
+<p>904: VPR用户不存在 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ac02bd045e66ee98e94aad88403937e4b"></a>HCI_ERR_VPR_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>905: VPR本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa56cc33e9dd931aca668e03b17b639a3"></a>HCI_ERR_VPR_CONFIG_USER_ID_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>906: VPR缺少userId配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a15fd4d8e9eeec500d3be5fe7f2e1e464"></a>HCI_ERR_FPR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>1000: HCI_FPR没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a46f9bd9ae4b0edba571fc27a6babf09e"></a>HCI_ERR_FPR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>1001: HCI_FPR多次初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a9b2605faa4d1e4c2862a081ca547371a"></a>HCI_ERR_FPR_ENGINE_INIT_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>1002: FPR本地引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a3cc2c52a83a0547f8f8404df2ec7e2ca"></a>HCI_ERR_FPR_ENGINE_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>1003: FPR本地引擎处理失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a5b3cd41a07d2dfdcf1eda719aadd3896"></a>HCI_ERR_FPR_USERID_NOT_EXIST</em>&nbsp;</td><td class="fielddoc">
+<p>1004: FPR用户不存在 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ada141c44ed4865e259a20632de36ebf1"></a>HCI_ERR_FPR_ENGINE_SESSION_START_FAILED</em>&nbsp;</td><td class="fielddoc">
+<p>1005: FPR本地引擎开启会话失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a946ca1defd83264e17bdd04e39455699"></a>HCI_ERR_FPR_CONFIG_USER_ID_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>1006: FPR缺少userId配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591ab9611732f24eddc2f9d5725edb10b875"></a>HCI_ERR_FPR_CONFIG_DPI_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>1007: FPR缺少dpi配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591abe849b7f8c2c20a340fc6be91e75117a"></a>HCI_ERR_FPR_CONFIG_BGCOLOR_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>1008: FPR缺少bgColor配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591a91e23a2c4612f80d09739136c7330c29"></a>HCI_ERR_FPR_CONFIG_WIDTH_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>1009: FPR缺少width配置项 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga9f643809ebea695fef3003df5d31b591aa8a85c47f66559f9b737baaa7292ce4a"></a>HCI_ERR_FPR_CONFIG_HEIGHT_MISSING</em>&nbsp;</td><td class="fielddoc">
+<p>1010: FPR缺少height配置项 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga432df9ea27c8eb63990424572179fa56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_check_auth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>手动访问云授权 </p>
+<p>当正常返回时，可以通过 <a class="el" href="group___h_c_i___s_y_s.html#ga9d2d515c5ab1986f39f9b86c00d3267d" title="获得授权过期时间">hci_get_auth_expire_time()</a>得到新授权的过期时间， 通过 <a class="el" href="group___h_c_i___s_y_s.html#ga855e3a7c3ad52bfe8abfea468c074700" title="根据能力Key获取其能力项条目">hci_get_capability()</a> 得到新授权的可使用的HCI能力。 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae7fbab799f2592987dcc48359e57b75b">HCI_ERR_SYS_CHECKAUTH_RESPONSE_FAILED</a></td><td>获取云端授权失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a046be963e2d137b31039aca64140e205">HCI_ERR_SYS_REGISTER_RESPONSE_FAILED</a></td><td>注册用户失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>内存分配错误 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3da635f49817b4b1ee3285e18ae5c2e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_check_update </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszLocalCapKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszDataPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html">CHECK_UPDATE_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psCheckUpdateResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查使用某个本地能力是否缺少某些资源文件或者资源文件是否有版本更新 </p>
+<p>目前版本只检查是否缺少资源文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszLocalCapKey</td><td>应用希望使用的本地能力, 只能传入一个能力串 </td></tr>
+    <tr><td class="paramname">pszDataPath</td><td>检查本地资源的路径, 此路径应当和各种能力的init函数传入的配置串中的dataPath一致 </td></tr>
+    <tr><td class="paramname">psCheckUpdateResult</td><td>结果缓冲区指针，存放需要下载或更新的文件列表。在用完后使用 <a class="el" href="group___h_c_i___s_y_s.html#gaac408ae251051cf0b03362e8f8bf02c5" title="释放更新文件列表占用的内存">hci_free_update_result()</a> 释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>没有找到此项能力 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a86e6d4d4fad3d79630fb46c7d5aa4643">HCI_ERR_NOT_LOCAL_CAPKEY</a></td><td>此项能力不是本地能力 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>无法找到用户注册的网络服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>内存分配错误 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4c17d9e5f91fe9b29ba224e1948b5097"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_free_capability_item </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html">CAPABILITY_ITEM</a> *&#160;</td>
+          <td class="paramname"><em>psCapabilityItem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放能力项条目的内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psCapabilityItem</td><td>需要释放的能力项条目内存 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8edae17221f22eb4b89feb497e434f67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_free_capability_list </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html">CAPABILITY_LIST</a> *&#160;</td>
+          <td class="paramname"><em>psCapabilityList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放能力列表的内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psCapabilityList</td><td>需要释放的能力列表内存 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaac408ae251051cf0b03362e8f8bf02c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_free_update_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html">CHECK_UPDATE_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psCheckUpdateResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放更新文件列表占用的内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psCheckUpdateResult</td><td>需要释放的更新文件列表结构的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9d2d515c5ab1986f39f9b86c00d3267d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_get_auth_expire_time </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _OUT_ int64 *&#160;</td>
+          <td class="paramname"><em>pnExpireTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得授权过期时间 </p>
+<p>得到的时间和 time() 返回概念一致，指 1970-01-01 00:00:00 UTC 之后的秒数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnExpireTime</td><td>结果缓冲区指针，存放过期时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a3ede50b7f4fdd603b8578148ffc4b536">HCI_ERR_SYS_AUTHFILE_INVALID</a></td><td>读取授权文件错误 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga855e3a7c3ad52bfe8abfea468c074700"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_get_capability </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html">CAPABILITY_ITEM</a> *&#160;</td>
+          <td class="paramname"><em>psCapabilityItem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据能力Key获取其能力项条目 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszKey</td><td>所查询的能力key，只能是一个key，不可为NULL或空串 </td></tr>
+    <tr><td class="paramname">psCapabilityItem</td><td>结果缓冲区指针，存放返回的能力项条目。使用完毕后，应该使用 <a class="el" href="group___h_c_i___s_y_s.html#ga4c17d9e5f91fe9b29ba224e1948b5097" title="释放能力项条目的内存">hci_free_capability_item()</a> 释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>错误码 </dd>
+<dd>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>没有找到此项能力 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>内存分配错误 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga51a96814e5ec67344c20e705777e55a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_get_capability_list </td>
+          <td>(</td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszHciType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html">CAPABILITY_LIST</a> *&#160;</td>
+          <td class="paramname"><em>psCapabilityList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取某种HCI类型可用的能力列表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszHciType</td><td>所查询的HCI能力（例如 hwr, tts, ocr, asr)，多种能力用';'隔开， 如果为NULL或者空串，表示全部查询 </td></tr>
+    <tr><td class="paramname">psCapabilityList</td><td>结果缓冲区指针，存放返回的能力列表。使用完毕后，应该使用 <a class="el" href="group___h_c_i___s_y_s.html#ga8edae17221f22eb4b89feb497e434f67" title="释放能力列表的内存">hci_free_capability_list()</a> 释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>内存分配错误 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1131cbde9e661b38291768d5217727fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* HCIAPI hci_get_error_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a>&#160;</td>
+          <td class="paramname"><em>nErrorCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取错误码对应的详细错误信息 </p>
+<dl class="section return"><dt>返回</dt><dd>错误信息 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>错误信息是utf8编码的英文字符串,如果传入的错误码没有在灵云sdk中定义 会返回“Unkown Error” </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2196ba9adb31db3bc8da340ac0ac1e21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* HCIAPI hci_get_sdk_version </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取sdk版本信息 </p>
+<dl class="section return"><dt>返回</dt><dd>sdk版本号 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaaecd0af75009a2c0cacae0dde986eeb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云系统SDK 公共初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>初始化配置串，ASCII字符串，以'\0'结束 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aab79f8e6f501b6c1075ac9329e4e38b8">HCI_ERR_SYS_ALREADY_INIT</a></td><td>HCI SYS 已经初始化过了 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法、或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a124497386a9f5375eb21675b526d60f0">HCI_ERR_START_LOG_FAILED</a></td><td>启动日志错误, 可能是日志配置参数错误，路径不存在或者没有写权限等造成 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>内存分配错误 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a06cf5f9f2c2e912bbabb81bdcd1e465c">HCI_ERR_SYS_CONFIG_AUTHPATH_MISSING</a></td><td>缺少必需的authPath配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae8beb2cbb53dfa6daab62b450284c601">HCI_ERR_SYS_CONFIG_CLOUDURL_MISSING</a></td><td>缺少必需的cloudUrl配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af516c283da90f31dad15a1affee64e15">HCI_ERR_SYS_CONFIG_USERID_MISSING</a></td><td>缺少必需的userId配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a1a2b419859839567cbd8209d2d190aa2">HCI_ERR_SYS_CONFIG_PASSWORD_MISSING</a></td><td>缺少必需的password配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a9e948d763579de1a7c65037e92812958">HCI_ERR_SYS_CONFIG_DEVELOPERKEY_MISSING</a></td><td>缺少必需的developerKey配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591afcc35c27cc936ab4cda835241e894177">HCI_ERR_SYS_CONFIG_APPKEY_MISSING</a></td><td>缺少必需的appKey配置项 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>authPath </td><td>opt/myapp/info/ </td><td>无 </td><td>授权文件所在路径 </td><td>此项必填，此目录下将会存放<b>授权文件</b>，授权文件的概念详见下面的注解。<br/>
+ SDK还需要在此目录下写一些数据文件，因此此目录必须有可读写权限, 但强烈建议不是在一个可移除的介质上，例如SD卡上，防止SD卡被拔出。   </td></tr>
+<tr>
+<td>developerKey </td><td>字符串 </td><td>无 </td><td>开发者密钥 </td><td>此项必填，由捷通华声提供。  </td></tr>
+<tr>
+<td>appKey </td><td>字符串 </td><td>无 </td><td>应用序号 </td><td>此项必填，由捷通华声提供。  </td></tr>
+<tr>
+<td>cloudUrl </td><td><a href="http://api.hcicloud.com:9999">http://api.hcicloud.com:9999</a> </td><td>无 </td><td>灵云云服务的接口地址 </td><td>此项必填。即便只使用本地能力，本SDK仍然会需要此地址以进行云端授权、上传数据等工作  </td></tr>
+<tr>
+<td>autoCloudAuth </td><td>yes, no </td><td>yes </td><td>是否自动检查云端授权 </td><td>详见下面的注解  </td></tr>
+<tr>
+<td>appChannel </td><td>1 </td><td>正整数 </td><td>应用渠道 </td><td>开发者通过指定不同的值来编译不同的版本，这样在灵云开发者社区可以获取不同渠道下载安装使用的一个统计。参考<a class="el" href="app_channel.html">应用渠道列表</a>  </td></tr>
+<tr>
+<td>logFilePath </td><td>/var/log/ </td><td>空 </td><td>日志的路径 </td><td>可选，如果不传或者为空则不生成日志，日志名称为hci.log  </td></tr>
+<tr>
+<td>logFileSize </td><td>1 - 1048576 (1024*1024) </td><td>32 </td><td>日志大小 </td><td>默认一个日志文件写多大，单位为K  </td></tr>
+<tr>
+<td>logFileCount </td><td>0 - 1024 </td><td>5 </td><td>日志数目 </td><td>默认保留多少个备份的日志文件，超过则覆盖最旧的日志。为0表示当前日志存满后不做任何备份  </td></tr>
+<tr>
+<td>logLevel </td><td>0，1，2，3，4，5 </td><td>0 </td><td>日志等级 </td><td>0=无，1=错误，2=警告，3=信息，4=细节，5=调试，SDK将输出小于等于logLevel的日志信息  </td></tr>
+<tr>
+<td>netProxy </td><td>192.168.10.2 </td><td>空 </td><td>HTTP代理服务器IP地址 </td><td>可选  </td></tr>
+<tr>
+<td>netProxyPort </td><td>1080 </td><td>1080 </td><td>HTTP代理服务器端口 </td><td>可选,如果netPorxy未设置则该项也不起作用  </td></tr>
+<tr>
+<td>netProxyUser </td><td>user </td><td>无 </td><td>HTTP代理服务器访问用户名 </td><td>可选,如果netPorxy未设置则该项也不起作用  </td></tr>
+<tr>
+<td>netProxyPwd </td><td>pwd </td><td>无 </td><td>HTTP代理服务器访问密码 </td><td>可选,如果netPorxy未设置则该项也不起作用  </td></tr>
+<tr>
+<td>autoUpload </td><td>yes, no </td><td>yes </td><td>是否自动上传本地能力所记录的请求数据 </td><td>本地能力将会记录用户输入的请求数据，如果此项为yes，则会在收集到一定量数据时触发自动上传操作。 如果为no，则不会主动上传，但用户可以手工调用 <a class="el" href="group___h_c_i___s_y_s.html#ga28ac7c671024342418bc6f2081500718" title="上传本地用户录入数据">hci_upload_user_history()</a> 进行上传。  </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置示例：</dt><dd><div class="fragment"><div class="line">authPath=/data/data/test.company.com/file,cloudUrl=http:<span class="comment">//api.hcicloud.com:9999,autocloudauth=true,</span></div>
+<div class="line">developerKey=abcdefgh,appKey=123,</div>
+<div class="line">logFilePath=/var/log/,logLevel=5,logFileSize=3,logFileCount=9</div>
+</div><!-- fragment --></dd></dl>
+<dl class="section note"><dt>注解</dt><dd><b>应用信息</b> <br/>
+<br/>
+ 配置项中developerKey, appKey两项内容由捷通华声提供，用于标识不同的开发者 和应用程序，给予不同的授权和服务。如果不提供或者提供内容和捷通华声给出的不一致，会导致服务失败。 <br/>
+<br/>
+ <b>授权</b> <br/>
+<br/>
+ 授权是用来确定应用可以使用的云端或本地的HCI能力。授权文件中包括具有过期时间的授权能力，也可能包含 一批永久授权能力。如果到过期时间尚未更新授权， 则仅能使用规定的永久授权能力。一般来说，永久授权 能力将不如正常期的能力，因此，一般必须在过期时间之前访问云端授权服务，以更新授权。 <br/>
+<br/>
+ 当autoCloudAuth配置项为yes时，系统将会自动开启授权检查的后台线程，自动更新授权。如果为no， 则需要开发者在当前授权的到期时间之前调用 <a class="el" href="group___h_c_i___s_y_s.html#ga432df9ea27c8eb63990424572179fa56" title="手动访问云授权">hci_check_auth()</a> 函数来手动更新授权。 <br/>
+<br/>
+ 捷通华声可以提供一个初始授权文件，其中规定了初始可以使用的授权，只提供本地能力。这样在此授权到期 时间之前，一直可以使用一些本地能力，从而可以不进行任何网络访问。但过了此初始授权的到期日期， 仍然需要进行授权的更新。 <br/>
+<br/>
+ 对于authPath配置项，Android系统下建议使用/data/data/包名/file 路径。如果有初始授权文件，可以在 打包时可以将授权文件当做一个so放在libs目录下, 在安装后，此文件就会放置在/data/data/包名/lib目录下。 在应用第一次启动时负责将此文件拷贝到/data/data/包名/file下面即可。由于此文件会被后续的更新授权所 更新，因此，在以后不要再次拷贝，以防覆盖新的授权文件。 <br/>
+<br/>
+ </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab6358dadc2aa92c031f29685de2146c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云系统SDK 反初始化 </p>
+<dl class="section return"><dt>返回</dt><dd>错误码 </dd>
+<dd>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ad52f56e0cac401330201e870b0c2071e">HCI_ERR_SYS_USING</a></td><td>仍然有能力在使用（尚未反初始化） </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga28ac7c671024342418bc6f2081500718"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_upload_user_history </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传本地用户录入数据 </p>
+<dl class="section return"><dt>返回</dt><dd>错误码 </dd>
+<dd>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回识别失败 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

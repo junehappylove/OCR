@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): OCR_RECOG_CHARNODE结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="classes.html"><span>结构体索引</span></a></li>
+      <li><a href="functions.html"><span>成员变量</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">OCR_RECOG_CHARNODE结构体 参考<div class="ingroups"><a class="el" href="group___h_c_i___o_c_r.html">灵云OCR能力API</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>字符节点定义  
+ <a href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hci__ocr_8h_source.html">hci_ocr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:ae9e356782e8ad44abcda88f743deeb86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9e356782e8ad44abcda88f743deeb86"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ae9e356782e8ad44abcda88f743deeb86">pszChar</a></td></tr>
+<tr class="memdesc:ae9e356782e8ad44abcda88f743deeb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">识别结果单字，UTF-8编码，以'\0'结束 <br/></td></tr>
+<tr class="separator:ae9e356782e8ad44abcda88f743deeb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc9f0ddeb39774d674b0aaf7fa5d3d0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a2cc9f0ddeb39774d674b0aaf7fa5d3d0">pszCandidateWords</a> [<a class="el" href="group___h_c_i___o_c_r.html#ga70fa5d4c628e7ddba7e09a5631e48acc">CANDIDATE_NUM</a>]</td></tr>
+<tr class="separator:a2cc9f0ddeb39774d674b0aaf7fa5d3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a982b12dcdbcd9db8db5df0b936a4d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a982b12dcdbcd9db8db5df0b936a4d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a8a982b12dcdbcd9db8db5df0b936a4d6">nSpaceBefore</a></td></tr>
+<tr class="memdesc:a8a982b12dcdbcd9db8db5df0b936a4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">此字符前面的空格字符数 <br/></td></tr>
+<tr class="separator:a8a982b12dcdbcd9db8db5df0b936a4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace11f807efa313d3477a05f4a3019ad2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace11f807efa313d3477a05f4a3019ad2"></a>
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaa1afb6a27f61eb376be25be538d187f1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ace11f807efa313d3477a05f4a3019ad2">bAccept</a></td></tr>
+<tr class="memdesc:ace11f807efa313d3477a05f4a3019ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否可信 <br/></td></tr>
+<tr class="separator:ace11f807efa313d3477a05f4a3019ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91594373fd35a6de33f8a76d464b095f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91594373fd35a6de33f8a76d464b095f"></a>
+<a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html">OCR_RECOG_RECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a91594373fd35a6de33f8a76d464b095f">rcBlock</a></td></tr>
+<tr class="memdesc:a91594373fd35a6de33f8a76d464b095f"><td class="mdescLeft">&#160;</td><td class="mdescRight">此字符在图像中区域 <br/></td></tr>
+<tr class="separator:a91594373fd35a6de33f8a76d464b095f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>字符节点定义 </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a class="anchor" id="a2cc9f0ddeb39774d674b0aaf7fa5d3d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* pszCandidateWords[<a class="el" href="group___h_c_i___o_c_r.html#ga70fa5d4c628e7ddba7e09a5631e48acc">CANDIDATE_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>多个候选字的识别结果，UTF-8编码，以'\0'结束 第一个字有可能和pszchar一样，但也有可能不一样 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html">OCR_RECOG_CHARNODE</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

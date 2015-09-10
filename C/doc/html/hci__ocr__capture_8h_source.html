@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): E:/svn/HCICloud/develop/branches/sdk_3.9.6/sdk/src/c/include/hci_ocr_capture.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci__ocr__capture_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hci_ocr_capture.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __HCI_OCR_CAPTURE_HEADER__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __HCI_OCR_CAPTURE_HEADER__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;hci_sys.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;hci_ocr.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/* @{ */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">   23</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2abd568ccc19aea0201539cb8ccd586be9">   25</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2abd568ccc19aea0201539cb8ccd586be9" title="0: 拍照器开始进行图片捕获">CAPTURE_EVENT_CAPTURE_BEGIN</a>,            </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a72f87826890e30def8fa4d9eb01aaca7">   26</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a72f87826890e30def8fa4d9eb01aaca7" title="1: 扫描完成">CAPTURE_EVENT_CAPTURE_FINISH</a>,           </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ad803660d58f2f29512fc037c80fac9f7">   27</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ad803660d58f2f29512fc037c80fac9f7" title="2: 开始识别">CAPTURE_EVENT_RECOGNIZE_BEGIN</a>,          </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af78a8ccdc101371f15157424904b8c34">   28</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af78a8ccdc101371f15157424904b8c34" title="3: 还有图片没有识别">CAPTURE_EVENT_RECOGNIZE_MORE</a>,           </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a8be8564174b63b07e61d46877a02cbd3">   29</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a8be8564174b63b07e61d46877a02cbd3" title="4: 单张图片识别结束">CAPTURE_EVENT_RECOGNIZE_FINISH</a>,         </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a104cc69e348a3334efc906edacc56b93">   30</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a104cc69e348a3334efc906edacc56b93" title="5: 所有识别结束">CAPTURE_EVENT_RECOGNIZE_COMPLETE</a>,       </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3fb0665909b82354f8691a708c118a20">   31</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3fb0665909b82354f8691a708c118a20" title="6: 引擎出错，一般为HCI_OCR模块出错">CAPTURE_EVENT_ENGINE_ERROR</a>,                     </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a30ebdf7fd4974f87847f2ce8b9796e19">   32</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a30ebdf7fd4974f87847f2ce8b9796e19" title="7: 设备出错,目前windows接口都为同步实现，因此都通过返回值返回，不再进行该种错误回调">CAPTURE_EVENT_DEVICE_ERROR</a>,                     </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a0ee78fdb79aef9db3c92eb294bb1c6b5">   33</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a0ee78fdb79aef9db3c92eb294bb1c6b5" title="8: 分配空间失败">CAPTURE_EVENT_MALLOC_ERROR</a>,                     </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aa527caadeaf6bfeca5d02e294477b3d3">   34</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aa527caadeaf6bfeca5d02e294477b3d3" title="9: 开始预览图像">CAPTURE_EVENT_PREVIEW_BEGIN</a>,        </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3a3e12b89e802899536e46365e10c006">   35</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3a3e12b89e802899536e46365e10c006" title="10: 检测到预览图片帧的切边信息">CAPTURE_EVENT_PREVIEW_DETECT_CORNER_POINTS_SUCCESS</a>,  </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab67206e4b0b8c6a9e342cfd33ab6b829">   36</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab67206e4b0b8c6a9e342cfd33ab6b829" title="11: 检测到预览图片帧可识别">CAPTURE_EVENT_PREVIEW_DETECT_CAN_BE_RECOGNIZE_SUCCESS</a>,  </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aed5faf99d34b7f99ee4ceda01b077cbe">   37</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aed5faf99d34b7f99ee4ceda01b077cbe" title="12: 开始对焦">CAPTURE_EVENT_FOCUS_BEGIN</a>,          </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3badff44af1cbd54c592423b3ef47018">   38</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3badff44af1cbd54c592423b3ef47018" title="13: 对焦成功">CAPTURE_EVENT_FOCUS_SUCCESS</a>,        </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab30f308bd65ec36c1c460aface05f129">   39</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab30f308bd65ec36c1c460aface05f129" title="14: 对焦失败">CAPTURE_EVENT_FOCUS_FAIL</a>,           </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af32eb6ecd519e213a9893da98a324816">   40</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af32eb6ecd519e213a9893da98a324816" title="15: 拍照获得的图片检测切边信息成功 暂未使用">CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_SUCCESS</a>,    </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ae5e1d4f72d4191b65dd8a3328adc7cad">   41</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ae5e1d4f72d4191b65dd8a3328adc7cad" title="16: 拍照获得的图片检测切边信息失败 暂未使用">CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_FAIL</a>,       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    } <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">   47</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a92cccad1b6cbb773d93e3acb53e998aa">   49</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a92cccad1b6cbb773d93e3acb53e998aa" title="-1: 未知错误，不会出现">CAPTURE_ERR_UNKNOWN</a> = -1,                                       </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a5a2aa3109e8f9dfe225d9c8a36a35273">   50</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a5a2aa3109e8f9dfe225d9c8a36a35273" title="0: 成功">CAPTURE_ERR_NONE</a> = 0,                                           </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a58136d3e60377e33597508261040b372">   51</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a58136d3e60377e33597508261040b372" title="1: 已经初始化">CAPTURE_ERR_ALREADY_INITED</a>,                 </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a2cdf8c4d32df92b3d55b2925e10de7b5">   52</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a2cdf8c4d32df92b3d55b2925e10de7b5" title="2: 拍图器没有初始化">CAPTURE_ERR_NOT_INITED</a>,                     </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a45f9ca3ab9f8b28a2f41e6d5a22144d3">   53</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a45f9ca3ab9f8b28a2f41e6d5a22144d3" title="3: 引擎初始化失败">CAPTURE_ERR_ENGINE_INIT</a>,                                        </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a1a12612267a2c44a3076ec6e1f2ac4d9">   54</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a1a12612267a2c44a3076ec6e1f2ac4d9" title="4: 设备初始化错误">CAPTURE_ERR_DEVICE_INIT</a>,                                        </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a417c6fc02c0d996eb74e02d84305fd7c">   55</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a417c6fc02c0d996eb74e02d84305fd7c" title="5: 扫描错误">CAPTURE_ERR_CAPTURE</a>,                        </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6a12e26cc69a8e35e39adc38e8e9dbf5">   56</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6a12e26cc69a8e35e39adc38e8e9dbf5" title="6: 加载模板错误">CAPTURE_ERR_LOAD_TEMPLATE</a>,                  </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a4bf619fb7ee1837b73a2ecfcd68dd6ee">   57</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a4bf619fb7ee1837b73a2ecfcd68dd6ee" title="7: 卸载模板错误">CAPTURE_ERR_UNLOAD_TEMPLATE</a>,                </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a7952c6c535633cc6a7e02fbc97ce161e">   58</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a7952c6c535633cc6a7e02fbc97ce161e" title="8: 启动任务失败">CAPTURE_ERR_SESSION_START</a>,                  </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8af9d34778b6537762faf95b8bba5ffe24">   59</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8af9d34778b6537762faf95b8bba5ffe24" title="9: 识别失败">CAPTURE_ERR_RECOGNIZE</a>,                      </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6cf6481d68e5af178d59dbfa787bf778">   60</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6cf6481d68e5af178d59dbfa787bf778" title="10: 加载图片失败">CAPTURE_ERR_LOAD_IMAGE</a>,                     </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa8e60e622ddc7f7d527b632932d2f57a">   61</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa8e60e622ddc7f7d527b632932d2f57a" title="11: 接口暂不支持">CAPTURE_ERR_UNSUPPORT</a>,                      </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa07b814a06db283dde94bd7d10b7193f">   62</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa07b814a06db283dde94bd7d10b7193f" title="12: 释放失败">CAPTURE_ERR_RELEASE</a>,                        </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8acbe42e919dbcb34ec2b3b8fef52ac882">   63</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8acbe42e919dbcb34ec2b3b8fef52ac882" title="13: 状态忙碌，正在拍照或识别">CAPTURE_ERR_BUSY</a>,                           </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a20e29c56f8f10a7e04e996573268088c">   64</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a20e29c56f8f10a7e04e996573268088c" title="14: 拍照失败">CAPTURE_ERR_CAPTUREONE</a>,                     </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a027d443996d25fd6abbe6ff05e87033e">   65</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a027d443996d25fd6abbe6ff05e87033e" title="15: 参数非法">CAPTURE_ERR_PARAM_INVALID</a>,                  </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a8e7fe31ed323bd1ae91c1fd1d6b1afbd">   66</a></span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a8e7fe31ed323bd1ae91c1fd1d6b1afbd" title="16: 内存不足">CAPTURE_ERR_OUT_OF_MEMORY</a>,                  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    } <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// 回调函数定义</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga73d3e45188b09bda9756d30e364b95ca">   80</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga73d3e45188b09bda9756d30e364b95ca" title="事件变化回调">Callback_CaptureEventStateChange</a>)(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                             _MUST_ _IN_ <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                             _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga909759ce0744a3f23d7087b7fdcabfbe">   93</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga909759ce0744a3f23d7087b7fdcabfbe" title="图片抓取回调">Callback_CaptureCapturing</a>)(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                      _MUST_ _IN_ <span class="keywordtype">void</span> * pszImageData,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                      _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uiImageLen,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                      _MUST_ _IN_ <span class="keywordtype">bool</span> bHasConers,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                      _OPT_ _IN_ <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html" title="切边矫正校点结构">OCR_CORNERS_RESULT</a> *pCornersResult,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                      _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga22bc1e03817c87c8db717da80f352e65">  108</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga22bc1e03817c87c8db717da80f352e65" title="拍照器识别完成回调">Callback_CaptureEventRecogFinish</a>)(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                                             _MUST_ _IN_ <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                             _MUST_ _IN_ <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html" title="OCR识别的返回结果">OCR_RECOG_RESULT</a> *pRecogResult,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                                             _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gaf7aa5e1387c8478cedb6d83691ba34f8">  121</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gaf7aa5e1387c8478cedb6d83691ba34f8" title="OCR SDK出错回调">Callback_CaptureEventError</a>)(</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                                       _MUST_ _IN_ <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                                       _MUST_ _IN_ <span class="keywordtype">int</span> eErrorCode,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                                       _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html">  129</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span>_CAPTURE_CALLBACK_PARAM {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga73d3e45188b09bda9756d30e364b95ca" title="事件变化回调">Callback_CaptureEventStateChange</a> pfnStateChange;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">void</span> * pvStateChangeUsrParam;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga909759ce0744a3f23d7087b7fdcabfbe" title="图片抓取回调">Callback_CaptureCapturing</a> pfnCapturing;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">void</span> * pvCapturingUsrParam;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga22bc1e03817c87c8db717da80f352e65" title="拍照器识别完成回调">Callback_CaptureEventRecogFinish</a> pfnRecogFinish;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">void</span> * pvRecogFinishUsrParam;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gaf7aa5e1387c8478cedb6d83691ba34f8" title="OCR SDK出错回调">Callback_CaptureEventError</a> pfnError;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> *pvErrorUsrParam;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    } <a class="code" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="拍照器回调函数的结构体">CAPTURE_CALLBACK_PARAM</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">// 接口API函数定义</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gaab1cd101b55024e4d5bf3af534c1b73c" title="拍照器SDK初始化">hci_ocr_capture_init</a>(</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                                 _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszOCRSdkConfig,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                                 _MUST_ _IN_ <a class="code" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="拍照器回调函数的结构体">CAPTURE_CALLBACK_PARAM</a> *psCallbackParam);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga42e2397d7e0d5559e6e9da85ceb7cce1" title="OCR Capture加载模板文件">hci_ocr_capture_load_template</a>(</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                                          _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszTemplateFile,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                          _MUST_ _OUT_ <span class="keywordtype">int</span> * pnTemplateId</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                                          );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gaf100d8ed06374ffa55aee9d26c7fc4ed" title="OCR Capture卸载模板文件">hci_ocr_capture_unload_template</a>(</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                                            _MUST_ _IN_  <span class="keywordtype">int</span> nTemplateId</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                                            );</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gac950ae2fdb3a15168095ab4b3ae203cc" title="OCR Capture开启扫描并识别">hci_ocr_capture_start</a>(</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                                                  _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga2f164cafd8673f33cadaf4df819972c0" title="获取预览界面，该接口Windows不支持(iOS专用)">hci_ocr_capture_get_preview</a>(<span class="keywordtype">void</span> * preview);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga80cdd9081ac71b323652d806fca2788b" title="停止相机并识别">hci_ocr_capture_stop_and_recog</a>();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gac3b803194f03a8f0fef621954aadb6bc" title="停止相机（不识别）">hci_ocr_capture_stop</a>();</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    </div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#ga04898649cb5cb5da0ee6f023a7071154" title="OCR Capture 支持识别单张图片识别，通过回调返回处理结果">hci_ocr_capture_recog</a>(</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                                                  _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                                                  _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * pImageData,</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                                                  _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uiImageLen);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    </div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i__ocr__capture___a_p_i.html#gab45b6b60677efed7d958941013878dfb" title="OCR Capture反初始化">hci_ocr_capture_release</a>();</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    </div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="comment">/* @} */</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    </div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3b19ecf29356981f494745fbef7e56bf.html">c</a></li><li class="navelem"><a class="el" href="dir_87681be5ca089ff245d0d9f911af7faf.html">include</a></li><li class="navelem"><b>hci_ocr_capture.h</b></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

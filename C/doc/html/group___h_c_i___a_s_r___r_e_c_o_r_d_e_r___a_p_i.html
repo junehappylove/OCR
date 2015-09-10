@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云ASR录音机API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云ASR录音机API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html">RECORDER_CALLBACK_PARAM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机回调函数的结构体  <a href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaba23103ee4b66ada6a423e7eca709b43"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaba23103ee4b66ada6a423e7eca709b43">Callback_RecorderEventStateChange</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:gaba23103ee4b66ada6a423e7eca709b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机事件变化回调  <a href="#gaba23103ee4b66ada6a423e7eca709b43">更多...</a><br/></td></tr>
+<tr class="separator:gaba23103ee4b66ada6a423e7eca709b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada1eaf27ca18ffe6b3f8dbd1e4519379"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gada1eaf27ca18ffe6b3f8dbd1e4519379">Callback_RecorderRecording</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pVoiceData, _MUST_ _IN_ unsigned int uiVoiceLen, _MUST_ _IN_ int nVolume, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:gada1eaf27ca18ffe6b3f8dbd1e4519379"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音音频数据回调  <a href="#gada1eaf27ca18ffe6b3f8dbd1e4519379">更多...</a><br/></td></tr>
+<tr class="separator:gada1eaf27ca18ffe6b3f8dbd1e4519379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13c483fa3baa0191f6527a60270c3355"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga13c483fa3baa0191f6527a60270c3355">Callback_RecorderEventRecogFinish</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html">ASR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:ga13c483fa3baa0191f6527a60270c3355"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机识别完成回调  <a href="#ga13c483fa3baa0191f6527a60270c3355">更多...</a><br/></td></tr>
+<tr class="separator:ga13c483fa3baa0191f6527a60270c3355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab24fd52800264ef36c3c0b6171a74d2d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab24fd52800264ef36c3c0b6171a74d2d">Callback_RecorderEventRecogProcess</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html">ASR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:gab24fd52800264ef36c3c0b6171a74d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机识别中间结果回调  <a href="#gab24fd52800264ef36c3c0b6171a74d2d">更多...</a><br/></td></tr>
+<tr class="separator:gab24fd52800264ef36c3c0b6171a74d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d3f747562dd1cb241a3dcf3c677e414"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4d3f747562dd1cb241a3dcf3c677e414">Callback_RecorderEventError</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> eErrorCode, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:ga4d3f747562dd1cb241a3dcf3c677e414"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASR SDK出错回调  <a href="#ga4d3f747562dd1cb241a3dcf3c677e414">更多...</a><br/></td></tr>
+<tr class="separator:ga4d3f747562dd1cb241a3dcf3c677e414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7541cc18086a8e32ab1f2f6b1a32b89a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7541cc18086a8e32ab1f2f6b1a32b89a"></a>
+typedef _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pUsrParam</b></td></tr>
+<tr class="separator:ga7541cc18086a8e32ab1f2f6b1a32b89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaf51835c35948acd66ad207ad92b093fe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feae57ef4df87927646b4c29addae880d86">RECORDER_EVENT_BEGIN_RECORD</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaa92b6e42ee7e1d77c2422084ee211219">RECORDER_EVENT_HAVING_VOICE</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feab5626a761b7ded87b0c125e13c407524">RECORDER_EVENT_NO_VOICE_INPUT</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feac00ebde8f40396d2ab0ee70e43363b96">RECORDER_EVENT_BUFF_FULL</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaf866f6c9fd50674b6d72b8d1cf8daa84">RECORDER_EVENT_END_RECORD</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea63e664e02aecdad831a464939dab564d">RECORDER_EVENT_BEGIN_RECOGNIZE</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea7652132659db91b53c1885f97f927ec5">RECORDER_EVENT_RECOGNIZE_COMPLETE</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6186f80dace392c7c8dd4b05d3a36196">RECORDER_EVENT_ENGINE_ERROR</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea30f5325aa542539280d751c163a8a9b2">RECORDER_EVENT_DEVICE_ERROR</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea8186a28b6072a92322ca8ad5646b44d0">RECORDER_EVENT_MALLOC_ERROR</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feafd73190cad19467d0d741b1ee457f55c">RECORDER_EVENT_INTERRUPTED</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fead567bdb8948362c926c2af8e1ead410d">RECORDER_EVENT_PERMISSION_DENIED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6704752501f1453a65483f94c1c32648">RECORDER_EVENT_TASK_FINISH</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6592139e6abef2bb69a0165adc652b23">RECORDER_EVENT_RECOGNIZE_PROCESS</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gaf51835c35948acd66ad207ad92b093fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机回调时的通知事件  <a href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">更多...</a><br/></td></tr>
+<tr class="separator:gaf51835c35948acd66ad207ad92b093fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga320575a0af12fe7b2d6f6d5e12861843"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">RECORDER_STATE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a22e15ee10b98239e8f4fca3e2ba12178">RECORDER_STATE_NOT_INIT</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a555fb741ff54fed8c982374950258cc8">RECORDER_STATE_IDLE</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843ad2e89a4737a6999922efadf63b9a9c89">RECORDER_STATE_RECORDING</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843adfe94c404959e2b91f168634c1748668">RECORDER_STATE_RECOGING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a4e42917b6417cd302bdfa7758d8bd657">RECORDER_STATE_CONFIRMING</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a5eaf796a3a065283d2261c17665c2905">RECORDER_STATE_ERROR</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a1149cb002b906e027960b0411d422d38">RECORDER_STATE_STARTING</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga320575a0af12fe7b2d6f6d5e12861843"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机状态  <a href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">更多...</a><br/></td></tr>
+<tr class="separator:ga320575a0af12fe7b2d6f6d5e12861843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57464c909ff257676a8bade4f9b7fccc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca87b59d66f4e15cbacc5d2aa888a13be0">RECORDER_ERR_UNKNOWN</a> = -1, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a> = 0, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccacb226084b9c22e5a1e0b7859de048f25">RECORDER_ERR_ALREADY_INIT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca19d6b504bce3f145d33b61d676a8b05f">RECORDER_ERR_ALREADY_BEGIN</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154">RECORDER_ERR_NOT_BEGIN</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984">RECORDER_ERR_OUT_OF_MEMORY</a>, 
+<a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4">RECORDER_ERR_ENGINE_ERROR</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga57464c909ff257676a8bade4f9b7fccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机错误码  <a href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">更多...</a><br/></td></tr>
+<tr class="separator:ga57464c909ff257676a8bade4f9b7fccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaa1afb6a27f61eb376be25be538d187f1"><td class="memItemLeft" align="right" valign="top">typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaa1afb6a27f61eb376be25be538d187f1">bool</a> (HCIAPI *Callback_RecorderSetAudioSession)(_MUST_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pExtendParam</td></tr>
+<tr class="memdesc:gaa1afb6a27f61eb376be25be538d187f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置audisession回调  <a href="#gaa1afb6a27f61eb376be25be538d187f1">更多...</a><br/></td></tr>
+<tr class="separator:gaa1afb6a27f61eb376be25be538d187f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga668498cf597780b16fce195d2a133dec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga668498cf597780b16fce195d2a133dec">hci_asr_recorder_init</a> (_MUST_ _IN_ const char *pszAsrSdkConfig, _MUST_ _IN_ <a class="el" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html">RECORDER_CALLBACK_PARAM</a> *psCallbackParam)</td></tr>
+<tr class="memdesc:ga668498cf597780b16fce195d2a133dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机SDK初始化  <a href="#ga668498cf597780b16fce195d2a133dec">更多...</a><br/></td></tr>
+<tr class="separator:ga668498cf597780b16fce195d2a133dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8c7fcc9ab85a9cf5e28d413d2667027"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf8c7fcc9ab85a9cf5e28d413d2667027">hci_asr_recorder_set_audio_session_callback</a> (_MUST_ _IN_ Callback_RecorderSetAudioSession pfnCallBack, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:gaf8c7fcc9ab85a9cf5e28d413d2667027"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置audiosession回调  <a href="#gaf8c7fcc9ab85a9cf5e28d413d2667027">更多...</a><br/></td></tr>
+<tr class="separator:gaf8c7fcc9ab85a9cf5e28d413d2667027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58de5a2c593820d0cd8293d76c886230"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga58de5a2c593820d0cd8293d76c886230">hci_asr_recorder_load_grammar</a> (_OPT_ _IN_ const char *pszAsrSdkConfig, _MUST_ _IN_ const char *pszGrammarData, _MUST_ _OUT_ unsigned int *pnGrammarId)</td></tr>
+<tr class="memdesc:ga58de5a2c593820d0cd8293d76c886230"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机SDK加载语法  <a href="#ga58de5a2c593820d0cd8293d76c886230">更多...</a><br/></td></tr>
+<tr class="separator:ga58de5a2c593820d0cd8293d76c886230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aa0ba58972893892e6a4a8f51b82801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga7aa0ba58972893892e6a4a8f51b82801">hci_asr_recorder_unload_grammar</a> (_MUST_ _IN_ unsigned int nGrammarId)</td></tr>
+<tr class="memdesc:ga7aa0ba58972893892e6a4a8f51b82801"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机SDK卸载语法  <a href="#ga7aa0ba58972893892e6a4a8f51b82801">更多...</a><br/></td></tr>
+<tr class="separator:ga7aa0ba58972893892e6a4a8f51b82801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf390f7932216ac3623e84037e4482c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">RECORDER_STATE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf390f7932216ac3623e84037e4482c64">hci_asr_recorder_get_state</a> ()</td></tr>
+<tr class="memdesc:gaf390f7932216ac3623e84037e4482c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得录音机的当前状态  <a href="#gaf390f7932216ac3623e84037e4482c64">更多...</a><br/></td></tr>
+<tr class="separator:gaf390f7932216ac3623e84037e4482c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeee1ea4aa9ccc47fb025b7ee3526c01f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaeee1ea4aa9ccc47fb025b7ee3526c01f">hci_asr_recorder_start</a> (_MUST_ _IN_ const char *pszConfig, _OPT_ _IN_ const char *pszGrammarData)</td></tr>
+<tr class="memdesc:gaeee1ea4aa9ccc47fb025b7ee3526c01f"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音机SDK启动  <a href="#gaeee1ea4aa9ccc47fb025b7ee3526c01f">更多...</a><br/></td></tr>
+<tr class="separator:gaeee1ea4aa9ccc47fb025b7ee3526c01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25e8bba33c3ba2e14d3e2d3adff847f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga25e8bba33c3ba2e14d3e2d3adff847f9">hci_asr_recorder_cancel</a> ()</td></tr>
+<tr class="memdesc:ga25e8bba33c3ba2e14d3e2d3adff847f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束录音但不识别  <a href="#ga25e8bba33c3ba2e14d3e2d3adff847f9">更多...</a><br/></td></tr>
+<tr class="separator:ga25e8bba33c3ba2e14d3e2d3adff847f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a493c183c6f5e64d0da572378acda4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4a493c183c6f5e64d0da572378acda4c">hci_asr_recorder_stop_and_recog</a> ()</td></tr>
+<tr class="memdesc:ga4a493c183c6f5e64d0da572378acda4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束录音并启动识别  <a href="#ga4a493c183c6f5e64d0da572378acda4c">更多...</a><br/></td></tr>
+<tr class="separator:ga4a493c183c6f5e64d0da572378acda4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5f7d6b881f7affe0fb0f21b7049b99d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab5f7d6b881f7affe0fb0f21b7049b99d">hci_asr_recorder_confirm</a> (_MUST_ _IN_ <a class="el" href="struct_a_s_r___c_o_n_f_i_r_m___i_t_e_m.html">ASR_CONFIRM_ITEM</a> *psAsrConfirmItem)</td></tr>
+<tr class="memdesc:gab5f7d6b881f7affe0fb0f21b7049b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传识别的确认结果  <a href="#gab5f7d6b881f7affe0fb0f21b7049b99d">更多...</a><br/></td></tr>
+<tr class="separator:gab5f7d6b881f7affe0fb0f21b7049b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaceae29d4e8de3e81a4bd7d8bcd4ed384"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaceae29d4e8de3e81a4bd7d8bcd4ed384">hci_asr_recorder_release</a> ()</td></tr>
+<tr class="memdesc:gaceae29d4e8de3e81a4bd7d8bcd4ed384"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASR 录音机反初始化  <a href="#gaceae29d4e8de3e81a4bd7d8bcd4ed384">更多...</a><br/></td></tr>
+<tr class="separator:gaceae29d4e8de3e81a4bd7d8bcd4ed384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="ga4d3f747562dd1cb241a3dcf3c677e414"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_RecorderEventError)(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> eErrorCode, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ASR SDK出错回调 </p>
+<dl class="section note"><dt>注解</dt><dd>发生事件 RECORDER_EVENT_ENGINE_ERROR 或 RECORDER_EVENT_DEVICE_ERROR 时回调 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eRecorderEvent</td><td>回调时的通知事件 </td></tr>
+    <tr><td class="paramname">nErrorCode</td><td>错误码 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13c483fa3baa0191f6527a60270c3355"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_RecorderEventRecogFinish)(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html">ASR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机识别完成回调 </p>
+<dl class="section note"><dt>注解</dt><dd>识别成功后回调 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eRecorderEvent</td><td>识别完成事件 </td></tr>
+    <tr><td class="paramname">pRecogResult</td><td>识别结果 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab24fd52800264ef36c3c0b6171a74d2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_RecorderEventRecogProcess)(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _MUST_ _IN_ <a class="el" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html">ASR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机识别中间结果回调 </p>
+<dl class="section note"><dt>注解</dt><dd>识别中间结果回调 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eRecorderEvent</td><td>识别进行中事件 </td></tr>
+    <tr><td class="paramname">pRecogResult</td><td>识别结果 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaba23103ee4b66ada6a423e7eca709b43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_RecorderEventStateChange)(_MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a> eRecorderEvent, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机事件变化回调 </p>
+<dl class="section note"><dt>注解</dt><dd>RECORDER_EVENT_RECOGNIZE_COMPLETE 事件不会在该回调中触发，它只会在 Callback_RecorderEventRecogFinish 中触发 RECORDER_EVENT_ENGINE_ERROR、RECORDER_EVENT_DEVICE_ERROR 事件不会在该回调中触发，只会在 Callback_RecorderErr 中触发 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eRecorderEvent</td><td>回调时的通知事件 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gada1eaf27ca18ffe6b3f8dbd1e4519379"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_RecorderRecording)(_MUST_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pVoiceData, _MUST_ _IN_ unsigned int uiVoiceLen, _MUST_ _IN_ int nVolume, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音音频数据回调 </p>
+<dl class="section note"><dt>注解</dt><dd></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVoiceData</td><td>音频数据 </td></tr>
+    <tr><td class="paramname">uiVoiceLen</td><td>音频数据长度 </td></tr>
+    <tr><td class="paramname">nVolume</td><td>录音音量大小,取值[0 ~ 100] 0~60表示静音，100声音最大 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="ga57464c909ff257676a8bade4f9b7fccc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机错误码 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fccca87b59d66f4e15cbacc5d2aa888a13be0"></a>RECORDER_ERR_UNKNOWN</em>&nbsp;</td><td class="fielddoc">
+<p>-1: 未知错误，不会出现 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748"></a>RECORDER_ERR_NONE</em>&nbsp;</td><td class="fielddoc">
+<p>0: 成功 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a"></a>RECORDER_ERR_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>1: 没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fcccacb226084b9c22e5a1e0b7859de048f25"></a>RECORDER_ERR_ALREADY_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>2: 已经初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fccca19d6b504bce3f145d33b61d676a8b05f"></a>RECORDER_ERR_ALREADY_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>3: 已经开始录音 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154"></a>RECORDER_ERR_NOT_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>4: 没有开始录音 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984"></a>RECORDER_ERR_OUT_OF_MEMORY</em>&nbsp;</td><td class="fielddoc">
+<p>5: 分配空间失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4"></a>RECORDER_ERR_ENGINE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>6: 调用引擎出错 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaf51835c35948acd66ad207ad92b093fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">RECORDER_EVENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机回调时的通知事件 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feae57ef4df87927646b4c29addae880d86"></a>RECORDER_EVENT_BEGIN_RECORD</em>&nbsp;</td><td class="fielddoc">
+<p>录音开始 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feaa92b6e42ee7e1d77c2422084ee211219"></a>RECORDER_EVENT_HAVING_VOICE</em>&nbsp;</td><td class="fielddoc">
+<p>听到声音 检测到始端的时候会触发该事件 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feab5626a761b7ded87b0c125e13c407524"></a>RECORDER_EVENT_NO_VOICE_INPUT</em>&nbsp;</td><td class="fielddoc">
+<p>没有听到声音 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feac00ebde8f40396d2ab0ee70e43363b96"></a>RECORDER_EVENT_BUFF_FULL</em>&nbsp;</td><td class="fielddoc">
+<p>缓冲区已填满 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feaf866f6c9fd50674b6d72b8d1cf8daa84"></a>RECORDER_EVENT_END_RECORD</em>&nbsp;</td><td class="fielddoc">
+<p>录音完毕（自动或手动结束） </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea63e664e02aecdad831a464939dab564d"></a>RECORDER_EVENT_BEGIN_RECOGNIZE</em>&nbsp;</td><td class="fielddoc">
+<p>开始识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea7652132659db91b53c1885f97f927ec5"></a>RECORDER_EVENT_RECOGNIZE_COMPLETE</em>&nbsp;</td><td class="fielddoc">
+<p>识别完毕 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea6186f80dace392c7c8dd4b05d3a36196"></a>RECORDER_EVENT_ENGINE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>引擎出错 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea30f5325aa542539280d751c163a8a9b2"></a>RECORDER_EVENT_DEVICE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>设备出错 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea8186a28b6072a92322ca8ad5646b44d0"></a>RECORDER_EVENT_MALLOC_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>分配空间失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093feafd73190cad19467d0d741b1ee457f55c"></a>RECORDER_EVENT_INTERRUPTED</em>&nbsp;</td><td class="fielddoc">
+<p>iOS收到其他声音中断会触发此事件，同时停止录音机，开发者必须处理此事件 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fead567bdb8948362c926c2af8e1ead410d"></a>RECORDER_EVENT_PERMISSION_DENIED</em>&nbsp;</td><td class="fielddoc">
+<p>iOS没有麦克风使用权限(ios7以上版本会有此事件，开发者必须处理此事件) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea6704752501f1453a65483f94c1c32648"></a>RECORDER_EVENT_TASK_FINISH</em>&nbsp;</td><td class="fielddoc">
+<p>识别任务结束 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf51835c35948acd66ad207ad92b093fea6592139e6abef2bb69a0165adc652b23"></a>RECORDER_EVENT_RECOGNIZE_PROCESS</em>&nbsp;</td><td class="fielddoc">
+<p>识别中间状态 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga320575a0af12fe7b2d6f6d5e12861843"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">RECORDER_STATE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843a22e15ee10b98239e8f4fca3e2ba12178"></a>RECORDER_STATE_NOT_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843a555fb741ff54fed8c982374950258cc8"></a>RECORDER_STATE_IDLE</em>&nbsp;</td><td class="fielddoc">
+<p>空闲状态，可以开始录音和识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843ad2e89a4737a6999922efadf63b9a9c89"></a>RECORDER_STATE_RECORDING</em>&nbsp;</td><td class="fielddoc">
+<p>正在录音 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843adfe94c404959e2b91f168634c1748668"></a>RECORDER_STATE_RECOGING</em>&nbsp;</td><td class="fielddoc">
+<p>正在识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843a4e42917b6417cd302bdfa7758d8bd657"></a>RECORDER_STATE_CONFIRMING</em>&nbsp;</td><td class="fielddoc">
+<p>正在提交用户确认结果 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843a5eaf796a3a065283d2261c17665c2905"></a>RECORDER_STATE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>错误状态，此时录音机已经无法正常工作 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga320575a0af12fe7b2d6f6d5e12861843a1149cb002b906e027960b0411d422d38"></a>RECORDER_STATE_STARTING</em>&nbsp;</td><td class="fielddoc">
+<p>starting session </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gaa1afb6a27f61eb376be25be538d187f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef bool </td>
+          <td>(</td>
+          <td class="paramtype">HCIAPI *&#160;</td>
+          <td class="paramname"><em>Callback_RecorderSetAudioSession</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置audisession回调 </p>
+<dl class="section note"><dt>注解</dt><dd>只在iOS平台使用 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pExtendParam</td><td>扩展参数，当前无效 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga25e8bba33c3ba2e14d3e2d3adff847f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束录音但不识别 </p>
+<p>此操作表示结束录音但不识别，如果希望结束录音并识别，请调用 <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4a493c183c6f5e64d0da572378acda4c" title="结束录音并启动识别">hci_asr_recorder_stop_and_recog()</a> </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>没有初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154">RECORDER_ERR_NOT_BEGIN</a></td><td>没有开始录音 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab5f7d6b881f7affe0fb0f21b7049b99d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_confirm </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_a_s_r___c_o_n_f_i_r_m___i_t_e_m.html">ASR_CONFIRM_ITEM</a> *&#160;</td>
+          <td class="paramname"><em>psAsrConfirmItem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传识别的确认结果 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>没有初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984">RECORDER_ERR_OUT_OF_MEMORY</a></td><td>内存分配失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>iOS 平台不支持此接口，调用后不进行任何操作并返回 RECORDER_ERR_NONE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf390f7932216ac3623e84037e4482c64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">RECORDER_STATE</a> HCIAPI hci_asr_recorder_get_state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得录音机的当前状态 </p>
+<dl class="section return"><dt>返回</dt><dd>返回录音机当前状态 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga668498cf597780b16fce195d2a133dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszAsrSdkConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html">RECORDER_CALLBACK_PARAM</a> *&#160;</td>
+          <td class="paramname"><em>psCallbackParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机SDK初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszAsrSdkConfig</td><td>录音机初台化配置串 参见 hci_asr_init </td></tr>
+    <tr><td class="paramname">psCallbackParam</td><td>回调函数的集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4">RECORDER_ERR_ENGINE_ERROR</a></td><td>ASR SDK 初始化失败，失败的原因会通过 Callback_RecorderErr 回调返回 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccacb226084b9c22e5a1e0b7859de048f25">RECORDER_ERR_ALREADY_INIT</a></td><td>已经初始化 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga58de5a2c593820d0cd8293d76c886230"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_load_grammar </td>
+          <td>(</td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszAsrSdkConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszGrammarData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ unsigned int *&#160;</td>
+          <td class="paramname"><em>pnGrammarId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机SDK加载语法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszAsrSdkConfig</td><td>录音机初台化配置串 参见 hci_asr_load_grammar </td></tr>
+    <tr><td class="paramname">pszGrammarData</td><td>语法数据或者语法文件路径 </td></tr>
+    <tr><td class="paramname">pnGrammarId</td><td>语法id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4">RECORDER_ERR_ENGINE_ERROR</a></td><td>ASR SDK 初始化失败，失败的原因会通过 Callback_RecorderErr 回调返回 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>录音机没有初始化 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaceae29d4e8de3e81a4bd7d8bcd4ed384"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ASR 录音机反初始化 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>没有初始化 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf8c7fcc9ab85a9cf5e28d413d2667027"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> hci_asr_recorder_set_audio_session_callback </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ Callback_RecorderSetAudioSession&#160;</td>
+          <td class="paramname"><em>pfnCallBack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *&#160;</td>
+          <td class="paramname"><em>pUsrParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置audiosession回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pfnCallBack</td><td>audiosession回调 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>recorder尚未初始化 </td></tr>
+</table>
+<br/>
+ </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>此接口只在iOS平台使用 recorder默认不处理中断。如果你的应用需要响应中断进行相应的处理， 可以调用此函数，设置Callback_RecorderSetAudioSession回调，在回调中进行audiosession的设置。如何设置audiosession，请参 考苹果AudioToolBox的官方文档。下面是一个设置audiosession的示例 <div class="fragment"><div class="line"><span class="keywordtype">void</span> playerSetAudioSessionCallback(<span class="keywordtype">void</span> * pExtendParam,<span class="keywordtype">void</span> * pUsrParam)</div>
+<div class="line">     {</div>
+<div class="line">             <span class="comment">//初始化audiosession</span></div>
+<div class="line">             AudioSessionInitialize(NULL, NULL, MyAudioSessionInterruptionListener, pUsrParam);</div>
+<div class="line">             <span class="comment">//设置kAudioSessionProperty_AudioCategory</span></div>
+<div class="line">             UInt32 sessionCategory = kAudioSessionCategory_PlayAndRecord;</div>
+<div class="line">             AudioSessionSetProperty ( kAudioSessionProperty_AudioCategory, <span class="keyword">sizeof</span> (sessionCategory), &amp;sessionCategory);</div>
+<div class="line">     }</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaeee1ea4aa9ccc47fb025b7ee3526c01f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_start </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszGrammarData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机SDK启动 </p>
+<p>配置中包含端点检测配制项 </p>
+<dl class="section note"><dt>注解</dt><dd>录音机仅提供对 pcm8k16bit pcm16k16bit 格式的支持 如果不是录音机支持的格式，会在 Callback_RecorderEventStateChange 中触发打开设备失败的事件</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>配置串 可通过deviceId指定录音设备，其余参数参见 hci_asr_session_start </td></tr>
+    <tr><td class="paramname">pszGrammarData</td><td>语法文件(只有当配置串grammarType为wordlist、jsgf或wfst时有效） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>没有初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca19d6b504bce3f145d33b61d676a8b05f">RECORDER_ERR_ALREADY_BEGIN</a></td><td>已经开录音 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984">RECORDER_ERR_OUT_OF_MEMORY</a></td><td>分配空间失败 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4a493c183c6f5e64d0da572378acda4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_stop_and_recog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束录音并启动识别 </p>
+<p>此操作表示结束录音同时启动识别过程，如果希望结束录音时不去识别，请调用 <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga25e8bba33c3ba2e14d3e2d3adff847f9" title="结束录音但不识别">hci_asr_recorder_cancel()</a> </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>没有初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154">RECORDER_ERR_NOT_BEGIN</a></td><td>没有开始录音 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7aa0ba58972893892e6a4a8f51b82801"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">RECORDER_ERR_CODE</a> HCIAPI hci_asr_recorder_unload_grammar </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ unsigned int&#160;</td>
+          <td class="paramname"><em>nGrammarId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>录音机SDK卸载语法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nGrammarId</td><td>语法id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">RECORDER_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4">RECORDER_ERR_ENGINE_ERROR</a></td><td>ASR SDK 初始化失败，失败的原因会通过 Callback_RecorderErr 回调返回 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">RECORDER_ERR_NOT_INIT</a></td><td>录音机没有初始化 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

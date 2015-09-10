@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): E:/svn/HCICloud/develop/branches/sdk_3.9.6/sdk/src/c/include/hci_asr_recorder.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci__asr__recorder_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hci_asr_recorder.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __HCI_ASR_RECORDER_HEADER__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __HCI_ASR_RECORDER_HEADER__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;hci_sys.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;hci_asr.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/* @{ */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// 常量定义</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe">   26</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feae57ef4df87927646b4c29addae880d86">   28</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feae57ef4df87927646b4c29addae880d86" title="录音开始">RECORDER_EVENT_BEGIN_RECORD</a>,            </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaa92b6e42ee7e1d77c2422084ee211219">   29</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaa92b6e42ee7e1d77c2422084ee211219" title="听到声音 检测到始端的时候会触发该事件">RECORDER_EVENT_HAVING_VOICE</a>,            </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feab5626a761b7ded87b0c125e13c407524">   30</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feab5626a761b7ded87b0c125e13c407524" title="没有听到声音">RECORDER_EVENT_NO_VOICE_INPUT</a>,          </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feac00ebde8f40396d2ab0ee70e43363b96">   31</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feac00ebde8f40396d2ab0ee70e43363b96" title="缓冲区已填满">RECORDER_EVENT_BUFF_FULL</a>,                       </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaf866f6c9fd50674b6d72b8d1cf8daa84">   32</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feaf866f6c9fd50674b6d72b8d1cf8daa84" title="录音完毕（自动或手动结束）">RECORDER_EVENT_END_RECORD</a>,                      </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea63e664e02aecdad831a464939dab564d">   33</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea63e664e02aecdad831a464939dab564d" title="开始识别">RECORDER_EVENT_BEGIN_RECOGNIZE</a>,         </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea7652132659db91b53c1885f97f927ec5">   34</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea7652132659db91b53c1885f97f927ec5" title="识别完毕">RECORDER_EVENT_RECOGNIZE_COMPLETE</a>,      </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6186f80dace392c7c8dd4b05d3a36196">   35</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6186f80dace392c7c8dd4b05d3a36196" title="引擎出错">RECORDER_EVENT_ENGINE_ERROR</a>,            </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea30f5325aa542539280d751c163a8a9b2">   36</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea30f5325aa542539280d751c163a8a9b2" title="设备出错">RECORDER_EVENT_DEVICE_ERROR</a>,            </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea8186a28b6072a92322ca8ad5646b44d0">   37</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea8186a28b6072a92322ca8ad5646b44d0" title="分配空间失败">RECORDER_EVENT_MALLOC_ERROR</a>,            </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feafd73190cad19467d0d741b1ee457f55c">   38</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093feafd73190cad19467d0d741b1ee457f55c" title="iOS收到其他声音中断会触发此事件，同时停止录音机，开发者必须处理此事件">RECORDER_EVENT_INTERRUPTED</a>,         </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fead567bdb8948362c926c2af8e1ead410d">   39</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fead567bdb8948362c926c2af8e1ead410d" title="iOS没有麦克风使用权限(ios7以上版本会有此事件，开发者必须处理此事件)">RECORDER_EVENT_PERMISSION_DENIED</a>,   </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6704752501f1453a65483f94c1c32648">   40</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6704752501f1453a65483f94c1c32648" title="识别任务结束">RECORDER_EVENT_TASK_FINISH</a>,                     </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6592139e6abef2bb69a0165adc652b23">   41</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ggaf51835c35948acd66ad207ad92b093fea6592139e6abef2bb69a0165adc652b23" title="识别中间状态">RECORDER_EVENT_RECOGNIZE_PROCESS</a>,       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe" title="录音机回调时的通知事件">RECORDER_EVENT</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843">   48</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a22e15ee10b98239e8f4fca3e2ba12178">   50</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a22e15ee10b98239e8f4fca3e2ba12178" title="没有初始化">RECORDER_STATE_NOT_INIT</a>,                        </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a555fb741ff54fed8c982374950258cc8">   51</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a555fb741ff54fed8c982374950258cc8" title="空闲状态，可以开始录音和识别">RECORDER_STATE_IDLE</a>,                            </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843ad2e89a4737a6999922efadf63b9a9c89">   52</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843ad2e89a4737a6999922efadf63b9a9c89" title="正在录音">RECORDER_STATE_RECORDING</a>,                       </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843adfe94c404959e2b91f168634c1748668">   53</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843adfe94c404959e2b91f168634c1748668" title="正在识别">RECORDER_STATE_RECOGING</a>,                        </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a4e42917b6417cd302bdfa7758d8bd657">   54</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a4e42917b6417cd302bdfa7758d8bd657" title="正在提交用户确认结果">RECORDER_STATE_CONFIRMING</a>,                      </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a5eaf796a3a065283d2261c17665c2905">   55</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a5eaf796a3a065283d2261c17665c2905" title="错误状态，此时录音机已经无法正常工作">RECORDER_STATE_ERROR</a>,                           </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a1149cb002b906e027960b0411d422d38">   56</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga320575a0af12fe7b2d6f6d5e12861843a1149cb002b906e027960b0411d422d38" title="starting session">RECORDER_STATE_STARTING</a>             </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843" title="录音机状态">RECORDER_STATE</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc">   63</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca87b59d66f4e15cbacc5d2aa888a13be0">   65</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca87b59d66f4e15cbacc5d2aa888a13be0" title="-1: 未知错误，不会出现">RECORDER_ERR_UNKNOWN</a> = -1,                                      </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748">   67</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca89e17782a407521b15bf4bccb1d0b748" title="0: 成功">RECORDER_ERR_NONE</a> = 0,                                          </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a">   69</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccac40621a15d012336ed2e10983e3e008a" title="1: 没有初始化">RECORDER_ERR_NOT_INIT</a>,                                          </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccacb226084b9c22e5a1e0b7859de048f25">   70</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccacb226084b9c22e5a1e0b7859de048f25" title="2: 已经初始化">RECORDER_ERR_ALREADY_INIT</a>,                                      </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca19d6b504bce3f145d33b61d676a8b05f">   71</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca19d6b504bce3f145d33b61d676a8b05f" title="3: 已经开始录音">RECORDER_ERR_ALREADY_BEGIN</a>,                                     </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154">   72</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fcccafe32a84de3f54722c4dd7724ec22e154" title="4: 没有开始录音">RECORDER_ERR_NOT_BEGIN</a>,                                         </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984">   73</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca8634c6ab34698734ea5bd8879cf63984" title="5: 分配空间失败">RECORDER_ERR_OUT_OF_MEMORY</a>,                                     </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4">   74</a></span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gga57464c909ff257676a8bade4f9b7fccca18b5b20eaa82124b3e8b5c158a9d78f4" title="6: 调用引擎出错">RECORDER_ERR_ENGINE_ERROR</a>                                       </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// 回调函数定义</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaba23103ee4b66ada6a423e7eca709b43">   88</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaba23103ee4b66ada6a423e7eca709b43" title="录音机事件变化回调">Callback_RecorderEventStateChange</a>)(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                              _MUST_ _IN_ <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe" title="录音机回调时的通知事件">RECORDER_EVENT</a> eRecorderEvent,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                              _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gada1eaf27ca18ffe6b3f8dbd1e4519379">  100</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gada1eaf27ca18ffe6b3f8dbd1e4519379" title="录音音频数据回调">Callback_RecorderRecording</a>)(</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                       _MUST_ _IN_ <span class="keywordtype">void</span> * pVoiceData,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                       _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uiVoiceLen,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                                       _MUST_ _IN_ <span class="keywordtype">int</span> nVolume,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                       _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                                       );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga13c483fa3baa0191f6527a60270c3355">  115</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga13c483fa3baa0191f6527a60270c3355" title="录音机识别完成回调">Callback_RecorderEventRecogFinish</a>)(</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                                              _MUST_ _IN_ <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe" title="录音机回调时的通知事件">RECORDER_EVENT</a> eRecorderEvent,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                              _MUST_ _IN_ <a class="code" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html" title="ASR识别函数的返回结果">ASR_RECOG_RESULT</a> *pRecogResult,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                              _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab24fd52800264ef36c3c0b6171a74d2d">  129</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab24fd52800264ef36c3c0b6171a74d2d" title="录音机识别中间结果回调">Callback_RecorderEventRecogProcess</a>)(</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                               _MUST_ _IN_ <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe" title="录音机回调时的通知事件">RECORDER_EVENT</a> eRecorderEvent,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                                               _MUST_ _IN_ <a class="code" href="struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html" title="ASR识别函数的返回结果">ASR_RECOG_RESULT</a> *pRecogResult,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                                               _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4d3f747562dd1cb241a3dcf3c677e414">  143</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4d3f747562dd1cb241a3dcf3c677e414" title="ASR SDK出错回调">Callback_RecorderEventError</a>)(</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf51835c35948acd66ad207ad92b093fe" title="录音机回调时的通知事件">RECORDER_EVENT</a> eRecorderEvent,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> eErrorCode,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                                        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaa1afb6a27f61eb376be25be538d187f1" title="设置audisession回调">bool</a> (HCIAPI * Callback_RecorderSetAudioSession)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    (_MUST_ _IN_ <span class="keywordtype">void</span> * pExtendParam,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;     _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html">  162</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span>_RECORDER_CALLBACK_PARAM {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaba23103ee4b66ada6a423e7eca709b43" title="录音机事件变化回调">Callback_RecorderEventStateChange</a> pfnStateChange;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">void</span> * pvStateChangeUsrParam;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gada1eaf27ca18ffe6b3f8dbd1e4519379" title="录音音频数据回调">Callback_RecorderRecording</a> pfnRecording;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">void</span> * pvRecordingUsrParam;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga13c483fa3baa0191f6527a60270c3355" title="录音机识别完成回调">Callback_RecorderEventRecogFinish</a> pfnRecogFinish;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordtype">void</span> * pvRecogFinishUsrParam;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4d3f747562dd1cb241a3dcf3c677e414" title="ASR SDK出错回调">Callback_RecorderEventError</a> pfnError;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">void</span> *pvErrorUsrParam;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab24fd52800264ef36c3c0b6171a74d2d" title="录音机识别中间结果回调">Callback_RecorderEventRecogProcess</a> pfnRecogProcess;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">void</span> *pvRecogProcessParam;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    } <a class="code" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="录音机回调函数的结构体">RECORDER_CALLBACK_PARAM</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// 接口API函数定义</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga668498cf597780b16fce195d2a133dec" title="录音机SDK初始化">hci_asr_recorder_init</a>(</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                                   _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszAsrSdkConfig,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                                   _MUST_ _IN_ <a class="code" href="struct_r_e_c_o_r_d_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="录音机回调函数的结构体">RECORDER_CALLBACK_PARAM</a> *psCallbackParam);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf8c7fcc9ab85a9cf5e28d413d2667027" title="设置audiosession回调">hci_asr_recorder_set_audio_session_callback</a>(</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                                                  _MUST_ _IN_ Callback_RecorderSetAudioSession pfnCallBack ,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                                  _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga58de5a2c593820d0cd8293d76c886230" title="录音机SDK加载语法">hci_asr_recorder_load_grammar</a>(</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                                           _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszAsrSdkConfig,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                                                           _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszGrammarData,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                                                           _MUST_ _OUT_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * pnGrammarId</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                                           );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga7aa0ba58972893892e6a4a8f51b82801" title="录音机SDK卸载语法">hci_asr_recorder_unload_grammar</a>(</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                                             _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nGrammarId</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                                             );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga320575a0af12fe7b2d6f6d5e12861843" title="录音机状态">RECORDER_STATE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaf390f7932216ac3623e84037e4482c64" title="获得录音机的当前状态">hci_asr_recorder_get_state</a>();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaeee1ea4aa9ccc47fb025b7ee3526c01f" title="录音机SDK启动">hci_asr_recorder_start</a>(</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                                                    _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                                                    _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszGrammarData);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga25e8bba33c3ba2e14d3e2d3adff847f9" title="结束录音但不识别">hci_asr_recorder_cancel</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga4a493c183c6f5e64d0da572378acda4c" title="结束录音并启动识别">hci_asr_recorder_stop_and_recog</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gab5f7d6b881f7affe0fb0f21b7049b99d" title="上传识别的确认结果">hci_asr_recorder_confirm</a>(</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                                      _MUST_ _IN_ <a class="code" href="struct_a_s_r___c_o_n_f_i_r_m___i_t_e_m.html" title="上传的ASR确认结果信息">ASR_CONFIRM_ITEM</a> * psAsrConfirmItem);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#ga57464c909ff257676a8bade4f9b7fccc" title="录音机错误码">RECORDER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaceae29d4e8de3e81a4bd7d8bcd4ed384" title="ASR 录音机反初始化">hci_asr_recorder_release</a>();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">/* @} */</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">#endif // _hci_cloud_asr_recorder_api_header_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3b19ecf29356981f494745fbef7e56bf.html">c</a></li><li class="navelem"><a class="el" href="dir_87681be5ca089ff245d0d9f911af7faf.html">include</a></li><li class="navelem"><b>hci_asr_recorder.h</b></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

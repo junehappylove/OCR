@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['player_5ferr_5falready_5fbegin',['PLAYER_ERR_ALREADY_BEGIN',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf109a8fbd5f4593d28c9ffa7d77cfff6',1,'hci_tts_player.h']]],
+  ['player_5ferr_5falready_5finit',['PLAYER_ERR_ALREADY_INIT',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eab7437cf68df550d993a8eee4a81c008f',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fengine_5ferror',['PLAYER_ERR_ENGINE_ERROR',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eae6cfd1b143c5606a0ee2dd7634164d4d',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fnone',['PLAYER_ERR_NONE',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fnot_5fbegin',['PLAYER_ERR_NOT_BEGIN',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0d57671977466a3ab7febeee112aa811',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fnot_5finit',['PLAYER_ERR_NOT_INIT',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea6e08769a40bc166657a380e9537297f9',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fopen_5fdevice',['PLAYER_ERR_OPEN_DEVICE',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea18b711e8ea173cd0f6c40886bdbb76d8',1,'hci_tts_player.h']]],
+  ['player_5ferr_5fout_5fof_5fmemory',['PLAYER_ERR_OUT_OF_MEMORY',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0f9cea22af4d9715b2524c895c1b1c23',1,'hci_tts_player.h']]],
+  ['player_5ferr_5funknown',['PLAYER_ERR_UNKNOWN',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf42f025717331c89d6ef57f9b8fcd9cb',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fbegin',['PLAYER_EVENT_BEGIN',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a4c0e045574c05bc9510010c042efd637',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fbuffering',['PLAYER_EVENT_BUFFERING',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0a6839a69f761d6d6a8d81ded5713adb',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fbuffering_5fend',['PLAYER_EVENT_BUFFERING_END',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391aaf55abe6166a748c9335d15e811317a2',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fdevice_5ferror',['PLAYER_EVENT_DEVICE_ERROR',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a78c40eee13d4f621f840998848d7f411',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fend',['PLAYER_EVENT_END',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391af3d8520086ab5db7f56f8f8a7b812417',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fengine_5ferror',['PLAYER_EVENT_ENGINE_ERROR',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0f4e3954294bc7b6f06214ecbdc94aa5',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fmalloc_5ferror',['PLAYER_EVENT_MALLOC_ERROR',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391ab2df0e523e8594f87998a59d18f7a0d0',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fpause',['PLAYER_EVENT_PAUSE',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a56d0eb2f491beff010e9b13331a4d181',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fprogress',['PLAYER_EVENT_PROGRESS',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a68f31d1af1c2812e2b10f4f739d44d73',1,'hci_tts_player.h']]],
+  ['player_5fevent_5fresume',['PLAYER_EVENT_RESUME',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a6ac170347869bfe5947a26ce68288e47',1,'hci_tts_player.h']]],
+  ['player_5fstate_5ferror',['PLAYER_STATE_ERROR',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a742953138d3ba74f4d1866a8ae70749a',1,'hci_tts_player.h']]],
+  ['player_5fstate_5fidle',['PLAYER_STATE_IDLE',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa4bec034ec362c9c61de07fc35a2b65a',1,'hci_tts_player.h']]],
+  ['player_5fstate_5fnot_5finit',['PLAYER_STATE_NOT_INIT',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa585aaac672daeed076673ef65330c65',1,'hci_tts_player.h']]],
+  ['player_5fstate_5fpause',['PLAYER_STATE_PAUSE',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a5299c9e558466dbaf3af8d1117c80f81',1,'hci_tts_player.h']]],
+  ['player_5fstate_5fplaying',['PLAYER_STATE_PLAYING',['../group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a0d5fd6f0cce5c928750fcbd44156891d',1,'hci_tts_player.h']]]
+];

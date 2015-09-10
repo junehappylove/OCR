@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/btn_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:text="@string/btn_take_picture" />
+    
+   <FrameLayout
+       		android:id="@+id/layout_camera_preview"
+       		android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_toLeftOf="@id/btn_take_picture">
+    </FrameLayout>    
+	
+</RelativeLayout>

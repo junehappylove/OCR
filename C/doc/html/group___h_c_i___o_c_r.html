@@ -1,0 +1,1405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云OCR能力API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i___o_c_r.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云OCR能力API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像结构体.  <a href="struct_o_c_r___i_m_a_g_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html">OCR_RECOG_POINT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">点结构  <a href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html">OCR_CORNERS_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">切边矫正校点结构  <a href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html">OCR_RECOG_RECT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形结构  <a href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html">OCR_RECOG_LINESEGMENT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">表格线子线段的定义  <a href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html">OCR_RECOG_FRAMELINE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">表格线的定义  <a href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html">OCR_RECOG_TABLECELL</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">表格单元定义  <a href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html">OCR_RECOG_TABLE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">表格的定义  <a href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html">OCR_RECOG_REGION</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">识别区域的定义  <a href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">OCR_LAYOUT_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">版面分析函数的返回结果  <a href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">OCR_DESKEW_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">倾斜校正函数的返回结果  <a href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html">OCR_RECOG_PAGENODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">页面节点定义  <a href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html">OCR_RECOG_REGIONNODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">区域节点定义  <a href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html">OCR_RECOG_CELLNODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">表格单元节点定义  <a href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html">OCR_RECOG_LINENODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本行节点定义  <a href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html">OCR_RECOG_CHARNODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符节点定义  <a href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html">OCR_RECOG_NODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR识别结果的详细节点信息  <a href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR识别的返回结果  <a href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga96a3090e1538685c486988fddec5a2eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga96a3090e1538685c486988fddec5a2eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga96a3090e1538685c486988fddec5a2eb">OCR_CAP_PROP_LANG</a>&#160;&#160;&#160;&quot;lang&quot;</td></tr>
+<tr class="memdesc:ga96a3090e1538685c486988fddec5a2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR能力的属性名称：语言 <br/></td></tr>
+<tr class="separator:ga96a3090e1538685c486988fddec5a2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b70c0d2f8d9f27b47553869984819d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3b70c0d2f8d9f27b47553869984819d9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga3b70c0d2f8d9f27b47553869984819d9">OCR_CAP_PROP_DOMAIN</a>&#160;&#160;&#160;&quot;domain&quot;</td></tr>
+<tr class="memdesc:ga3b70c0d2f8d9f27b47553869984819d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR能力的属性名称：领域 <br/></td></tr>
+<tr class="separator:ga3b70c0d2f8d9f27b47553869984819d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70fa5d4c628e7ddba7e09a5631e48acc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga70fa5d4c628e7ddba7e09a5631e48acc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga70fa5d4c628e7ddba7e09a5631e48acc">CANDIDATE_NUM</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:ga70fa5d4c628e7ddba7e09a5631e48acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符节点中的候选字最大项目 <br/></td></tr>
+<tr class="separator:ga70fa5d4c628e7ddba7e09a5631e48acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga4b24478e81899be40504215410db0e37"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37">OCR_RECOG_RGNTYPE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ad66f6668dd2d24fece421dbbfde9b372">OCR_RECOG_RGNTYPE_HORZTEXT</a> = 0, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37a6008b6f4171432e407d66aea66e2b8b7">OCR_RECOG_RGNTYPE_VERTTEXT</a> = 1, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37acc5d3b23f990554e9ccc6e5a0f5a9529">OCR_RECOG_RGNTYPE_TABLE</a> = 2, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae9fad7aa9f2422439baddde008d68dbd">OCR_RECOG_RGNTYPE_GRAPH</a> = 3, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae433413778cfd372f314e6889edfe24a">OCR_RECOG_RGNTYPE_AUTOTEXT</a> = 4
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga4b24478e81899be40504215410db0e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">区域类型  <a href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37">更多...</a><br/></td></tr>
+<tr class="separator:ga4b24478e81899be40504215410db0e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac92130ff34d5224e8068d3cf520c692e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e">OCR_RECOG_LANG</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eae7ce64f81ee0c141ced980b409d97e0a">OCR_RECOG_LANG_DEFAULT</a> = 0, 
+<a class="el" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eaca60b2175ad7a756b2cf17c4e3c66e66">OCR_RECOG_LANG_ZH_CN</a> = 1, 
+<a class="el" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eabf1d4956d3784f5c1841033f4600f346">OCR_RECOG_LANG_ZH_HK</a> = 2, 
+<a class="el" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea919ca3830f69884f44624135e0d38cd4">OCR_RECOG_LANG_ZH_TW</a> = 3, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea1bb713281eb76a736957488f7d916f4b">OCR_RECOG_LANG_EN</a> = 4
+<br/>
+ }</td></tr>
+<tr class="memdesc:gac92130ff34d5224e8068d3cf520c692e"><td class="mdescLeft">&#160;</td><td class="mdescRight">区域识别的语言控制，此项仅在选择了中文引擎的时候有效  <a href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e">更多...</a><br/></td></tr>
+<tr class="separator:gac92130ff34d5224e8068d3cf520c692e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga687fa97e29080d00939afbf3ca4406bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd">OCR_TABLE_LINE_TYPE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda54c0bc9016501d66c63ef4246c84e655">LINE_TYPE_UNKNOWN</a> = 0, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda95e3ca69b756b0c82c2cac793c521505">LINE_TYPE_REAL</a>, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdab0dce87ed4a1d2709564d9f780b7fd3a">LINE_TYPE_DASHED</a>, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda58860718404053136f7675448f25bb21">LINE_TYPE_DOTTED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda7505768faaf0fb49dbf0944a0b9dcd36">LINE_TYPE_VIRTUAL</a>, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdaf2d03c82579aa32f35e0572f3dac00ba">LINE_TYPE_EMPTY</a> = 0x100
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga687fa97e29080d00939afbf3ca4406bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">线段类型  <a href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd">更多...</a><br/></td></tr>
+<tr class="separator:ga687fa97e29080d00939afbf3ca4406bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37e7cb22f91169c9938a30542abc8f95"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95">OCR_RECOG_NODE_TYPE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95acacf78bcf0a6d9e0dc6d6535d85de5af">OCR_RECOG_NODE_PAGE</a> = 0, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a60428e9c666831c276f5e932dd6019cc">OCR_RECOG_NODE_REGION</a>, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a9f22d0173498b21eda0447b54fb73b5f">OCR_RECOG_NODE_CELL</a>, 
+<a class="el" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a0a76711ee6c85a5283bcad6ec85e9f03">OCR_RECOG_NODE_LINE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a39a79e222bb33251d6dd6ac26ac955ca">OCR_RECOG_NODE_CHAR</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga37e7cb22f91169c9938a30542abc8f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">识别结果节点类型  <a href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95">更多...</a><br/></td></tr>
+<tr class="separator:ga37e7cb22f91169c9938a30542abc8f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga46d3ca0e0d3a5e1f21b7c2fb6470e06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga46d3ca0e0d3a5e1f21b7c2fb6470e06d">hci_ocr_init</a> (_MUST_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:ga46d3ca0e0d3a5e1f21b7c2fb6470e06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云OCR能力 初始化  <a href="#ga46d3ca0e0d3a5e1f21b7c2fb6470e06d">更多...</a><br/></td></tr>
+<tr class="separator:ga46d3ca0e0d3a5e1f21b7c2fb6470e06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58be1f5f565711d6be7f9002f8d5a51d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga58be1f5f565711d6be7f9002f8d5a51d">hci_ocr_session_start</a> (_MUST_ _IN_ const char *pszConfig, _MUST_ _OUT_ int *pnSessionId)</td></tr>
+<tr class="memdesc:ga58be1f5f565711d6be7f9002f8d5a51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始会话  <a href="#ga58be1f5f565711d6be7f9002f8d5a51d">更多...</a><br/></td></tr>
+<tr class="separator:ga58be1f5f565711d6be7f9002f8d5a51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeec12309091da3bdb9f574a8470481ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gaeec12309091da3bdb9f574a8470481ec">hci_ocr_deskew</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig, _MUST_ _OUT_ <a class="el" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">OCR_DESKEW_RESULT</a> *psOcrDeskewResult)</td></tr>
+<tr class="memdesc:gaeec12309091da3bdb9f574a8470481ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">倾斜校正  <a href="#gaeec12309091da3bdb9f574a8470481ec">更多...</a><br/></td></tr>
+<tr class="separator:gaeec12309091da3bdb9f574a8470481ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga106cdd52ed73d8719553c0ffe419e879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga106cdd52ed73d8719553c0ffe419e879">hci_ocr_denoise</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:ga106cdd52ed73d8719553c0ffe419e879"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片美化降噪（暂不支持）  <a href="#ga106cdd52ed73d8719553c0ffe419e879">更多...</a><br/></td></tr>
+<tr class="separator:ga106cdd52ed73d8719553c0ffe419e879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf5a4ca5527c35d4a80265c310ddb180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gabf5a4ca5527c35d4a80265c310ddb180">hci_ocr_free_deskew_result</a> (_MUST_ _IN_ <a class="el" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">OCR_DESKEW_RESULT</a> *psOcrDeskewResult)</td></tr>
+<tr class="memdesc:gabf5a4ca5527c35d4a80265c310ddb180"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放倾斜校正结果内存  <a href="#gabf5a4ca5527c35d4a80265c310ddb180">更多...</a><br/></td></tr>
+<tr class="separator:gabf5a4ca5527c35d4a80265c310ddb180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8d40fa264ba8020818fbc979b766bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gae8d40fa264ba8020818fbc979b766bd9">hci_ocr_layout_analysis</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig, _MUST_ _OUT_ <a class="el" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">OCR_LAYOUT_RESULT</a> *psOcrLayoutResult)</td></tr>
+<tr class="memdesc:gae8d40fa264ba8020818fbc979b766bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">进行版面分析  <a href="#gae8d40fa264ba8020818fbc979b766bd9">更多...</a><br/></td></tr>
+<tr class="separator:gae8d40fa264ba8020818fbc979b766bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae51cf85420e516f4fe89a723708b7235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gae51cf85420e516f4fe89a723708b7235">hci_ocr_free_layout_result</a> (_MUST_ _IN_ <a class="el" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">OCR_LAYOUT_RESULT</a> *psOcrLayoutResult)</td></tr>
+<tr class="memdesc:gae51cf85420e516f4fe89a723708b7235"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放版面分析结果的内存  <a href="#gae51cf85420e516f4fe89a723708b7235">更多...</a><br/></td></tr>
+<tr class="separator:gae51cf85420e516f4fe89a723708b7235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb65abac2be4d772405867a259366d90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gaeb65abac2be4d772405867a259366d90">hci_ocr_recog</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig, _OPT_ _IN_ const <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html">OCR_RECOG_REGION</a> *pRegions, _OPT_ _IN_ unsigned int nRegionCount, _MUST_ _OUT_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *psOcrRecogResult)</td></tr>
+<tr class="memdesc:gaeb65abac2be4d772405867a259366d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">进行OCR识别  <a href="#gaeb65abac2be4d772405867a259366d90">更多...</a><br/></td></tr>
+<tr class="separator:gaeb65abac2be4d772405867a259366d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacace06d706102e43924f629420ea2a2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gacace06d706102e43924f629420ea2a2a">hci_ocr_free_recog_result</a> (_MUST_ _IN_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *psOcrRecogResult)</td></tr>
+<tr class="memdesc:gacace06d706102e43924f629420ea2a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放识别结果内存  <a href="#gacace06d706102e43924f629420ea2a2a">更多...</a><br/></td></tr>
+<tr class="separator:gacace06d706102e43924f629420ea2a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32654a69121f225ce271d8660d4f4683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga32654a69121f225ce271d8660d4f4683">hci_ocr_session_stop</a> (_MUST_ _IN_ int nSessionId)</td></tr>
+<tr class="memdesc:ga32654a69121f225ce271d8660d4f4683"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束会话  <a href="#ga32654a69121f225ce271d8660d4f4683">更多...</a><br/></td></tr>
+<tr class="separator:ga32654a69121f225ce271d8660d4f4683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac75629c266eec54dbd59016b5ef78fa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gac75629c266eec54dbd59016b5ef78fa8">hci_ocr_release</a> ()</td></tr>
+<tr class="memdesc:gac75629c266eec54dbd59016b5ef78fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云OCR能力 反初始化  <a href="#gac75629c266eec54dbd59016b5ef78fa8">更多...</a><br/></td></tr>
+<tr class="separator:gac75629c266eec54dbd59016b5ef78fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga122f33ed5fb249cd08e30cec4169532d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga122f33ed5fb249cd08e30cec4169532d">hci_ocr_set_image_buffer</a> (_MUST_ _IN_ int nSessionId, _MUST_ _IN_ unsigned char *pImageData, _MUST_ _IN_ unsigned int uiImageDataSize)</td></tr>
+<tr class="memdesc:ga122f33ed5fb249cd08e30cec4169532d"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过内存缓冲设置本会话处理的图像  <a href="#ga122f33ed5fb249cd08e30cec4169532d">更多...</a><br/></td></tr>
+<tr class="separator:ga122f33ed5fb249cd08e30cec4169532d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad09d9a05aff0569d679fd63db100b049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gad09d9a05aff0569d679fd63db100b049">hci_ocr_set_image_file</a> (_MUST_ _IN_ int nSessionId, _MUST_ _IN_ const char *pszImageFileName)</td></tr>
+<tr class="memdesc:gad09d9a05aff0569d679fd63db100b049"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过文件设置本回话处理的图像  <a href="#gad09d9a05aff0569d679fd63db100b049">更多...</a><br/></td></tr>
+<tr class="separator:gad09d9a05aff0569d679fd63db100b049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacda38ba55c696080faeccc300cf7be0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gacda38ba55c696080faeccc300cf7be0f">hci_ocr_get_image</a> (_MUST_ _IN_ int nSessionID, _MUST_ _OUT_ <a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a> *pImage)</td></tr>
+<tr class="memdesc:gacda38ba55c696080faeccc300cf7be0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取会话中的图像数据结构，用户可以用来显示  <a href="#gacda38ba55c696080faeccc300cf7be0f">更多...</a><br/></td></tr>
+<tr class="separator:gacda38ba55c696080faeccc300cf7be0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2460933fc0c7173bc006ef60b384001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#gaa2460933fc0c7173bc006ef60b384001">hci_ocr_save_image_file</a> (_MUST_ _IN_ const char *pszImageFileName, _MUST_ _IN_ <a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a> *pImage)</td></tr>
+<tr class="memdesc:gaa2460933fc0c7173bc006ef60b384001"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存一个本地文件，文件格式由文件名后缀确定(目前支持bmp、jpg、png、tif)  <a href="#gaa2460933fc0c7173bc006ef60b384001">更多...</a><br/></td></tr>
+<tr class="separator:gaa2460933fc0c7173bc006ef60b384001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga052dd13f8325e9dd2d8d85eee673a59f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga052dd13f8325e9dd2d8d85eee673a59f">hci_ocr_load_template</a> (const char *pszTemplateFile, int *pnTemplateID)</td></tr>
+<tr class="memdesc:ga052dd13f8325e9dd2d8d85eee673a59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">载入一个模板文件，通过参数列表返回其ID  <a href="#ga052dd13f8325e9dd2d8d85eee673a59f">更多...</a><br/></td></tr>
+<tr class="separator:ga052dd13f8325e9dd2d8d85eee673a59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33ffd04b5eb95d22079916887ceac2c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___o_c_r.html#ga33ffd04b5eb95d22079916887ceac2c6">hci_ocr_unload_template</a> (int nTemplateID)</td></tr>
+<tr class="memdesc:ga33ffd04b5eb95d22079916887ceac2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载一个已经载入的模板文件  <a href="#ga33ffd04b5eb95d22079916887ceac2c6">更多...</a><br/></td></tr>
+<tr class="separator:ga33ffd04b5eb95d22079916887ceac2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="gac92130ff34d5224e8068d3cf520c692e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e">OCR_RECOG_LANG</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>区域识别的语言控制，此项仅在选择了中文引擎的时候有效 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggac92130ff34d5224e8068d3cf520c692eae7ce64f81ee0c141ced980b409d97e0a"></a>OCR_RECOG_LANG_DEFAULT</em>&nbsp;</td><td class="fielddoc">
+<p>缺省语言，由识别配置串决定 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggac92130ff34d5224e8068d3cf520c692eaca60b2175ad7a756b2cf17c4e3c66e66"></a>OCR_RECOG_LANG_ZH_CN</em>&nbsp;</td><td class="fielddoc">
+<p>此区域强制采用简体中文识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggac92130ff34d5224e8068d3cf520c692eabf1d4956d3784f5c1841033f4600f346"></a>OCR_RECOG_LANG_ZH_HK</em>&nbsp;</td><td class="fielddoc">
+<p>此区域强制采用繁体中文识别，与OCR_RECOG_LANG_TW 目前无区别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggac92130ff34d5224e8068d3cf520c692ea919ca3830f69884f44624135e0d38cd4"></a>OCR_RECOG_LANG_ZH_TW</em>&nbsp;</td><td class="fielddoc">
+<p>此区域强制采用繁体中文识别，与OCR_RECOG_LANG_HK 目前无区别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggac92130ff34d5224e8068d3cf520c692ea1bb713281eb76a736957488f7d916f4b"></a>OCR_RECOG_LANG_EN</em>&nbsp;</td><td class="fielddoc">
+<p>此区域强制采用英文引擎识别 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga37e7cb22f91169c9938a30542abc8f95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95">OCR_RECOG_NODE_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>识别结果节点类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga37e7cb22f91169c9938a30542abc8f95acacf78bcf0a6d9e0dc6d6535d85de5af"></a>OCR_RECOG_NODE_PAGE</em>&nbsp;</td><td class="fielddoc">
+<p>页面节点 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga37e7cb22f91169c9938a30542abc8f95a60428e9c666831c276f5e932dd6019cc"></a>OCR_RECOG_NODE_REGION</em>&nbsp;</td><td class="fielddoc">
+<p>区域节点 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga37e7cb22f91169c9938a30542abc8f95a9f22d0173498b21eda0447b54fb73b5f"></a>OCR_RECOG_NODE_CELL</em>&nbsp;</td><td class="fielddoc">
+<p>表格单元节点 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga37e7cb22f91169c9938a30542abc8f95a0a76711ee6c85a5283bcad6ec85e9f03"></a>OCR_RECOG_NODE_LINE</em>&nbsp;</td><td class="fielddoc">
+<p>文本行节点 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga37e7cb22f91169c9938a30542abc8f95a39a79e222bb33251d6dd6ac26ac955ca"></a>OCR_RECOG_NODE_CHAR</em>&nbsp;</td><td class="fielddoc">
+<p>字符节点 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga4b24478e81899be40504215410db0e37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37">OCR_RECOG_RGNTYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>区域类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga4b24478e81899be40504215410db0e37ad66f6668dd2d24fece421dbbfde9b372"></a>OCR_RECOG_RGNTYPE_HORZTEXT</em>&nbsp;</td><td class="fielddoc">
+<p>横排文本 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga4b24478e81899be40504215410db0e37a6008b6f4171432e407d66aea66e2b8b7"></a>OCR_RECOG_RGNTYPE_VERTTEXT</em>&nbsp;</td><td class="fielddoc">
+<p>竖排文本 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga4b24478e81899be40504215410db0e37acc5d3b23f990554e9ccc6e5a0f5a9529"></a>OCR_RECOG_RGNTYPE_TABLE</em>&nbsp;</td><td class="fielddoc">
+<p>表格区域 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga4b24478e81899be40504215410db0e37ae9fad7aa9f2422439baddde008d68dbd"></a>OCR_RECOG_RGNTYPE_GRAPH</em>&nbsp;</td><td class="fielddoc">
+<p>图片区域，不参与识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga4b24478e81899be40504215410db0e37ae433413778cfd372f314e6889edfe24a"></a>OCR_RECOG_RGNTYPE_AUTOTEXT</em>&nbsp;</td><td class="fielddoc">
+<p>文本区域，由引擎自动判断横竖排版，当前版本不支持 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga687fa97e29080d00939afbf3ca4406bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd">OCR_TABLE_LINE_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>线段类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bda54c0bc9016501d66c63ef4246c84e655"></a>LINE_TYPE_UNKNOWN</em>&nbsp;</td><td class="fielddoc">
+<p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bda95e3ca69b756b0c82c2cac793c521505"></a>LINE_TYPE_REAL</em>&nbsp;</td><td class="fielddoc">
+<p>实线 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bdab0dce87ed4a1d2709564d9f780b7fd3a"></a>LINE_TYPE_DASHED</em>&nbsp;</td><td class="fielddoc">
+<p>虚线 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bda58860718404053136f7675448f25bb21"></a>LINE_TYPE_DOTTED</em>&nbsp;</td><td class="fielddoc">
+<p>点线 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bda7505768faaf0fb49dbf0944a0b9dcd36"></a>LINE_TYPE_VIRTUAL</em>&nbsp;</td><td class="fielddoc">
+<p>没有实际的线, 但逻辑上有的线 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga687fa97e29080d00939afbf3ca4406bdaf2d03c82579aa32f35e0572f3dac00ba"></a>LINE_TYPE_EMPTY</em>&nbsp;</td><td class="fielddoc">
+<p>没有线，对应于两个表格单元格的合并 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga106cdd52ed73d8719553c0ffe419e879"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_denoise </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>图片美化降噪（暂不支持） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>保留配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaeec12309091da3bdb9f574a8470481ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_deskew </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">OCR_DESKEW_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrDeskewResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>倾斜校正 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>参数配置，ASCII编码，以'\0'结束，可为NULL </td></tr>
+    <tr><td class="paramname">psOcrDeskewResult</td><td>倾斜校正结果的指针，使用完毕后，需使用 <a class="el" href="group___h_c_i___o_c_r.html#gabf5a4ca5527c35d4a80265c310ddb180" title="释放倾斜校正结果内存">hci_ocr_free_deskew_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的数据超过可处理的上限, 云端识别数据发往云端时判断[0,5M] </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回倾斜校正失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>传入的配置在总参数列表中，但此处不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b">HCI_ERR_OCR_ENGINE_FAILED</a></td><td>本地引擎，倾斜校正过程失败，或者云端识别图像旋转、转换、二值化和压缩失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>imageType </td><td>normal, screen </td><td>normal </td><td>图像类型 </td><td>normal: 普通图像<br/>
+ screen: 截屏图像   </td></tr>
+<tr>
+<td>adjustImage </td><td>yes, no </td><td>no </td><td>是否直接做校正 </td><td>yes: 校正<br/>
+ no: 不校正   </td></tr>
+<tr>
+<td>binarize </td><td>adaptive, global </td><td>adaptive </td><td>二值化方法，对灰度或者彩色图像有效 </td><td>global: 全局二值化算法，主要针对通过扫描、截屏等获取的图像<br/>
+ adaptive: 局部自适应二值化算法，主要针对通过拍照、摄像头等获取的受光照影响较大图像   </td></tr>
+<tr>
+<td>localProcess </td><td>yes, no </td><td>yes </td><td>是否先做本地预处理，云端中文OCR支持该配置<br/>
+ 现在主要是指二值化 </td><td>yes: 进行预处理<br/>
+ no: 不进行预处理   </td></tr>
+</table>
+<br/>
+<br/>
+ 这里没有定义的配置项，会使用 session_start 时的定义。如果 session_start 时也没有定义，则使用缺省值</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>配置项 adjustImage 决定检测到倾斜角后是否对图像进行倾斜校正，若adjustImage=no则只返回倾斜角度不改动图像数据；<br/>
+ 若adjustImage=yes，则进行校正并根据倾斜角对图像数据进行校正。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gabf5a4ca5527c35d4a80265c310ddb180"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_free_deskew_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">OCR_DESKEW_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrDeskewResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放倾斜校正结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psOcrDeskewResult</td><td>需要释放的倾斜校正结果的内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae51cf85420e516f4fe89a723708b7235"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_free_layout_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">OCR_LAYOUT_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrLayoutResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放版面分析结果的内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psOcrLayoutResult</td><td>需要释放的版面分析结果的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gacace06d706102e43924f629420ea2a2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_free_recog_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrRecogResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放识别结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psOcrRecogResult</td><td>需要释放的识别结果的内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gacda38ba55c696080faeccc300cf7be0f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_get_image </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a> *&#160;</td>
+          <td class="paramname"><em>pImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取会话中的图像数据结构，用户可以用来显示 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pImage</td><td>返回的图像结构，用户定义的OCR_IMAGE结构体对象的地址做实参(用于显示，不要修改返回图像的数据) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b">HCI_ERR_OCR_ENGINE_FAILED</a></td><td>设置初始数据为图像缓冲时，本函数返回时转换为OCR_IMAGE结构失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aa5409a94cb7ec2ea829586cb57e4e651">HCI_ERR_OCR_IMAGE_NOT_SET</a></td><td>本会话还未设置图像数据 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga46d3ca0e0d3a5e1f21b7c2fb6470e06d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云OCR能力 初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>全局配置串，ASCII编码，以'\0'结束 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7087f3ac6a49ee17e6547e682a184a8d">HCI_ERR_OCR_ALREADY_INIT</a></td><td>OCR SDK多次初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041">HCI_ERR_CONFIG_DATAPATH_MISSING</a></td><td>传入的不是OCR的capkey </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>缺少必需的dataPath配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>没有找到指定的能力 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地能力引擎缺失必要的库资源 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>dataPath </td><td>opt/myapp/ocr_data </td><td>空 </td><td>光学字符识别本地资源所在路径 </td><td>不使用本地能力时，此项不传  </td></tr>
+<tr>
+<td>initCapKeys </td><td>ocr.local </td><td>空 </td><td>初始化所需的本地能力 </td><td>多个能力以';'隔开，传入的能力必须合法，否则返回错误。忽略传入的云端能力key。如果不使用本地识别能力，此项不传。  </td></tr>
+<tr>
+<td>fileFlag </td><td>none, android_so </td><td>none </td><td>获取本地文件名的特殊标记 </td><td>不使用本地能力时，此项不传。详细说明参见下面的注释  </td></tr>
+</table>
+</dd></dl>
+<p><b>Android特殊配置</b> <br/>
+ 当fileFlag为android_so时，加载本地资源文件(字典和编码库)时会将正常的库文件名更改为so文件名进行加载。 例如，当使用的库为file.dat时，则实际打开的文件名为libfile.dat.so，这样在Android系统下， 开发者可以按照此规则将本地资源改名后, 放在libs目录下打包入apk。在安装后，这些资源文件 就会放置在/data/data/包名/lib目录下。则可以直接将dataPath配置项指为此目录即可。</p>
+<dl class="section note"><dt>注解</dt><dd>若是云端识别，此配置串可以直接传NULL或者"" </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae8d40fa264ba8020818fbc979b766bd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_layout_analysis </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">OCR_LAYOUT_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrLayoutResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>进行版面分析 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>参数配置，ASCII编码，以'\0'结束，可为NULL </td></tr>
+    <tr><td class="paramname">psOcrLayoutResult</td><td>版面分析结果的指针，使用完毕后，需使用 <a class="el" href="group___h_c_i___o_c_r.html#gae51cf85420e516f4fe89a723708b7235" title="释放版面分析结果的内存">hci_ocr_free_layout_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置参数有误，如设定值非法或格式错误等 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的数据超过可处理的上限，云端识别数据发往云端时判断[0,5M] </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回版面分析失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>传入的配置在总参数列表中，但此处不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b">HCI_ERR_OCR_ENGINE_FAILED</a></td><td>本地引擎，版面分析过程失败，或者云端识别图像旋转、转换、二值化和压缩失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>imageType </td><td>normal, screen </td><td>normal </td><td>图像类型 </td><td>normal: 普通图像<br/>
+ screen: 截屏图像   </td></tr>
+<tr>
+<td>binarize </td><td>adaptive, global </td><td>adaptive </td><td>二值化方法，对灰度或者彩色图像有效 </td><td>global: 全局二值化算法，主要针对通过扫描、截屏等获取的图像<br/>
+ adaptive: 局部自适应二值化算法，主要针对通过拍照、摄像头等获取的受光照影响较大图像   </td></tr>
+<tr>
+<td>localProcess </td><td>yes, no </td><td>yes </td><td>是否先做本地预处理，云端中文OCR支持该配置<br/>
+ 现在主要是指二值化 </td><td>yes: 进行预处理<br/>
+ no: 不进行预处理   </td></tr>
+</table>
+<br/>
+<br/>
+ 这里没有定义的配置项，会使用 session_start 时的定义。如果 session_start 时也没有定义，则使用缺省值 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga052dd13f8325e9dd2d8d85eee673a59f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> hci_ocr_load_template </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pszTemplateFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnTemplateID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>载入一个模板文件，通过参数列表返回其ID </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszTemplateFile</td><td>要载入的模板文件路径 </td></tr>
+    <tr><td class="paramname">pnTemplateID</td><td>用于返回载入成功获取的模板文件ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a31cbea20aa70774fda828f6ae250777f">HCI_ERR_OCR_LOAD_TEMPLATE_FAILED</a></td><td>载入模板失败，可能是文件不存在、文件不可读、文件非法或者解码失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aac336d34b5559174632cf83955388df2">HCI_ERR_OCR_TEMPLATE_OVERLOAD</a></td><td>载入的模板数量超过上线，目前暂只能加载1个模板 </td></tr>
+</table>
+</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>本地模板识别时使用，载入模板，获取其ID，在 <a class="el" href="group___h_c_i___o_c_r.html#ga58be1f5f565711d6be7f9002f8d5a51d" title="开始会话">hci_ocr_session_start()</a>时用于创建会话。多个session可共用一个templateID。 多次载入同一个模板文件不会有错，被认为是独立的多个模板且得到多个ID，这些ID都需要对应卸载。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaeb65abac2be4d772405867a259366d90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_recog </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html">OCR_RECOG_REGION</a> *&#160;</td>
+          <td class="paramname"><em>pRegions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ unsigned int&#160;</td>
+          <td class="paramname"><em>nRegionCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psOcrRecogResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>进行OCR识别 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>识别参数配置串，可为NULL或者'\0' </td></tr>
+    <tr><td class="paramname">pRegions</td><td>识别区域列表， </td></tr>
+    <tr><td class="paramname">nRegionCount</td><td>识别区域的数目， </td></tr>
+    <tr><td class="paramname">psOcrRecogResult</td><td>识别结果的数据结构指针，使用完毕后，需使用 <a class="el" href="group___h_c_i___o_c_r.html#gacace06d706102e43924f629420ea2a2a" title="释放识别结果内存">hci_ocr_free_recog_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的数据超过可处理的上限，云端识别数据发往云端时判断[0,5M] </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置项非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回倾斜校正失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>传入的配置在总参数列表中，但此处不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74c269993b2def6dd06c21de01e34a9b">HCI_ERR_OCR_ENGINE_FAILED</a></td><td>本地引擎，识别过程失败，或者云端识别图像旋转、转换、二值化和压缩失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。并不是每个能力都支持<br/>
+<br/>
+ 列表中的所有配置项，各能力支持的配置项请参考<a class="el" href="hci_ocr_page.html">OCR能力描述</a> <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>模块</b> </td><td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td rowspan="2">通用配置 </td><td>cutEdge </td><td>yes, no  </td><td>no </td><td>原始图片需要裁边 </td><td>yes,需要裁边,对于拍照照片适用，原始图像为未裁边图像<br/>
+ no, 不需要裁边，非拍照图片使用，原始图像为裁边图像<br/>
+   </td></tr>
+<tr>
+<td>detailResult </td><td>no, yes </td><td>no </td><td>是否返回详细结果 </td><td>缺省只返回识别结果的文本串，如果设为yes，则会返回详细的节点信息 <a class="el" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html">OCR_RECOG_NODE</a>   </td></tr>
+<tr>
+<td rowspan="7">云端中文和本地文本识别 </td><td>recogRange </td><td>gb, letter </td><td>all </td><td>识别范围 </td><td>number: 数字 0 - 9, 10个<br/>
+ uppercase: 大写英文字母, A - Z, 26个<br/>
+ lowercase: 小写英文字母, a - z, 26个<br/>
+ letter: 大小写字母, 52个<br/>
+ alnum: 大小写字母和数字, 62个<br/>
+ gb: 中文简体汉字<br/>
+ big5: 中文繁体汉字 all: 所有字符集的合集,英文能力时不包含gb和big5<br/>
+   </td></tr>
+<tr>
+<td>autoDeskew </td><td>no, yes </td><td>no </td><td>是否识别前自动倾斜校正，支持，没有设置识别区域列表的情况下有效 </td><td></td></tr>
+<tr>
+<td>autoLayout </td><td>no, yes </td><td>no </td><td>是否识别前进行自动版面分析，没有设置识别区域列表的情况下有效 </td><td></td></tr>
+<tr>
+<td>fullHalf </td><td>full, half </td><td>half </td><td>设置中文识别模式下输出英文字母、数字是全角还是半角 </td><td>full: 全角<br/>
+half: 半角  </td></tr>
+<tr>
+<td>dispCode </td><td>nochange, tosimplified </td><td>nochange </td><td>设置输出结果简繁体转换，云端中文和本地OCR支持该配置 </td><td>nochange: 简繁体不做变化<br/>
+tosimplified: 繁体转换为简体  </td></tr>
+<tr>
+<td>imageType </td><td>normal, screen </td><td>normal </td><td>图像类型 </td><td>normal: 普通图像<br/>
+ screen: 截屏图像   </td></tr>
+<tr>
+<td>binarize </td><td>adaptive, global </td><td>adaptive </td><td>二值化方法,对灰度或者彩色图像有效 </td><td>global: 全局二值化算法，主要针对通过扫描、截屏等获取的图像<br/>
+ adaptive: 局部自适应二值化算法，主要针对通过拍照、摄像头等获取的受光照影响较大图像   </td></tr>
+<tr>
+<td>云端中文 </td><td>localProcess </td><td>yes, no </td><td>yes </td><td>是否先做本地预处理(云端多语种必须设置为no)<br/>
+ 现在主要是指二值化 </td><td>yes: 进行预处理<br/>
+ no: 不进行预处理   </td></tr>
+<tr>
+<td>云端多语种OCR </td><td>export </td><td>none,xml,pdf,docx,rtf,xlsx,text,html,pptx </td><td>none </td><td>导出文件格式设置 </td><td>none:不以导出文件方式返回结果<br/>
+ pdf:pdf格式文件<br/>
+ docx:docx格式文件<br/>
+ rtf:rtf格式文件<br/>
+ xlsx:xlsx格式文件<br/>
+ text:text格式文件<br/>
+ html:html格式文件<br/>
+ pptx:pptx格式文件<br/>
+   </td></tr>
+<tr>
+<td rowspan="4">模板识别 </td><td>templateId </td><td>1 </td><td>无 </td><td>本地识别使用的模板ID </td><td>本地必选<br/>
+ 本地识别时，本参数是由 <a class="el" href="group___h_c_i___o_c_r.html#ga052dd13f8325e9dd2d8d85eee673a59f" title="载入一个模板文件，通过参数列表返回其ID">hci_ocr_load_template()</a>返回的ID；<br/>
+ 云端识别时，请使用domain参数指定欲使用的识别模板  </td></tr>
+<tr>
+<td>templateIndex </td><td>0到对应模板文件中的最大模板索引号 </td><td>无 </td><td>只针对模板识别生效，模板文件中的模板索引号 </td><td>必选，模板文件中可能有多个模板，比如身份证、票据等，本参数指定模板在模板文件中的索引号  </td></tr>
+<tr>
+<td>templatePageIndex </td><td>0到对应模板中的最大页索引号 </td><td>无 </td><td>只针对模板识别生效，模板页索引号 </td><td>必选，模板中可能存在多个模板页，比如身份证的正面和反面，本参数指定模板页在模板中的索引号  </td></tr>
+<tr>
+<td>domain </td><td>dlcard，vlcard，idcard </td><td>无 </td><td>指定云端模板识别欲使用的模板 </td><td>云端必选<br/>
+ 目前可以指定为dlcard（驾驶证）、vlcard（行驶证）、idcard（身份证）  </td></tr>
+</table>
+<br/>
+<br/>
+ 这里没有定义的配置项，会使用 session_start 时的定义。如果 session_start 时也没有定义，则使用缺省值。<br/>
+ 使用本地模板识别时请配置cutEdge为no，引擎内部会自动作切边处理。<br/>
+ 云端模板识别使用原始图像数据进行识别，即SDK不作任何预处理。 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>pRegions 如果为NULL或nRegionCount为0，则检查配置串中的 autoLayout, 如果是true，则后台进行自动版面分析， 如果是false，则将整幅图像当做一个完整的横排正文区域进行识别 <br/>
+<br/>
+ pRegions 如果不为NULL且nRegionCount不为0，配置串不支持autoDeskew和autoLayout两个参数，因此总是不进行倾斜校正和版面分析, 而使用传入的pRegions作为识别区域 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac75629c266eec54dbd59016b5ef78fa8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云OCR能力 反初始化 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4f6673aeae1ff4d5529509773be11c68">HCI_ERR_ACTIVE_SESSION_EXIST</a></td><td>尚有未stop的Sesssion，无法结束 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa2460933fc0c7173bc006ef60b384001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_save_image_file </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszImageFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a> *&#160;</td>
+          <td class="paramname"><em>pImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保存一个本地文件，文件格式由文件名后缀确定(目前支持bmp、jpg、png、tif) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszImageFileName</td><td>保存到的本地图像文件名 </td></tr>
+    <tr><td class="paramname">pImage</td><td>要保存的源图像数据结构 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a07174cd0c75d2d4870c13c56d7b6fa5b">HCI_ERR_OCR_SAVE_IMAGE</a></td><td>保存本地图像文件失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>iOS平台不支持此操作，调用此函数会返回 HCI_ERR_UNSUPPORT。如果希望在iOS存储图像数据， 请使用 hci_ocr_get_uiImage() 获取UIImage，然后使用UIImage的存储文件功能进行存储。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga58be1f5f565711d6be7f9002f8d5a51d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_session_start </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ int *&#160;</td>
+          <td class="paramname"><em>pnSessionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开始会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>会话配置串，ASCII编码，以'\0'结束 </td></tr>
+    <tr><td class="paramname">pnSessionId</td><td>成功时返回会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae3aaa1bfb8f3e65736afe3e4132d231c">HCI_ERR_CONFIG_CAPKEY_MISSING</a></td><td>缺少必需的capKey配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置项非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>能力与key不匹配 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>传入的能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abfd66e608f5855b1968b315bfd95da32">HCI_ERR_TOO_MANY_SESSION</a></td><td>创建的Session数量超出限制(256) </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>传入的配置在总参数列表中，但此处不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af9dcb107665ae5c90b3768f605684606">HCI_ERR_OCR_ENGINE_INIT_FAILED</a></td><td>本地识别时，OCR引擎初始化失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>capKey </td><td>ocr.cloud </td><td>无 </td><td>OCR识别能力key </td><td>参见 <a class="el" href="hci_ocr_page.html">OCR能力描述</a> 。每个session只能定义一种能力，并且过程中不能改变。  </td></tr>
+</table>
+<br/>
+<br/>
+ 另外，这里还可以传入倾斜校正、版面分析和识别的配置项，作为默认配置项。参见 <a class="el" href="group___h_c_i___o_c_r.html#gaeec12309091da3bdb9f574a8470481ec" title="倾斜校正">hci_ocr_deskew()</a>, <a class="el" href="group___h_c_i___o_c_r.html#gae8d40fa264ba8020818fbc979b766bd9" title="进行版面分析">hci_ocr_layout_analysis()</a>, <a class="el" href="group___h_c_i___o_c_r.html#gaeb65abac2be4d772405867a259366d90" title="进行OCR识别">hci_ocr_recog()</a> 。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga32654a69121f225ce271d8660d4f4683"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_session_stop </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga122f33ed5fb249cd08e30cec4169532d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_set_image_buffer </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ unsigned char *&#160;</td>
+          <td class="paramname"><em>pImageData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ unsigned int&#160;</td>
+          <td class="paramname"><em>uiImageDataSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过内存缓冲设置本会话处理的图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pImageData</td><td>要设置的本地内存缓冲 </td></tr>
+    <tr><td class="paramname">uiImageDataSize</td><td>要设置的本地内存缓冲的长度，字节为单位 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad09d9a05aff0569d679fd63db100b049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_set_image_file </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszImageFileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过文件设置本回话处理的图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszImageFileName</td><td>要设置的本地图片文件 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga33ffd04b5eb95d22079916887ceac2c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> hci_ocr_unload_template </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nTemplateID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>卸载一个已经载入的模板文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nTemplateID</td><td>要卸载的模板文件的ID，由 <a class="el" href="group___h_c_i___o_c_r.html#ga052dd13f8325e9dd2d8d85eee673a59f" title="载入一个模板文件，通过参数列表返回其ID">hci_ocr_load_template()</a>得来 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a2b33c55dfccdd61a8fc7e43819aee326">HCI_ERR_OCR_NOT_INIT</a></td><td>HCI OCR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7a46c9fcc237513ca99dbd94db8fdb96">HCI_ERR_OCR_TEMPLATE_ID_INVALID</a></td><td>传入的模板ID不在加载的模板列表中 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a92b9ce1c3f8d8344bcd44243044c1a7d">HCI_ERR_OCR_TEMPLATE_USING</a></td><td>还有会话在使用要卸载的模板 </td></tr>
+</table>
+</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>用户在卸载模板时，必须保证使用该模板的所有session都已经执行 <a class="el" href="group___h_c_i___o_c_r.html#ga32654a69121f225ce271d8660d4f4683" title="结束会话">hci_ocr_session_stop()</a>操作，否则返回错误。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

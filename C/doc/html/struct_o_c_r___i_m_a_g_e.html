@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): OCR_IMAGE结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="classes.html"><span>结构体索引</span></a></li>
+      <li><a href="functions.html"><span>成员变量</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('struct_o_c_r___i_m_a_g_e.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">OCR_IMAGE结构体 参考<div class="ingroups"><a class="el" href="group___h_c_i___o_c_r.html">灵云OCR能力API</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>图像结构体.  
+ <a href="struct_o_c_r___i_m_a_g_e.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hci__ocr_8h_source.html">hci_ocr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a3033f862a8ea8da718113ef466c2bd9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3033f862a8ea8da718113ef466c2bd9e"></a>
+_MUST_ _IN_ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#a3033f862a8ea8da718113ef466c2bd9e">nWidth</a></td></tr>
+<tr class="memdesc:a3033f862a8ea8da718113ef466c2bd9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像宽度 <br/></td></tr>
+<tr class="separator:a3033f862a8ea8da718113ef466c2bd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebea9d7ca8d78d93c6e4f5839ed18649"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebea9d7ca8d78d93c6e4f5839ed18649"></a>
+_MUST_ _IN_ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#aebea9d7ca8d78d93c6e4f5839ed18649">nHeight</a></td></tr>
+<tr class="memdesc:aebea9d7ca8d78d93c6e4f5839ed18649"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像高度 <br/></td></tr>
+<tr class="separator:aebea9d7ca8d78d93c6e4f5839ed18649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37b99a8c0609f0f62a1d599e603ca2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad37b99a8c0609f0f62a1d599e603ca2d"></a>
+_MUST_ _IN_ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#ad37b99a8c0609f0f62a1d599e603ca2d">nBitsPerPixel</a></td></tr>
+<tr class="memdesc:ad37b99a8c0609f0f62a1d599e603ca2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">只能取三个值1, 8, 24，分别表示图像为单色图、灰度图、彩色图 <br/></td></tr>
+<tr class="separator:ad37b99a8c0609f0f62a1d599e603ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bc7df9cb37c2e9c415927c99db6b51"><td class="memItemLeft" align="right" valign="top">_MUST_ _IN_ unsigned char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a></td></tr>
+<tr class="separator:af0bc7df9cb37c2e9c415927c99db6b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c50e7f00a3d995a71539ffadd4b2a08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c50e7f00a3d995a71539ffadd4b2a08"></a>
+_OPT_ _IN_ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#a3c50e7f00a3d995a71539ffadd4b2a08">xResolution</a></td></tr>
+<tr class="memdesc:a3c50e7f00a3d995a71539ffadd4b2a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">x 分辨率(DPI)，如果未知赋0 <br/></td></tr>
+<tr class="separator:a3c50e7f00a3d995a71539ffadd4b2a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8ec8cd056ec69ea54fc4cab9aa9788"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada8ec8cd056ec69ea54fc4cab9aa9788"></a>
+_OPT_ _IN_ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_c_r___i_m_a_g_e.html#ada8ec8cd056ec69ea54fc4cab9aa9788">yResolution</a></td></tr>
+<tr class="memdesc:ada8ec8cd056ec69ea54fc4cab9aa9788"><td class="mdescLeft">&#160;</td><td class="mdescRight">y 分辨率(DPI)，如果未知赋0 <br/></td></tr>
+<tr class="separator:ada8ec8cd056ec69ea54fc4cab9aa9788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>图像结构体. </p>
+<p>图像结构体，图像数据需存放在一块连续的内存区域内，但可能 因四字节对齐，导致每行后补充了1到3个字节的无用数据. </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a class="anchor" id="af0bc7df9cb37c2e9c415927c99db6b51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_MUST_ _IN_ unsigned char** pLines</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>二维数组指针, <a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>[i]指向第i行图像数据的首地址，i的取值范围：[0, <a class="el" href="struct_o_c_r___i_m_a_g_e.html#aebea9d7ca8d78d93c6e4f5839ed18649" title="图像高度">nHeight</a>)<br/>
+ 彩色图像各点的三字节存放顺序为RGB，即图像数据依次为RGBRGB...<br/>
+ 图像上的(0, 0)点位于图像的左上角:</p>
+<ul>
+<li>灰度图时(0, 0)点数据是第一行上的第一个字节，即 <a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>[0][0]；</li>
+<li>单色图时(0, 0)点数据在第一行上的第一个字节的最高位；</li>
+<li>彩色图时(0, 0)点的RGB三字节依次是 <a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>[0][0], <a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>[0][1], <a class="el" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>[0][2] </li>
+</ul>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_o_c_r___i_m_a_g_e.html">OCR_IMAGE</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

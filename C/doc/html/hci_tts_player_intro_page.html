@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): TTS播放器</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci_tts_player_intro_page.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TTS播放器 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>以下描述了如何使用灵云TTS播放器功能。</p>
+<h1><a class="anchor" id="hci_tts_player_intro"></a>
+1. TTS播放器简介</h1>
+<p>TTS播放器封装了灵云SDK的TTS模块并且实现了实时播放的功能，能将任意文字信息实时转化为标准流畅的自然语音并朗读出来。</p>
+<h1><a class="anchor" id="hci_tts_player_choice"></a>
+2. TTS能力</h1>
+<p>TTS播放器封装了灵云SDK的TTS能力，其许多概念仍然是基于TTS基础API的。建议在使用灵云TTS播放器之前， 先熟悉 <a class="el" href="hci_tts_intro_page.html">TTS能力</a> 的相关内容。</p>
+<p>在使用灵云TTS播放器之前，需要选择合适的TTS模块和能力以及音频编解码库， 具体请参见 <a class="el" href="hci_tts_intro_page.html#hci_tts_choice">选择模块和能力</a> 和 <a class="el" href="codec_intro_page.html">音频编解码库</a>。</p>
+<h1><a class="anchor" id="hci_tts_player_init"></a>
+3. 初始化</h1>
+<p>在使用播放器之前，仍然需要先初始化系统模块，请参见 <a class="el" href="hci_sys_intro_page.html#hci_sys_init">系统模块的初始化/终止</a>。</p>
+<h2><a class="anchor" id="hci_tts_player_init_create"></a>
+3.1 创建播放器对象</h2>
+<p>在初始化系统模块之后，就可以使用 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga03f715f74a21a09bc23e930f86697c7e" title="播放器SDK初始化">hci_tts_player_init()</a> 创建播放器对象，同时需要设置初始化参数和回调函数参数。</p>
+<h2><a class="anchor" id="hci_tts_player_init_init"></a>
+3.2 设置初始化参数</h2>
+<p>初始化参数主要是设置本地资源库的路径等。 </p>
+<div class="fragment"><div class="line"><span class="comment">// 设置回调参数及用户数据</span></div>
+<div class="line"><a class="code" href="struct_p_l_a_y_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="播放器回调函数的结构体">PLAYER_CALLBACK_PARAM</a> paramcallback;</div>
+<div class="line"></div>
+<div class="line">paramcallback.pfnStateChange = PlayerEventStateChangeCallback;</div>
+<div class="line">paramcallback.pfnProgressChange = PlayerProgressChangeCallback;</div>
+<div class="line">paramcallback.pfnPlayerError = PlayerErrorCallback;</div>
+<div class="line">paramcallback.pvStateChangeUsrParam = NULL;</div>
+<div class="line">paramcallback.pvProgressChangeUsrParam = NULL;</div>
+<div class="line">paramcallback.pvPlayerErrorUsrParam = NULL;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// 设置初始化参数</span></div>
+<div class="line"><span class="comment">// initCapKeys: 如果使用本地能力，配置需要使用的能力，SDK利用此信息初始化本地音库，云端能力不需要设置此项</span></div>
+<div class="line"><span class="comment">// dataPath: 如果使用本地能力，需要设置本地音库文件路径</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* pszConfig = <span class="stringliteral">&quot;initCapKeys=tts.local.xixi,dataPath=/mount/myapp/Document&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271" title="0: 成功">PLAYER_ERR_NONE</a>;</div>
+<div class="line">playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga03f715f74a21a09bc23e930f86697c7e" title="播放器SDK初始化">hci_tts_player_init</a>(pszConfig, &amp;paramcallback);</div>
+</div><!-- fragment --><p>如果是只使用云端能力，可以直接指定初始化配置串为空或者NULL。初始化配置串 pszConfig 的设置请参见 <a class="el" href="hci_common_intro_page.html#hci_common_init">初始化能力</a>。</p>
+<h2><a class="anchor" id="hci_tts_player_init_callback"></a>
+3.3 设置回调函数</h2>
+<p>为了能接收播放器内部信息，如状态信息、播放情况及错误信息等，应用层需要实现播放器的回调函数接口。 回调函数通过 <a class="el" href="struct_p_l_a_y_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="播放器回调函数的结构体">PLAYER_CALLBACK_PARAM</a> 参数传递给 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga03f715f74a21a09bc23e930f86697c7e" title="播放器SDK初始化">hci_tts_player_init()</a> 函数。 下面的代码示例实现了回调函数接口的写法：</p>
+<div class="fragment"><div class="line"><span class="comment">// 事件回调，通知外部播放器状态的变化，如开始播放、播放完毕等</span></div>
+<div class="line"><span class="keywordtype">void</span> PlayerEventChangeCallback(</div>
+<div class="line">                                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line">                                                        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam )</div>
+<div class="line">{</div>
+<div class="line">                </div>
+<div class="line">        <span class="comment">// ePlayerEvent - 可能出现的事件：</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_BEGIN: 开始播放</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_BUFFERING: 播放缓冲，等待合成数据</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_BUFFERING_END: 缓冲结束，继续播放</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_PAUSE: 暂停播放</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_RESUME: 恢复播放</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_END: 播放完毕</span></div>
+<div class="line"></div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// 进度回调，通知外部当前正在播放文本的起止位置</span></div>
+<div class="line"><span class="keywordtype">void</span> PlayerProgressChangeCallback(</div>
+<div class="line">                                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line">                                                        _MUST_ _IN_ <span class="keywordtype">int</span> nStart,</div>
+<div class="line">                                                        _MUST_ _IN_ <span class="keywordtype">int</span> nStop,</div>
+<div class="line">                                                        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam )</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">        <span class="comment">//可以在此处截取当前正在播放的字符串，显示给用户</span></div>
+<div class="line">        <span class="comment">// ePlayerEvent - 可能出现的事件：</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_PROGRESS</span></div>
+<div class="line"></div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// 出错回调，通知外部出现的错误</span></div>
+<div class="line"><span class="keywordtype">void</span> PlayerErrorCallback(</div>
+<div class="line">                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line">                                        _MUST_ _IN_ <a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> eErrorCode,</div>
+<div class="line">                                        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam </div>
+<div class="line">{</div>
+<div class="line">        <span class="comment">// ePlayerEvent - 可能出现的事件：</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_DEVICE_ERROR</span></div>
+<div class="line">        <span class="comment">// PLAYER_EVENT_ENGINE_ERROR    }</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_tts_player_start"></a>
+4. 合成播放</h1>
+<p>通过 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8c27ae3158b2ec30172cdaec813f3367" title="启动播放器，播放一串文本">hci_tts_player_start()</a> 来播放由文本合成的语音数据，示例如下：</p>
+<div class="fragment"><div class="line"><span class="comment">// 配置选项 </span></div>
+<div class="line"><span class="comment">// capKey: 设置语音合成的能力（发音人）</span></div>
+<div class="line"><span class="comment">// audioFormat: 设置语音合成的音频格式</span></div>
+<div class="line"><span class="keywordtype">char</span> * pszConfig = <span class="stringliteral">&quot;capKey=tts.local.xixi,audioFormat=pcm16k16bit&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// 合成文本是UTF8编码，有些平台需要转换</span></div>
+<div class="line"><span class="keywordtype">char</span> * pszText = <span class="stringliteral">&quot;要播放的文本&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// 开始合成指定文本并实时播放</span></div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8c27ae3158b2ec30172cdaec813f3367" title="启动播放器，播放一串文本">hci_tts_player_start</a>(pszText, pszConfig);</div>
+</div><!-- fragment --><p>这里的配置项pszConfig包括了初始化会话的配置项（capKey，也即发音人）、合成选项以及播放设备ID（deviceId）选项。</p>
+<ul>
+<li>capKey选项请参见 <a class="el" href="hci_tts_page.html">TTS能力描述</a> 。</li>
+<li>合成选项设置请参照TTS基础API的 <a class="el" href="hci_tts_intro_page.html#hci_tts_config">合成选项</a>。</li>
+<li>deviceId选项用于指定播放设备的ID，不指定则为系统自动匹配（WAVE_MAPPER）。<br/>
+<br/>
+</li>
+</ul>
+<p>要注意的是：播放器支持的格式audioFormat只有pcm。windows平台支持pcm8K16bit pcm16k16bit, ios平台支持pcm8k8bit pcm8k16bit pcm11k8bit pcm11k16bit pcm16k8bit pcm16k16bit。</p>
+<p>start() 函数会在后台启动一个线程进行播放，因此此函数会立即退出。播放的状态变化或者是否错误可以通过回调函数来获得。另外 回调函数还可以获得当前合成的文本位置，开发者可根据此位置信息实现类似高亮显示这样的功能。</p>
+<h1><a class="anchor" id="hci_tts_player_pause_resume"></a>
+5. 暂停和恢复</h1>
+<p>可以使用 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8b053895b81753af3fa143b3754a3079" title="暂停播放器">hci_tts_player_pause()</a> 和 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gad163cd1ab824863c33271f85d92dc970" title="恢复播放器播放">hci_tts_player_resume()</a> 来暂停和恢复播放过程。 </p>
+<div class="fragment"><div class="line"><span class="comment">//暂停播放</span></div>
+<div class="line"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271" title="0: 成功">PLAYER_ERR_NONE</a>;</div>
+<div class="line">playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8b053895b81753af3fa143b3754a3079" title="暂停播放器">hci_tts_player_pause</a>();</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//恢复播放</span></div>
+<div class="line"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271" title="0: 成功">PLAYER_ERR_NONE</a>;</div>
+<div class="line">playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gad163cd1ab824863c33271f85d92dc970" title="恢复播放器播放">hci_tts_player_resume</a>();</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_tts_player_stop"></a>
+6. 停止</h1>
+<p>可以使用 canStop() 来检查当前是否可以被停止，只有当播放器处于 PLAYER_STATE_PLAYING 或者 PLAYER_STATE_PAUSE时， 才能够被停止。</p>
+<p>可以使用 stop() 来停止播放过程。 </p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> bCanStop = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5b19ae3f94fa94e62d6dfbaff648a0d0" title="播放器当前是否可以停止">hci_tts_player_can_stop</a>();</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span> (bCanStop) {</div>
+<div class="line">        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gad7c7064946e00ffe8e155de9989a712d" title="停止播放器">hci_tts_player_stop</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_tts_player_get_state"></a>
+7. 获取播放器状态</h1>
+<p>可以使用 <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga73c02f6b000a0f216df36630a94cbee7" title="得到播放器的当前状态">hci_tts_player_get_state()</a> 来获取播放器当前状态 </p>
+<div class="fragment"><div class="line"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5baccd10d2f9116585c878821a80cc94" title="播放机状态">PLAYER_STATE</a> playerState = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga73c02f6b000a0f216df36630a94cbee7" title="得到播放器的当前状态">hci_tts_player_get_state</a>();</div>
+<div class="line"><span class="keywordflow">switch</span> (playerState)</div>
+<div class="line">{</div>
+<div class="line">        <span class="comment">// 不同状态的处理</span></div>
+<div class="line">        ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_tts_player_release"></a>
+8. 反初始化</h1>
+<p>当不再使用TTS播放器的时候，需要反初始化TTS播放器，示例如下：</p>
+<div class="fragment"><div class="line"><span class="comment">//反初始化tts_player</span></div>
+<div class="line"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271" title="0: 成功">PLAYER_ERR_NONE</a>;</div>
+<div class="line">playerRet = <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga07990ed092827e393be87d4e4cde7936" title="播放器SDK反初始化">hci_tts_player_release</a>();</div>
+</div><!-- fragment --><p>当不再使用其它灵云能力时，需要反初始化系统模块，请参见 <a class="el" href="hci_sys_intro_page.html#hci_sys_init">系统模块的初始化/终止</a>。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="hci_dev_content.html">开发指南</a></li><li class="navelem"><a class="el" href="hci_dev_ext_api.html">扩展API</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

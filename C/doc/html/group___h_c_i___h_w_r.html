@@ -1,0 +1,1215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云HWR能力API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i___h_w_r.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云HWR能力API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html">HWR_RECOG_RESULT_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HWR识别候选结果条目  <a href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html">HWR_RECOG_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HWR识别函数的返回结果  <a href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_w_r___c_o_n_f_i_r_m___i_t_e_m.html">HWR_CONFIRM_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传的HWR确认结果信息  <a href="struct_h_w_r___c_o_n_f_i_r_m___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t___i_t_e_m.html">PINYIN_RESULT_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">拼音条目  <a href="struct_p_i_n_y_i_n___r_e_s_u_l_t___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html">PINYIN_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询拼音函数的返回结果，若为多音字，则会包含多个结果条目  <a href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t___i_t_e_m.html">ASSOCIATE_WORDS_RESULT_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">联想词条目  <a href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询联想词函数的返回结果  <a href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t___i_t_e_m.html">PEN_SCRIPT_RESULT_ITEM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">笔型结果条目  <a href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t___i_t_e_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html">PEN_SCRIPT_RESULT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">笔型结果条目  <a href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga52a4f53f23e67adbe4cb0e7abf6aa756"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga52a4f53f23e67adbe4cb0e7abf6aa756"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga52a4f53f23e67adbe4cb0e7abf6aa756">HWR_CAP_PROP_MODE</a>&#160;&#160;&#160;&quot;mode&quot;</td></tr>
+<tr class="memdesc:ga52a4f53f23e67adbe4cb0e7abf6aa756"><td class="mdescLeft">&#160;</td><td class="mdescRight">HWR能力的属性名称：识别模式。值：单字识别(letter), 多字识别(freewrite) <br/></td></tr>
+<tr class="separator:ga52a4f53f23e67adbe4cb0e7abf6aa756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67a8ca6e7162114b0a109f4851b87bf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga67a8ca6e7162114b0a109f4851b87bf2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga67a8ca6e7162114b0a109f4851b87bf2">HWR_CAP_PROP_LANG</a>&#160;&#160;&#160;&quot;lang&quot;</td></tr>
+<tr class="memdesc:ga67a8ca6e7162114b0a109f4851b87bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">HWR能力的属性名称：语言 <br/></td></tr>
+<tr class="separator:ga67a8ca6e7162114b0a109f4851b87bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabadedad054a022bc21a8287b3e1c0da4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabadedad054a022bc21a8287b3e1c0da4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#gabadedad054a022bc21a8287b3e1c0da4">HWR_CAP_PROP_DOMAIN</a>&#160;&#160;&#160;&quot;domain&quot;</td></tr>
+<tr class="memdesc:gabadedad054a022bc21a8287b3e1c0da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">HWR能力的属性名称：领域 <br/></td></tr>
+<tr class="separator:gabadedad054a022bc21a8287b3e1c0da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga6f0053ca26a6e81e03f9a2f4b7afefc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga6f0053ca26a6e81e03f9a2f4b7afefc5">hci_hwr_init</a> (_MUST_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:ga6f0053ca26a6e81e03f9a2f4b7afefc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云HWR能力 初始化  <a href="#ga6f0053ca26a6e81e03f9a2f4b7afefc5">更多...</a><br/></td></tr>
+<tr class="separator:ga6f0053ca26a6e81e03f9a2f4b7afefc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94938645c0f1c3ba427614079205eef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga94938645c0f1c3ba427614079205eef7">hci_hwr_session_start</a> (_MUST_ _IN_ const char *pszConfig, _MUST_ _OUT_ int *pnSessionId)</td></tr>
+<tr class="memdesc:ga94938645c0f1c3ba427614079205eef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始会话  <a href="#ga94938645c0f1c3ba427614079205eef7">更多...</a><br/></td></tr>
+<tr class="separator:ga94938645c0f1c3ba427614079205eef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61edb1a3697a3ace74701ff3802cc94e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga61edb1a3697a3ace74701ff3802cc94e">hci_hwr_recog</a> (_MUST_ _IN_ int nSessionId, _MUST_ _IN_ short *psStrokingData, _MUST_ _IN_ unsigned int uiStrokingDataLen, _OPT_ _IN_ const char *pszConfig, _MUST_ _OUT_ <a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html">HWR_RECOG_RESULT</a> *psHwrRecogResult)</td></tr>
+<tr class="memdesc:ga61edb1a3697a3ace74701ff3802cc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">识别函数  <a href="#ga61edb1a3697a3ace74701ff3802cc94e">更多...</a><br/></td></tr>
+<tr class="separator:ga61edb1a3697a3ace74701ff3802cc94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5931d3e087442c9d5e935b120ebe6fde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga5931d3e087442c9d5e935b120ebe6fde">hci_hwr_free_recog_result</a> (_MUST_ _IN_ <a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html">HWR_RECOG_RESULT</a> *psHwrRecogResult)</td></tr>
+<tr class="memdesc:ga5931d3e087442c9d5e935b120ebe6fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放识别结果内存  <a href="#ga5931d3e087442c9d5e935b120ebe6fde">更多...</a><br/></td></tr>
+<tr class="separator:ga5931d3e087442c9d5e935b120ebe6fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89ff00d67dc70deeb1df6eafb9d80542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga89ff00d67dc70deeb1df6eafb9d80542">hci_hwr_confirm</a> (_MUST_ _IN_ int nSessionId, _MUST_ _IN_ <a class="el" href="struct_h_w_r___c_o_n_f_i_r_m___i_t_e_m.html">HWR_CONFIRM_ITEM</a> *psHwrConfirmItem)</td></tr>
+<tr class="memdesc:ga89ff00d67dc70deeb1df6eafb9d80542"><td class="mdescLeft">&#160;</td><td class="mdescRight">提交确认结果  <a href="#ga89ff00d67dc70deeb1df6eafb9d80542">更多...</a><br/></td></tr>
+<tr class="separator:ga89ff00d67dc70deeb1df6eafb9d80542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d2798117639a70725818427f4f0b301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga4d2798117639a70725818427f4f0b301">hci_hwr_session_stop</a> (_MUST_ _IN_ int nSessionId)</td></tr>
+<tr class="memdesc:ga4d2798117639a70725818427f4f0b301"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束会话  <a href="#ga4d2798117639a70725818427f4f0b301">更多...</a><br/></td></tr>
+<tr class="separator:ga4d2798117639a70725818427f4f0b301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f13853d70ab75f58fa13eb09918d0de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga6f13853d70ab75f58fa13eb09918d0de">hci_hwr_pinyin</a> (_MUST_ _IN_ const char *pszWord, _MUST_ _OUT_ <a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html">PINYIN_RESULT</a> *psPinyin)</td></tr>
+<tr class="memdesc:ga6f13853d70ab75f58fa13eb09918d0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取拼音 （仅Windows平台有效）  <a href="#ga6f13853d70ab75f58fa13eb09918d0de">更多...</a><br/></td></tr>
+<tr class="separator:ga6f13853d70ab75f58fa13eb09918d0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04861596f772112666e39a927cb383c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga04861596f772112666e39a927cb383c1">hci_hwr_free_pinyin_result</a> (_MUST_ _IN_ <a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html">PINYIN_RESULT</a> *psPinyin)</td></tr>
+<tr class="memdesc:ga04861596f772112666e39a927cb383c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放拼音结果内存  <a href="#ga04861596f772112666e39a927cb383c1">更多...</a><br/></td></tr>
+<tr class="separator:ga04861596f772112666e39a927cb383c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1abfb04a8bac9a6aa1420dbb5833aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#gab1abfb04a8bac9a6aa1420dbb5833aed">hci_hwr_associate_words</a> (_MUST_ _IN_ const char *pszWord, _MUST_ _OUT_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *psAssocWords)</td></tr>
+<tr class="memdesc:gab1abfb04a8bac9a6aa1420dbb5833aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取联想词  <a href="#gab1abfb04a8bac9a6aa1420dbb5833aed">更多...</a><br/></td></tr>
+<tr class="separator:gab1abfb04a8bac9a6aa1420dbb5833aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bf600219f2766e8e642f1d6a570a661"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga8bf600219f2766e8e642f1d6a570a661">hci_hwr_associate_words_ex</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig, _MUST_ _IN_ const char *pszWord, _MUST_ _OUT_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *psAssocWords)</td></tr>
+<tr class="memdesc:ga8bf600219f2766e8e642f1d6a570a661"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取联想词  <a href="#ga8bf600219f2766e8e642f1d6a570a661">更多...</a><br/></td></tr>
+<tr class="separator:ga8bf600219f2766e8e642f1d6a570a661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93948eab8212f8d9d9cdf767aca63ae8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga93948eab8212f8d9d9cdf767aca63ae8">hci_hwr_associate_words_adjust</a> (_MUST_ _IN_ const char *pszWord)</td></tr>
+<tr class="memdesc:ga93948eab8212f8d9d9cdf767aca63ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">联想词动态调整，提前pszWord的出现位置  <a href="#ga93948eab8212f8d9d9cdf767aca63ae8">更多...</a><br/></td></tr>
+<tr class="separator:ga93948eab8212f8d9d9cdf767aca63ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga396563007fb5c84520f2d63efb75af34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga396563007fb5c84520f2d63efb75af34">hci_hwr_associate_words_adjust_ex</a> (_MUST_ _IN_ int nSessionId, _OPT_ _IN_ const char *pszConfig, _MUST_ _IN_ const char *pszWord)</td></tr>
+<tr class="memdesc:ga396563007fb5c84520f2d63efb75af34"><td class="mdescLeft">&#160;</td><td class="mdescRight">联想词动态调整，提前pszWord的出现位置  <a href="#ga396563007fb5c84520f2d63efb75af34">更多...</a><br/></td></tr>
+<tr class="separator:ga396563007fb5c84520f2d63efb75af34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa90d8f8e42b363897c4b4af59dba6c2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#gaa90d8f8e42b363897c4b4af59dba6c2f">hci_hwr_free_associate_words_result</a> (_MUST_ _IN_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *psAssocWords)</td></tr>
+<tr class="memdesc:gaa90d8f8e42b363897c4b4af59dba6c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放联想词结果内存  <a href="#gaa90d8f8e42b363897c4b4af59dba6c2f">更多...</a><br/></td></tr>
+<tr class="separator:gaa90d8f8e42b363897c4b4af59dba6c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga066e8ef37f090dc198a183fc09f21df3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga066e8ef37f090dc198a183fc09f21df3">hci_hwr_pen_script</a> (_OPT_ _IN_ const char *pszConfig, _MUST_ _IN_ int nX, _MUST_ _IN_ int nY, _MUST_ _IN_ <a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html">PEN_SCRIPT_RESULT</a> *psPenScript)</td></tr>
+<tr class="memdesc:ga066e8ef37f090dc198a183fc09f21df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取笔型  <a href="#ga066e8ef37f090dc198a183fc09f21df3">更多...</a><br/></td></tr>
+<tr class="separator:ga066e8ef37f090dc198a183fc09f21df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4660abd1a41e3cf3606947c5a61ed514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga4660abd1a41e3cf3606947c5a61ed514">hci_hwr_free_pen_script_result</a> (_MUST_ _IN_ <a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html">PEN_SCRIPT_RESULT</a> *psPenScript)</td></tr>
+<tr class="memdesc:ga4660abd1a41e3cf3606947c5a61ed514"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放笔型结果内存  <a href="#ga4660abd1a41e3cf3606947c5a61ed514">更多...</a><br/></td></tr>
+<tr class="separator:ga4660abd1a41e3cf3606947c5a61ed514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ee7929e1cd69e905b1e7c58e144e54a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga5ee7929e1cd69e905b1e7c58e144e54a">hci_hwr_upload_user_history</a> ()</td></tr>
+<tr class="memdesc:ga5ee7929e1cd69e905b1e7c58e144e54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传用户数据(该接口已经废弃，调用该接口目前返回HCI_ERR_NONE)  <a href="#ga5ee7929e1cd69e905b1e7c58e144e54a">更多...</a><br/></td></tr>
+<tr class="separator:ga5ee7929e1cd69e905b1e7c58e144e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d20476a18e3bcc384eb32636b0e2ebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i___h_w_r.html#ga7d20476a18e3bcc384eb32636b0e2ebb">hci_hwr_release</a> ()</td></tr>
+<tr class="memdesc:ga7d20476a18e3bcc384eb32636b0e2ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">灵云HWR能力 反初始化  <a href="#ga7d20476a18e3bcc384eb32636b0e2ebb">更多...</a><br/></td></tr>
+<tr class="separator:ga7d20476a18e3bcc384eb32636b0e2ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gab1abfb04a8bac9a6aa1420dbb5833aed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_associate_words </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psAssocWords</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取联想词 </p>
+<p>获取联想词的时候会先按照输入串整体进行联想，然后依次从前去除字符进行联想， 例如，输入"中华人民"的时候，会给出"共和国"(按照"中华人民"匹配)，"大学"(按照"人民"匹配）， "族"(按照"民"匹配)等。但总的联想词的累计字数有一定限制。<br/>
+ 当输入串为全部英文时，会进行英文词的联想功能。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszWord</td><td>字符串指针，UTF-8格式，以'\0'为结束符。 </td></tr>
+    <tr><td class="paramname">psAssocWords</td><td>返回的联想词结构，使用完毕后，需使用 <a class="el" href="group___h_c_i___h_w_r.html#gaa90d8f8e42b363897c4b4af59dba6c2f" title="释放联想词结果内存">hci_hwr_free_associate_words_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地联想字典丢失 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>本地引擎获取联想词失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga93948eab8212f8d9d9cdf767aca63ae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_associate_words_adjust </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszWord</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>联想词动态调整，提前pszWord的出现位置 </p>
+<p>支持中文的联想词动态调整，若输入的是词库中已有的词，则会使其出现位置提前； 若输入的是词库中没有 的词，则插入词库，存于字典内的预留空间，字典大小不变，预留空间写满后较早插入的新词将被覆盖。<br/>
+ 不支持英文联想词动态调整，当输入串为全部英文时，返回失败。<br/>
+ 输入举例：输入"人民"进行联想，有对应"人民"的联想结果"大学"，想使这个结果靠前，此处应该提高 "人民大学"的词频，即pszWord应该是"人民大学"对应的UTF-8字符串，以'\0'结束。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszWord</td><td>字符串指针，UTF-8格式，以'\0'为结束符，最少2个字符，最多15个字符(注意：不是15个字节)。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的文本超过15个字符 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地联想字典丢失 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>联想词动态调整失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga396563007fb5c84520f2d63efb75af34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_associate_words_adjust_ex </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszWord</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>联想词动态调整，提前pszWord的出现位置 </p>
+<p>支持中文的联想词动态调整，若输入的是词库中已有的词，则会使其出现位置提前； 若输入的是词库中没有 的词，则插入词库，存于字典内的预留空间，字典大小不变，预留空间写满后较早插入的新词将被覆盖。<br/>
+ 不支持英文联想词动态调整，当输入串为全部英文时，返回失败。<br/>
+ 输入举例：输入"人民"进行联想，有对应"人民"的联想结果"大学"，想使这个结果靠前，此处应该提高 "人民大学"的词频，即pszWord应该是"人民大学"对应的UTF-8字符串，以'\0'结束。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>初始化配置串,ASCII字符串，以'\0'结束，保留接口，暂时无配置项 </td></tr>
+    <tr><td class="paramname">pszWord</td><td>字符串指针，UTF-8格式，以'\0'为结束符，最少2个字符，最多15个字符(注意：不是15个字节)。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的文本超过15个字符 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>联想词动态调整失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8bf600219f2766e8e642f1d6a570a661"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_associate_words_ex </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psAssocWords</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取联想词 </p>
+<p>获取联想词的时候会先按照输入串整体进行联想，然后依次从前去除字符进行联想， 例如，输入"中华人民"的时候，会给出"共和国"(按照"中华人民"匹配)，"大学"(按照"人民"匹配）， "族"(按照"民"匹配)等。但总的联想词的累计字数有一定限制。<br/>
+ 当输入串为全部英文时，会进行英文词的联想功能。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>初始化配置串,ASCII字符串，以'\0'结束 </td></tr>
+    <tr><td class="paramname">pszWord</td><td>字符串指针，UTF-8格式，以'\0'为结束符。 </td></tr>
+    <tr><td class="paramname">psAssocWords</td><td>返回的联想词结构，使用完毕后，需使用 <a class="el" href="group___h_c_i___h_w_r.html#gaa90d8f8e42b363897c4b4af59dba6c2f" title="释放联想词结果内存">hci_hwr_free_associate_words_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>本地引擎获取联想词失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置串中的值不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ 以下配置，与能力相关，并非所有的能力都支持，参见 <a class="el" href="hci_hwr_page.html">HWR能力描述</a> 。具体使用上可咨询捷通华声公司。 <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>associateModel </td><td>multi, single </td><td>multi </td><td>控制联想结果是多字还是单字，该配置只支持中文联想，英文联想忽略 </td><td>如果此项为multi，则不会对联想结果词的长度进行限制。如果此项为single，则表示限定联想词返回结果为单字。  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga89ff00d67dc70deeb1df6eafb9d80542"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_confirm </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_h_w_r___c_o_n_f_i_r_m___i_t_e_m.html">HWR_CONFIRM_ITEM</a> *&#160;</td>
+          <td class="paramname"><em>psHwrConfirmItem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>提交确认结果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">psHwrConfirmItem</td><td>要提交的确认结果,UTF8格式，以'\0'结束，不能超过2048字节（包括'\0'） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的确认文本超过可处理的上限 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a6ec54ee98979eab1cbc96776463522bb">HCI_ERR_HWR_CONFIRM_NO_TASK</a></td><td>没有可用来提交的任务，例如尚未识别就调用了本函数 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回识别失败 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa90d8f8e42b363897c4b4af59dba6c2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_free_associate_words_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html">ASSOCIATE_WORDS_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psAssocWords</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放联想词结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psAssocWords</td><td>需要释放的联想词内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4660abd1a41e3cf3606947c5a61ed514"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_free_pen_script_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html">PEN_SCRIPT_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psPenScript</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放笔型结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psPenScript</td><td>需要释放的笔型结果内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga04861596f772112666e39a927cb383c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_free_pinyin_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html">PINYIN_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psPinyin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放拼音结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psPinyin</td><td>需要释放的拼音内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5931d3e087442c9d5e935b120ebe6fde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_free_recog_result </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html">HWR_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psHwrRecogResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放识别结果内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">psHwrRecogResult</td><td>需要释放的识别结果内存指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>输入参数不合法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6f0053ca26a6e81e03f9a2f4b7afefc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云HWR能力 初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>初始化配置串,ASCII字符串，以'\0'结束 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS 尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a832ef7c13cbde671e5cc0f65c6f616af">HCI_ERR_HWR_ALREADY_INIT</a></td><td>HWR重复初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置项非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591aff8c54af6164765f012fe79d16fac041">HCI_ERR_CONFIG_DATAPATH_MISSING</a></td><td>配置中有initCapkeys却没有dataPath </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>输入的不是HWR的能力KEY </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>传入的能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae05f31dc92349860aab97f64314b53d9">HCI_ERR_HWR_ENGINE_INIT_FAILED</a></td><td>本地引擎初始化失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地引擎缺少字典 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。本配置串用于本地识别的字典载入和配置。 若不需要使用本地能力，此配置串可以传NULL或者""。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>dataPath </td><td>opt/myapp/hwr_data/ </td><td>空 </td><td>手写识别本地资源所在路径 </td><td>如果不使用本地手写识别能力，可以不传此项  </td></tr>
+<tr>
+<td>initCapKeys </td><td>hwr.local.freestylus </td><td>空 </td><td>初始化所需的本地能力 </td><td>多个能力以';'隔开，忽略传入的云端能力key。如果不使用本地识别能力，可以不传此项  </td></tr>
+<tr>
+<td>fileFlag </td><td>none, android_so </td><td>none </td><td>获取本地文件名的特殊标记 </td><td>参见下面的注释  </td></tr>
+<tr>
+<td>associateModel </td><td>multi, single </td><td>multi </td><td>控制联想结果是多字还是单字，该配置只支持中文联想，英文联想忽略 </td><td>如果此项为multi，则不会对联想结果词的长度进行限制。如果此项为single，则表示限定联想词返回结果为单字。  </td></tr>
+</table>
+</dd></dl>
+<p><b>Android特殊配置</b> <br/>
+ 当fileFlag为android_so时，加载本地资源文件(字典和领域库)时会将正常的库文件名更改为so文件名进行加载。 例如，当使用的库为file.dat时，则实际打开的文件名为libfile.dat.so，这样在Android系统下， 开发者可以按照此规则将本地资源改名后, 放在libs目录下打包入apk。在安装后，这些资源文件 就会放置在/data/data/包名/lib目录下。则可以直接将dataPath配置项指为此目录即可。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga066e8ef37f090dc198a183fc09f21df3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_pen_script </td>
+          <td>(</td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html">PEN_SCRIPT_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psPenScript</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取笔型 </p>
+<p>传入笔迹点获取笔型位图。 此函数会根据前后两次传入的点的位置关系进行位图的生成，如果此次传入的坐标点是第一个传入的坐标点，或者与之前传入的坐标点 完全相同则不会生成位图结果。 每一笔结束的时候要传入(-1,0),结束本次笔型生成。 此函数的配置项只在两种情况下生效：(1)第一次调用此函数；(2)传入结束笔迹标记(-1,0)后下一次调用此函数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>识别参数配置串,ASCII字符串，以'\0'结束，可为NULL </td></tr>
+    <tr><td class="paramname">nX</td><td>笔迹点的横坐标 取值&gt;= 0或者 -1 </td></tr>
+    <tr><td class="paramname">nY</td><td>笔迹点的纵坐标取值 &gt;= 0 </td></tr>
+    <tr><td class="paramname">psPenScript</td><td>返回的笔型结果结构，使用完毕后，需使用 <a class="el" href="group___h_c_i___h_w_r.html#ga4660abd1a41e3cf3606947c5a61ed514" title="释放笔型结果内存">hci_hwr_free_pen_script_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置串中的值不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae05f31dc92349860aab97f64314b53d9">HCI_ERR_HWR_ENGINE_INIT_FAILED</a></td><td>初始化笔形库失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>本地引擎获取笔型失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ 以下配置，与能力相关，并非所有的能力都支持，参见 <a class="el" href="hci_hwr_page.html">HWR能力描述</a> 。具体使用上可咨询捷通华声公司。 <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>penMode </td><td>pencil, pen, brush </td><td>pencil </td><td>设置笔型模式 </td><td>pencil: 铅笔<br/>
+pen: 钢笔<br/>
+brush: 毛笔  </td></tr>
+<tr>
+<td>penColor </td><td>#000000-#FFFFFF、rainbow </td><td>rainbow </td><td>设置笔迹颜色 </td><td>RGB颜色值，rainbow为彩色，其他值为单色  </td></tr>
+<tr>
+<td>penWidth </td><td>1-15 </td><td>1 </td><td>设置笔宽 </td><td></td></tr>
+<tr>
+<td>penSpeed </td><td>1-10 </td><td>1 </td><td>设置笔速，仅对毛笔有效 </td><td>通常情况下使用默认笔速即可，如果设备屏幕能够取到的点过于密集，影响到了笔形库的效率可以适当调大笔速(笔速的机制是通过舍弃部分点来实现的，笔速越大被忽略的点越多)。  </td></tr>
+</table>
+</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>此接口不支持多线程操作,nX的取值范围大于等于-1的整数(nX取值-1的时候，nY的值只能是0)，nY的取值范围是大于等于0的整数 <br/>
+<br/>
+ </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6f13853d70ab75f58fa13eb09918d0de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_pinyin </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_p_i_n_y_i_n___r_e_s_u_l_t.html">PINYIN_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psPinyin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取拼音 （仅Windows平台有效） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszWord</td><td>字符串指针，UTF-8格式，字符串以'\0'结束。如果多于一个汉字，只返回第一个汉字的拼音结果 </td></tr>
+    <tr><td class="paramname">psPinyin</td><td>返回的拼音信息，使用完毕后，需使用 <a class="el" href="group___h_c_i___h_w_r.html#ga04861596f772112666e39a927cb383c1" title="释放拼音结果内存">hci_hwr_free_pinyin_result()</a> 函数进行释放 应该将结构内容拷贝出来使用 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地拼音字典丢失 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae05f31dc92349860aab97f64314b53d9">HCI_ERR_HWR_ENGINE_INIT_FAILED</a></td><td>本地引擎初始化失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>本地引擎获取拼音失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga61edb1a3697a3ace74701ff3802cc94e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_recog </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ short *&#160;</td>
+          <td class="paramname"><em>psStrokingData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ unsigned int&#160;</td>
+          <td class="paramname"><em>uiStrokingDataLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_OPT_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ <a class="el" href="struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html">HWR_RECOG_RESULT</a> *&#160;</td>
+          <td class="paramname"><em>psHwrRecogResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>识别函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">psStrokingData</td><td>要识别的笔迹数据，最大可传入64KB。由若干坐标点组成，每个坐标点形式为（x，y），x 和 y 都是short类型， 有效值是0~32767。有两个分隔符是特例，(-1，0)是一个笔画结束的标记，(-1, -1) 是笔迹结束的标记 </td></tr>
+    <tr><td class="paramname">uiStrokingDataLen</td><td>要识别的笔迹数据长度, 字节为单位 </td></tr>
+    <tr><td class="paramname">pszConfig</td><td>识别参数配置串,ASCII字符串，以'\0'结束，可为NULL </td></tr>
+    <tr><td class="paramname">psHwrRecogResult</td><td>识别结果，使用完成后，需使用 <a class="el" href="group___h_c_i___h_w_r.html#ga5931d3e087442c9d5e935b120ebe6fde" title="释放识别结果内存">hci_hwr_free_recog_result()</a> 函数进行释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8928be7092a62e624d2e06188ff2bb71">HCI_ERR_DATA_SIZE_TOO_LARGE</a></td><td>传入的点数超过可处理的上限 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置串中的值不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591acd1abb56684477d460afe1eddb45ddb2">HCI_ERR_SYS_NOT_INIT</a></td><td>HCI SYS未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>传入的能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>不支持传入的配置 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7bd40612fda856110257b89c2a106680">HCI_ERR_HWR_ENGINE_FAILED</a></td><td>本地引擎识别失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8e3d09dbc6f5daa690c77b7d356f679c">HCI_ERR_SERVICE_CONNECT_FAILED</a></td><td>连接服务器失败，服务器无响应 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a80f9bab7b70e0ef9da41e8a5979f9207">HCI_ERR_SERVICE_TIMEOUT</a></td><td>服务器访问超时 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a200a44a4f7038f34706a7f9ec6501178">HCI_ERR_SERVICE_DATA_INVALID</a></td><td>服务器返回的数据格式不正确 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5b5f1c6be284a74fd70d0730d4307849">HCI_ERR_SERVICE_RESPONSE_FAILED</a></td><td>服务器返回识别失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af7a9d2f5a3bdab2d585830cfc20ecf87">HCI_ERR_UNSUPPORT</a></td><td>暂不支持 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4b697d62629355c1ca74d53ddbd83070">HCI_ERR_HWR_CONFIG_SUBLANG_MISSING</a></td><td>多语种能力时未传入subLang配置 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ 以下配置，与能力相关，并非所有的能力都支持，参见 <a class="el" href="hci_hwr_page.html">HWR能力描述</a> 。具体使用上可咨询捷通华声公司。 <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>candNum </td><td>1-10 </td><td>10 </td><td>识别候选结果个数 </td><td></td></tr>
+<tr>
+<td>recogRange </td><td>gb, gbk, big5, alphabet, number, punctuation, all </td><td>其他语言在能力列表中给出 </td><td>识别范围 </td><td>lower: 小写英文字母<br/>
+ upper: 大写英文字母<br/>
+ alphabet: 英文字母，总共52大小写字母<br/>
+ number：数字，0~9十个数字<br/>
+ alnum: 数字和英文字母<br/>
+ symbol:<br/>
+ sympun:<br/>
+ punctuation:同punct<br/>
+ punct: 标点符号，43个<br/>
+ gb: 国标一二级汉字，总共6763个汉字<br/>
+ gbk: GBK全部汉字(包括偏旁部首)，总共21003个汉字<br/>
+ gb18030: GB18030中所有汉字，共27585个<br/>
+ big5_5401: Big5一级汉字，总共5401汉字<br/>
+ big5: Big5汉字，总共13060汉字<br/>
+ hkscs: 香港增补字符集，共4026个<br/>
+ all(中文能力): 所有字符，包含gb，gbk，big5, alphabet, number, punctuation<br/>
+ all(英文能力): alphabet, number, punctuation<br/>
+ all(其他能力): 为所有支持范围的集合。 punctuation: 同 punct<br/>
+ katakana: 日文片假名<br/>
+ hiragana：日文平假名<br/>
+ kanji_jis0208: JIS X 0208中的日本汉字<br/>
+ kanji_cp932: CP932中的日本汉字<br/>
+ kanji_jis0213: JIS0213中的日本汉字<br/>
+ hanja: 韩文汉字<br/>
+ hangul: 韩语文字<br/>
+ hangul_basic: 基础韩语文字<br/>
+ thai: 泰语文字<br/>
+ hindi: 印地语文字<br/>
+ kanji_jis0212: JIS0212中的日本汉字<br/>
+ greek_lowercase：希腊文的小写字母<br/>
+ greek_uppercase: 希腊文的大写字母<br/>
+ latin_lowercase: 拉丁语系小写字母<br/>
+ latin_uppercase: 拉丁语系大写字母<br/>
+ cyrillic_lowercase:西里尔语系小写字母<br/>
+ cyrillic_uppercase: 西里尔语系大写字母<br/>
+ arabic: 阿拉伯文<br/>
+ 支持多识别范围同时设置，多个范围以+连接，例如 lower+number+gb，最后设置的 字符识别范围以所有的小范围合并为准，例如 lower+alphabet 等同于 alphabet。 若使用英文能力，识别范围设置目前无效，但其中若包含英文不支持的识别范围(gb、gbk、big5_5401、big5等)， 则返回HCI_ERR_CONFIG_UNSUPPORT。   </td></tr>
+<tr>
+<td>openSlant </td><td>no, yes </td><td>no </td><td>倾斜矫正开关 </td><td>no: 不做倾斜矫正<br/>
+yes: 做倾斜矫正<br/>
+  </td></tr>
+<tr>
+<td>splitMode </td><td>line, overlap </td><td>line </td><td>设置书写模式 </td><td>line: 行识别<br/>
+overlap: 叠字识别  </td></tr>
+<tr>
+<td>wordMode </td><td>mixed, capital, lowercase, initial </td><td>mixed </td><td>设置英文单词的大小写形式 </td><td>mixed: 字母大小写混合<br/>
+ capital: 全部字母大写<br/>
+ lowercase: 全部字母小写<br/>
+ initial: 首字母大写   </td></tr>
+<tr>
+<td>dispCode </td><td>nochange, tosimplified, totraditional </td><td>nochange </td><td>设置输出结果简繁体转换 </td><td>nochange: 简繁体不做变化<br/>
+tosimplified: 写繁得简<br/>
+totraditional: 写简得繁  </td></tr>
+<tr>
+<td>fullHalf </td><td>full, half </td><td>half </td><td>设置中文识别模式下输出符号是全角还是半角 </td><td>full: 全角<br/>
+half: 半角  </td></tr>
+<tr>
+<td>subLang </td><td>使用能力hwr.local.letter.latin时设置subLang=english </td><td>无 </td><td>多语种能力时选择语言，只能传入1个 </td><td>详见<a class="el" href="hci_hwr_page.html#sublang_list">语种列表</a>  </td></tr>
+</table>
+<br/>
+<br/>
+ 这里没有定义的配置项，会使用 session_start 时的定义。如果 session_start 时也没有定义，则使用缺省值。此配置串可以传NULL或者""。</dd></dl>
+<dl class="section note"><dt>注解</dt><dd><b>实时识别(realtime配置值为yes)</b> <br/>
+<br/>
+ 当不启动实时识别时，每次调用本函数时所输入的笔迹数据被认为是完整的数据， 如果不是(-1,0)(-1,-1)结束，会认为数据非法。 <br/>
+<br/>
+ 当启用实时识别时，对于每次连续的识别内容，可以多次调用本函数，每次调用追加输入新的数据，每次输入的数据 以(-1,0)结束，也即每次输入的笔画是完整的，可以一次输入多个笔画。最后一次以(-1,0)(-1,-1)结束， 表示整次识别结束。每次调用本函数都会返回从头开始的完整结果，新输入的数据会导致切分发生变化， 因此后一次结果不一定是前次结果再追加字符，可能会更改掉部分前次结果。实时识别中每次识别的结果都需要释放。 <br/>
+<br/>
+ 实时识别只使用每次新开启时的pszConfig配置，在实时识别过程中再传入的pszConfig总是会被忽略。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7d20476a18e3bcc384eb32636b0e2ebb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>灵云HWR能力 反初始化 </p>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4f6673aeae1ff4d5529509773be11c68">HCI_ERR_ACTIVE_SESSION_EXIST</a></td><td>尚有未stop的Sesssion，无法结束 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga94938645c0f1c3ba427614079205eef7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_session_start </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ int *&#160;</td>
+          <td class="paramname"><em>pnSessionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开始会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>会话配置串,ASCII字符串，以'\0'结束 </td></tr>
+    <tr><td class="paramname">pnSessionId</td><td>成功时返回会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a74f2a1bafbde9111af1edd1676b14552">HCI_ERR_PARAM_INVALID</a></td><td>传入的参数不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae3aaa1bfb8f3e65736afe3e4132d231c">HCI_ERR_CONFIG_CAPKEY_MISSING</a></td><td>缺少必需的capKey配置项 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a4bf17c940e9295810f762231a7b08dfc">HCI_ERR_CONFIG_INVALID</a></td><td>配置串中的值不合法 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a474e0f398b272a240eb3a517f01c6c38">HCI_ERR_CONFIG_CAPKEY_NOT_MATCH</a></td><td>输入的不是HWR的能力KEY </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a67341f58e067b45247549218ad3dd950">HCI_ERR_CONFIG_UNSUPPORT</a></td><td>不支持传入的配置 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591abfd66e608f5855b1968b315bfd95da32">HCI_ERR_TOO_MANY_SESSION</a></td><td>创建的Session数量超出限制(256) </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a790c7ac9cc7c80f133ac7d5d08b3f695">HCI_ERR_CAPKEY_NOT_FOUND</a></td><td>传入的能力key未找到 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a358dd1f6cf528794753716efb8bd8fca">HCI_ERR_URL_MISSING</a></td><td>未找到有效的云服务地址 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a7d4579beec063a88f037cafd4349147d">HCI_ERR_HWR_ENGINE_SESSION_START_FAILED</a></td><td>本地引擎启动会话失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a12985d8024ae0050a5d511b320787ad3">HCI_ERR_OUT_OF_MEMORY</a></td><td>分配内存失败 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8798c14531d684dfc35330e1082e3720">HCI_ERR_LOCAL_LIB_MISSING</a></td><td>本地引擎缺少字典 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a5ef3452003adc1ab176998d4fa8aedb2">HCI_ERR_LOAD_FUNCTION_FROM_DLL</a></td><td>要载入的模块不存在，或者需要的功能在该模块不存在 </td></tr>
+</table>
+</dd></dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。 <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>capKey </td><td>hwr.cloud.freewrite </td><td>无 </td><td>手写识别能力key </td><td>参见 <a class="el" href="hci_hwr_page.html">HWR能力描述</a> 。每个session只能定义一种能力，并且过程中不能改变。  </td></tr>
+<tr>
+<td>realtime </td><td>no, yes </td><td>no </td><td>是否启动实时识别，仅本地多字手写能力支持 </td><td>参见 <a class="el" href="group___h_c_i___h_w_r.html#ga61edb1a3697a3ace74701ff3802cc94e" title="识别函数">hci_hwr_recog()</a> 函数的注释  </td></tr>
+</table>
+<br/>
+<br/>
+ 另外，这里还可以传入识别的配置项(除了subLang)，作为默认配置项。参见 <a class="el" href="group___h_c_i___h_w_r.html#ga61edb1a3697a3ace74701ff3802cc94e" title="识别函数">hci_hwr_recog()</a> 。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4d2798117639a70725818427f4f0b301"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_session_stop </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nSessionId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSessionId</td><td>会话ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591ae63f27feaae7058f9a01140aad00a964">HCI_ERR_HWR_NOT_INIT</a></td><td>HCI HWR尚未初始化 </td></tr>
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591af8a19cafbf0d508720d169c67e5ada0a">HCI_ERR_SESSION_INVALID</a></td><td>传入的Session非法 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5ee7929e1cd69e905b1e7c58e144e54a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_hwr_upload_user_history </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传用户数据(该接口已经废弃，调用该接口目前返回HCI_ERR_NONE) </p>
+<dl class="section return"><dt>返回</dt><dd>错误码 </dd>
+<dd>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><a class="el" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018">HCI_ERR_NONE</a></td><td>操作成功 </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

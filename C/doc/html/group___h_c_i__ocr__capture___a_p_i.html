@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): 灵云OCR拍照器API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___h_c_i__ocr__capture___a_p_i.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">灵云OCR拍照器API</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html">CAPTURE_CALLBACK_PARAM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">拍照器回调函数的结构体  <a href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga73d3e45188b09bda9756d30e364b95ca"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga73d3e45188b09bda9756d30e364b95ca">Callback_CaptureEventStateChange</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:ga73d3e45188b09bda9756d30e364b95ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件变化回调  <a href="#ga73d3e45188b09bda9756d30e364b95ca">更多...</a><br/></td></tr>
+<tr class="separator:ga73d3e45188b09bda9756d30e364b95ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga909759ce0744a3f23d7087b7fdcabfbe"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga909759ce0744a3f23d7087b7fdcabfbe">Callback_CaptureCapturing</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pszImageData, _MUST_ _IN_ unsigned int uiImageLen, _MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaa1afb6a27f61eb376be25be538d187f1">bool</a> bHasConers, _OPT_ _IN_ <a class="el" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html">OCR_CORNERS_RESULT</a> *pCornersResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:ga909759ce0744a3f23d7087b7fdcabfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片抓取回调  <a href="#ga909759ce0744a3f23d7087b7fdcabfbe">更多...</a><br/></td></tr>
+<tr class="separator:ga909759ce0744a3f23d7087b7fdcabfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22bc1e03817c87c8db717da80f352e65"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga22bc1e03817c87c8db717da80f352e65">Callback_CaptureEventRecogFinish</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _MUST_ _IN_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:ga22bc1e03817c87c8db717da80f352e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">拍照器识别完成回调  <a href="#ga22bc1e03817c87c8db717da80f352e65">更多...</a><br/></td></tr>
+<tr class="separator:ga22bc1e03817c87c8db717da80f352e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7aa5e1387c8478cedb6d83691ba34f8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gaf7aa5e1387c8478cedb6d83691ba34f8">Callback_CaptureEventError</a> )(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _MUST_ _IN_ int eErrorCode, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td></tr>
+<tr class="memdesc:gaf7aa5e1387c8478cedb6d83691ba34f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR SDK出错回调  <a href="#gaf7aa5e1387c8478cedb6d83691ba34f8">更多...</a><br/></td></tr>
+<tr class="separator:gaf7aa5e1387c8478cedb6d83691ba34f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga5a004caa0a056b9f26ecb3a87760e5b2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2abd568ccc19aea0201539cb8ccd586be9">CAPTURE_EVENT_CAPTURE_BEGIN</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a72f87826890e30def8fa4d9eb01aaca7">CAPTURE_EVENT_CAPTURE_FINISH</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ad803660d58f2f29512fc037c80fac9f7">CAPTURE_EVENT_RECOGNIZE_BEGIN</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af78a8ccdc101371f15157424904b8c34">CAPTURE_EVENT_RECOGNIZE_MORE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a8be8564174b63b07e61d46877a02cbd3">CAPTURE_EVENT_RECOGNIZE_FINISH</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a104cc69e348a3334efc906edacc56b93">CAPTURE_EVENT_RECOGNIZE_COMPLETE</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3fb0665909b82354f8691a708c118a20">CAPTURE_EVENT_ENGINE_ERROR</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a30ebdf7fd4974f87847f2ce8b9796e19">CAPTURE_EVENT_DEVICE_ERROR</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a0ee78fdb79aef9db3c92eb294bb1c6b5">CAPTURE_EVENT_MALLOC_ERROR</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aa527caadeaf6bfeca5d02e294477b3d3">CAPTURE_EVENT_PREVIEW_BEGIN</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3a3e12b89e802899536e46365e10c006">CAPTURE_EVENT_PREVIEW_DETECT_CORNER_POINTS_SUCCESS</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab67206e4b0b8c6a9e342cfd33ab6b829">CAPTURE_EVENT_PREVIEW_DETECT_CAN_BE_RECOGNIZE_SUCCESS</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2aed5faf99d34b7f99ee4ceda01b077cbe">CAPTURE_EVENT_FOCUS_BEGIN</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2a3badff44af1cbd54c592423b3ef47018">CAPTURE_EVENT_FOCUS_SUCCESS</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ab30f308bd65ec36c1c460aface05f129">CAPTURE_EVENT_FOCUS_FAIL</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2af32eb6ecd519e213a9893da98a324816">CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_SUCCESS</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gga5a004caa0a056b9f26ecb3a87760e5b2ae5e1d4f72d4191b65dd8a3328adc7cad">CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_FAIL</a>
+<br/>
+ }</td></tr>
+<tr class="separator:ga5a004caa0a056b9f26ecb3a87760e5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafab27a10f1a3a3e99d846480387fe1f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> { <br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a92cccad1b6cbb773d93e3acb53e998aa">CAPTURE_ERR_UNKNOWN</a> = -1, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a5a2aa3109e8f9dfe225d9c8a36a35273">CAPTURE_ERR_NONE</a> = 0, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a58136d3e60377e33597508261040b372">CAPTURE_ERR_ALREADY_INITED</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a2cdf8c4d32df92b3d55b2925e10de7b5">CAPTURE_ERR_NOT_INITED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a45f9ca3ab9f8b28a2f41e6d5a22144d3">CAPTURE_ERR_ENGINE_INIT</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a1a12612267a2c44a3076ec6e1f2ac4d9">CAPTURE_ERR_DEVICE_INIT</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a417c6fc02c0d996eb74e02d84305fd7c">CAPTURE_ERR_CAPTURE</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6a12e26cc69a8e35e39adc38e8e9dbf5">CAPTURE_ERR_LOAD_TEMPLATE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a4bf619fb7ee1837b73a2ecfcd68dd6ee">CAPTURE_ERR_UNLOAD_TEMPLATE</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a7952c6c535633cc6a7e02fbc97ce161e">CAPTURE_ERR_SESSION_START</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8af9d34778b6537762faf95b8bba5ffe24">CAPTURE_ERR_RECOGNIZE</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a6cf6481d68e5af178d59dbfa787bf778">CAPTURE_ERR_LOAD_IMAGE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa8e60e622ddc7f7d527b632932d2f57a">CAPTURE_ERR_UNSUPPORT</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8aa07b814a06db283dde94bd7d10b7193f">CAPTURE_ERR_RELEASE</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8acbe42e919dbcb34ec2b3b8fef52ac882">CAPTURE_ERR_BUSY</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a20e29c56f8f10a7e04e996573268088c">CAPTURE_ERR_CAPTUREONE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a027d443996d25fd6abbe6ff05e87033e">CAPTURE_ERR_PARAM_INVALID</a>, 
+<a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ggafab27a10f1a3a3e99d846480387fe1f8a8e7fe31ed323bd1ae91c1fd1d6b1afbd">CAPTURE_ERR_OUT_OF_MEMORY</a>
+<br/>
+ }</td></tr>
+<tr class="separator:gafab27a10f1a3a3e99d846480387fe1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaab1cd101b55024e4d5bf3af534c1b73c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gaab1cd101b55024e4d5bf3af534c1b73c">hci_ocr_capture_init</a> (_MUST_ _IN_ const char *pszOCRSdkConfig, _MUST_ _IN_ <a class="el" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html">CAPTURE_CALLBACK_PARAM</a> *psCallbackParam)</td></tr>
+<tr class="memdesc:gaab1cd101b55024e4d5bf3af534c1b73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">拍照器SDK初始化  <a href="#gaab1cd101b55024e4d5bf3af534c1b73c">更多...</a><br/></td></tr>
+<tr class="separator:gaab1cd101b55024e4d5bf3af534c1b73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42e2397d7e0d5559e6e9da85ceb7cce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga42e2397d7e0d5559e6e9da85ceb7cce1">hci_ocr_capture_load_template</a> (_MUST_ _IN_ const char *pszTemplateFile, _MUST_ _OUT_ int *pnTemplateId)</td></tr>
+<tr class="memdesc:ga42e2397d7e0d5559e6e9da85ceb7cce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR Capture加载模板文件  <a href="#ga42e2397d7e0d5559e6e9da85ceb7cce1">更多...</a><br/></td></tr>
+<tr class="separator:ga42e2397d7e0d5559e6e9da85ceb7cce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf100d8ed06374ffa55aee9d26c7fc4ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gaf100d8ed06374ffa55aee9d26c7fc4ed">hci_ocr_capture_unload_template</a> (_MUST_ _IN_ int nTemplateId)</td></tr>
+<tr class="memdesc:gaf100d8ed06374ffa55aee9d26c7fc4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR Capture卸载模板文件  <a href="#gaf100d8ed06374ffa55aee9d26c7fc4ed">更多...</a><br/></td></tr>
+<tr class="separator:gaf100d8ed06374ffa55aee9d26c7fc4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac950ae2fdb3a15168095ab4b3ae203cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gac950ae2fdb3a15168095ab4b3ae203cc">hci_ocr_capture_start</a> (_MUST_ _IN_ const char *pszConfig)</td></tr>
+<tr class="memdesc:gac950ae2fdb3a15168095ab4b3ae203cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR Capture开启扫描并识别  <a href="#gac950ae2fdb3a15168095ab4b3ae203cc">更多...</a><br/></td></tr>
+<tr class="separator:gac950ae2fdb3a15168095ab4b3ae203cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f164cafd8673f33cadaf4df819972c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga2f164cafd8673f33cadaf4df819972c0">hci_ocr_capture_get_preview</a> (<a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *preview)</td></tr>
+<tr class="memdesc:ga2f164cafd8673f33cadaf4df819972c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取预览界面，该接口Windows不支持(iOS专用)  <a href="#ga2f164cafd8673f33cadaf4df819972c0">更多...</a><br/></td></tr>
+<tr class="separator:ga2f164cafd8673f33cadaf4df819972c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80cdd9081ac71b323652d806fca2788b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga80cdd9081ac71b323652d806fca2788b">hci_ocr_capture_stop_and_recog</a> ()</td></tr>
+<tr class="memdesc:ga80cdd9081ac71b323652d806fca2788b"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止相机并识别  <a href="#ga80cdd9081ac71b323652d806fca2788b">更多...</a><br/></td></tr>
+<tr class="separator:ga80cdd9081ac71b323652d806fca2788b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3b803194f03a8f0fef621954aadb6bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gac3b803194f03a8f0fef621954aadb6bc">hci_ocr_capture_stop</a> ()</td></tr>
+<tr class="memdesc:gac3b803194f03a8f0fef621954aadb6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止相机（不识别）  <a href="#gac3b803194f03a8f0fef621954aadb6bc">更多...</a><br/></td></tr>
+<tr class="separator:gac3b803194f03a8f0fef621954aadb6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04898649cb5cb5da0ee6f023a7071154"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga04898649cb5cb5da0ee6f023a7071154">hci_ocr_capture_recog</a> (_MUST_ _IN_ const char *pszConfig, _MUST_ _IN_ unsigned char *pImageData, _MUST_ _IN_ unsigned int uiImageLen)</td></tr>
+<tr class="memdesc:ga04898649cb5cb5da0ee6f023a7071154"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR Capture 支持识别单张图片识别，通过回调返回处理结果  <a href="#ga04898649cb5cb5da0ee6f023a7071154">更多...</a><br/></td></tr>
+<tr class="separator:ga04898649cb5cb5da0ee6f023a7071154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab45b6b60677efed7d958941013878dfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gab45b6b60677efed7d958941013878dfb">hci_ocr_capture_release</a> ()</td></tr>
+<tr class="memdesc:gab45b6b60677efed7d958941013878dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR Capture反初始化  <a href="#gab45b6b60677efed7d958941013878dfb">更多...</a><br/></td></tr>
+<tr class="separator:gab45b6b60677efed7d958941013878dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="ga909759ce0744a3f23d7087b7fdcabfbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_CaptureCapturing)(_MUST_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pszImageData, _MUST_ _IN_ unsigned int uiImageLen, _MUST_ _IN_ <a class="el" href="group___h_c_i___a_s_r___r_e_c_o_r_d_e_r___a_p_i.html#gaa1afb6a27f61eb376be25be538d187f1">bool</a> bHasConers, _OPT_ _IN_ <a class="el" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html">OCR_CORNERS_RESULT</a> *pCornersResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>图片抓取回调 </p>
+<dl class="section note"><dt>注解</dt><dd></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszImageData</td><td>图像数据 </td></tr>
+    <tr><td class="paramname">uiImageLen</td><td>图像数据长度 </td></tr>
+    <tr><td class="paramname">bHasConers</td><td>是否切边,扫描仪返回true </td></tr>
+    <tr><td class="paramname">pCornersResult</td><td>图像坐标,扫描仪返回NULL </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf7aa5e1387c8478cedb6d83691ba34f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_CaptureEventError)(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _MUST_ _IN_ int eErrorCode, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR SDK出错回调 </p>
+<dl class="section note"><dt>注解</dt><dd>发生事件 CAPTURE_EVENT_ENGINE_ERROR 或 CAPTURE_EVENT_DEVICE_ERROR 时回调 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eCaptureEvent</td><td>回调时的通知事件 </td></tr>
+    <tr><td class="paramname">nErrorCode</td><td>错误码 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga22bc1e03817c87c8db717da80f352e65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_CaptureEventRecogFinish)(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _MUST_ _IN_ <a class="el" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">OCR_RECOG_RESULT</a> *pRecogResult, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拍照器识别完成回调 </p>
+<dl class="section note"><dt>注解</dt><dd>识别成功后回调 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eCaptureEvent</td><td>识别完成事件 </td></tr>
+    <tr><td class="paramname">pRecogResult</td><td>识别结果 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga73d3e45188b09bda9756d30e364b95ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a>(HCIAPI * Callback_CaptureEventStateChange)(_MUST_ _IN_ <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a> eCaptureEvent, _OPT_ _IN_ <a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *pUsrParam)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>事件变化回调 </p>
+<dl class="section note"><dt>注解</dt><dd>CAPTURE_EVENT_RECOGNIZE_FINISH 事件不会在该回调中触发，它只会在 Callback_CaptureEventRecogFinish 中触发 CAPTURE_EVENT_ENGINE_ERROR、CAPTURE_EVENT_DEVICE_ERROR 事件不会在该回调中触发，只会在 Callback_CaptureEventError 中触发 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eCaptureEvent</td><td>回调时的通知事件 </td></tr>
+    <tr><td class="paramname">pUsrParam</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="gafab27a10f1a3a3e99d846480387fe1f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>*CAPTURE_ERR_CODE 扩展接口错误码定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a92cccad1b6cbb773d93e3acb53e998aa"></a>CAPTURE_ERR_UNKNOWN</em>&nbsp;</td><td class="fielddoc">
+<p>-1: 未知错误，不会出现 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a5a2aa3109e8f9dfe225d9c8a36a35273"></a>CAPTURE_ERR_NONE</em>&nbsp;</td><td class="fielddoc">
+<p>0: 成功 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a58136d3e60377e33597508261040b372"></a>CAPTURE_ERR_ALREADY_INITED</em>&nbsp;</td><td class="fielddoc">
+<p>1: 已经初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a2cdf8c4d32df92b3d55b2925e10de7b5"></a>CAPTURE_ERR_NOT_INITED</em>&nbsp;</td><td class="fielddoc">
+<p>2: 拍图器没有初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a45f9ca3ab9f8b28a2f41e6d5a22144d3"></a>CAPTURE_ERR_ENGINE_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>3: 引擎初始化失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a1a12612267a2c44a3076ec6e1f2ac4d9"></a>CAPTURE_ERR_DEVICE_INIT</em>&nbsp;</td><td class="fielddoc">
+<p>4: 设备初始化错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a417c6fc02c0d996eb74e02d84305fd7c"></a>CAPTURE_ERR_CAPTURE</em>&nbsp;</td><td class="fielddoc">
+<p>5: 扫描错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a6a12e26cc69a8e35e39adc38e8e9dbf5"></a>CAPTURE_ERR_LOAD_TEMPLATE</em>&nbsp;</td><td class="fielddoc">
+<p>6: 加载模板错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a4bf619fb7ee1837b73a2ecfcd68dd6ee"></a>CAPTURE_ERR_UNLOAD_TEMPLATE</em>&nbsp;</td><td class="fielddoc">
+<p>7: 卸载模板错误 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a7952c6c535633cc6a7e02fbc97ce161e"></a>CAPTURE_ERR_SESSION_START</em>&nbsp;</td><td class="fielddoc">
+<p>8: 启动任务失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8af9d34778b6537762faf95b8bba5ffe24"></a>CAPTURE_ERR_RECOGNIZE</em>&nbsp;</td><td class="fielddoc">
+<p>9: 识别失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a6cf6481d68e5af178d59dbfa787bf778"></a>CAPTURE_ERR_LOAD_IMAGE</em>&nbsp;</td><td class="fielddoc">
+<p>10: 加载图片失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8aa8e60e622ddc7f7d527b632932d2f57a"></a>CAPTURE_ERR_UNSUPPORT</em>&nbsp;</td><td class="fielddoc">
+<p>11: 接口暂不支持 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8aa07b814a06db283dde94bd7d10b7193f"></a>CAPTURE_ERR_RELEASE</em>&nbsp;</td><td class="fielddoc">
+<p>12: 释放失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8acbe42e919dbcb34ec2b3b8fef52ac882"></a>CAPTURE_ERR_BUSY</em>&nbsp;</td><td class="fielddoc">
+<p>13: 状态忙碌，正在拍照或识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a20e29c56f8f10a7e04e996573268088c"></a>CAPTURE_ERR_CAPTUREONE</em>&nbsp;</td><td class="fielddoc">
+<p>14: 拍照失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a027d443996d25fd6abbe6ff05e87033e"></a>CAPTURE_ERR_PARAM_INVALID</em>&nbsp;</td><td class="fielddoc">
+<p>15: 参数非法 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggafab27a10f1a3a3e99d846480387fe1f8a8e7fe31ed323bd1ae91c1fd1d6b1afbd"></a>CAPTURE_ERR_OUT_OF_MEMORY</em>&nbsp;</td><td class="fielddoc">
+<p>16: 内存不足 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga5a004caa0a056b9f26ecb3a87760e5b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga5a004caa0a056b9f26ecb3a87760e5b2">CAPTURE_EVENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>*CAPTURE_EVENT 扩展接口回调事件定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2abd568ccc19aea0201539cb8ccd586be9"></a>CAPTURE_EVENT_CAPTURE_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>0: 拍照器开始进行图片捕获 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a72f87826890e30def8fa4d9eb01aaca7"></a>CAPTURE_EVENT_CAPTURE_FINISH</em>&nbsp;</td><td class="fielddoc">
+<p>1: 扫描完成 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2ad803660d58f2f29512fc037c80fac9f7"></a>CAPTURE_EVENT_RECOGNIZE_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>2: 开始识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2af78a8ccdc101371f15157424904b8c34"></a>CAPTURE_EVENT_RECOGNIZE_MORE</em>&nbsp;</td><td class="fielddoc">
+<p>3: 还有图片没有识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a8be8564174b63b07e61d46877a02cbd3"></a>CAPTURE_EVENT_RECOGNIZE_FINISH</em>&nbsp;</td><td class="fielddoc">
+<p>4: 单张图片识别结束 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a104cc69e348a3334efc906edacc56b93"></a>CAPTURE_EVENT_RECOGNIZE_COMPLETE</em>&nbsp;</td><td class="fielddoc">
+<p>5: 所有识别结束 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a3fb0665909b82354f8691a708c118a20"></a>CAPTURE_EVENT_ENGINE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>6: 引擎出错，一般为HCI_OCR模块出错 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a30ebdf7fd4974f87847f2ce8b9796e19"></a>CAPTURE_EVENT_DEVICE_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>7: 设备出错,目前windows接口都为同步实现，因此都通过返回值返回，不再进行该种错误回调 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a0ee78fdb79aef9db3c92eb294bb1c6b5"></a>CAPTURE_EVENT_MALLOC_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>8: 分配空间失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2aa527caadeaf6bfeca5d02e294477b3d3"></a>CAPTURE_EVENT_PREVIEW_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>9: 开始预览图像 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a3a3e12b89e802899536e46365e10c006"></a>CAPTURE_EVENT_PREVIEW_DETECT_CORNER_POINTS_SUCCESS</em>&nbsp;</td><td class="fielddoc">
+<p>10: 检测到预览图片帧的切边信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2ab67206e4b0b8c6a9e342cfd33ab6b829"></a>CAPTURE_EVENT_PREVIEW_DETECT_CAN_BE_RECOGNIZE_SUCCESS</em>&nbsp;</td><td class="fielddoc">
+<p>11: 检测到预览图片帧可识别 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2aed5faf99d34b7f99ee4ceda01b077cbe"></a>CAPTURE_EVENT_FOCUS_BEGIN</em>&nbsp;</td><td class="fielddoc">
+<p>12: 开始对焦 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2a3badff44af1cbd54c592423b3ef47018"></a>CAPTURE_EVENT_FOCUS_SUCCESS</em>&nbsp;</td><td class="fielddoc">
+<p>13: 对焦成功 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2ab30f308bd65ec36c1c460aface05f129"></a>CAPTURE_EVENT_FOCUS_FAIL</em>&nbsp;</td><td class="fielddoc">
+<p>14: 对焦失败 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2af32eb6ecd519e213a9893da98a324816"></a>CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_SUCCESS</em>&nbsp;</td><td class="fielddoc">
+<p>15: 拍照获得的图片检测切边信息成功 暂未使用 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga5a004caa0a056b9f26ecb3a87760e5b2ae5e1d4f72d4191b65dd8a3328adc7cad"></a>CAPTURE_EVENT_CAPTURE_DETECT_CORNER_POINTS_FAIL</em>&nbsp;</td><td class="fielddoc">
+<p>16: 拍照获得的图片检测切边信息失败 暂未使用 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga2f164cafd8673f33cadaf4df819972c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_get_preview </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b">void</a> *&#160;</td>
+          <td class="paramname"><em>preview</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取预览界面，该接口Windows不支持(iOS专用) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">preview</td><td>用户传入的UIView，预览内容将展示在此view上 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaab1cd101b55024e4d5bf3af534c1b73c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_init </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszOCRSdkConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ <a class="el" href="struct_c_a_p_t_u_r_e___c_a_l_l_b_a_c_k___p_a_r_a_m.html">CAPTURE_CALLBACK_PARAM</a> *&#160;</td>
+          <td class="paramname"><em>psCallbackParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拍照器SDK初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszOCRSdkConfig</td><td>拍照器初始化配置串 </td></tr>
+    <tr><td class="paramname">psCallbackParam</td><td>回调函数的集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>附加配置串定义：</dt><dd><br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td>dataPath </td><td>opt/myapp/ocr_data </td><td>空 </td><td>光学字符识别本地资源所在路径 </td><td>不使用本地能力时，此项不传  </td></tr>
+<tr>
+<td>initCapKeys </td><td>ocr.local </td><td>空 </td><td>初始化所需的本地能力 </td><td>多个能力以';'隔开，传入的能力必须合法，否则返回错误。忽略传入的云端能力key。如果不使用本地识别能力，此项不传。  </td></tr>
+<tr>
+<td>fileFlag </td><td>none, android_so </td><td>none </td><td>获取本地文件名的特殊标记 </td><td>不使用本地能力时，此项不传。详细说明参见下面的注释  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga42e2397d7e0d5559e6e9da85ceb7cce1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_load_template </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszTemplateFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _OUT_ int *&#160;</td>
+          <td class="paramname"><em>pnTemplateId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR Capture加载模板文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszTemplateFile</td><td>模板路径 </td></tr>
+    <tr><td class="paramname">pnTemplateId</td><td>模板标识ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga04898649cb5cb5da0ee6f023a7071154"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_recog </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ unsigned char *&#160;</td>
+          <td class="paramname"><em>pImageData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_MUST_ _IN_ unsigned int&#160;</td>
+          <td class="paramname"><em>uiImageLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR Capture 支持识别单张图片识别，通过回调返回处理结果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>识别配置项 </td></tr>
+    <tr><td class="paramname">pImageData</td><td>图像数据，可以通过isFile字段来指定使用文件路径还是图像数据内存 </td></tr>
+    <tr><td class="paramname">uiImageLen</td><td>设置图像数据的长度，如果接口传入的是路径该设置项无效 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。并不是每个能力都支持<br/>
+<br/>
+ 列表中的所有配置项，各能力支持的配置项请参考<a class="el" href="hci_ocr_page.html">OCR能力描述</a> <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>模块</b> </td><td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td rowspan="3">识别通用 </td><td>capKey </td><td>ocr.cloud </td><td>无 </td><td>OCR识别能力key </td><td>参见 <a class="el" href="hci_ocr_page.html">OCR能力描述</a> 。每个session只能定义一种能力，并且过程中不能改变。  </td></tr>
+<tr>
+<td>cutEdge </td><td>yes, no  </td><td>no </td><td>原始图片需要裁边，该配置只适用于本地识别 </td><td>yes,需要裁边,对于拍照照片适用，原始图像为未裁边图像<br/>
+ no, 不需要裁边，非拍照图片使用，原始图像为裁边图像<br/>
+   </td></tr>
+<tr>
+<td>isFile </td><td>yes,no </td><td>no </td><td>是否文件路径输入 </td><td>是否是文件路径输入  </td></tr>
+<tr>
+<td rowspan="9">文本识别 </td><td>recogRange </td><td>gb, letter </td><td>all </td><td>识别范围 </td><td>number: 数字 0 - 9, 10个<br/>
+ uppercase: 大写英文字母, A - Z, 26个<br/>
+ lowercase: 小写英文字母, a - z, 26个<br/>
+ letter: 大小写字母, 52个<br/>
+ alnum: 大小写字母和数字, 62个<br/>
+ gb: 中文简体汉字<br/>
+ big5: 中文繁体汉字 all: 所有字符集的合集,英文能力时不包含gb和big5<br/>
+   </td></tr>
+<tr>
+<td>autoDeskew </td><td>no, yes </td><td>no </td><td>是否自动倾斜校正，自动识别时才支持 </td><td></td></tr>
+<tr>
+<td>autoLayout </td><td>no, yes </td><td>no </td><td>是否进行自动版面分析，自动识别时才支持 </td><td></td></tr>
+<tr>
+<td>fullHalf </td><td>full, half </td><td>half </td><td>设置中文识别模式下输出英文字母、数字是全角还是半角 </td><td>full: 全角<br/>
+half: 半角  </td></tr>
+<tr>
+<td>dispCode </td><td>nochange, tosimplified </td><td>nochange </td><td>设置输出结果简繁体转换 </td><td>nochange: 简繁体不做变化<br/>
+tosimplified: 繁体转换为简体  </td></tr>
+<tr>
+<td>detailResult </td><td>no, yes </td><td>no </td><td>是否返回详细结果 </td><td>缺省只返回识别结果的文本串，如果设为yes，则会返回详细的节点信息 <a class="el" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html">OCR_RECOG_NODE</a>   </td></tr>
+<tr>
+<td>binarize </td><td>adaptive, global </td><td>adaptive </td><td>二值化方法，仅对灰度或者彩色图像有效 </td><td>global: 全局二值化算法，主要针对通过扫描、截屏等获取的图像<br/>
+ adaptive: 局部自适应二值化算法，主要针对通过拍照、摄像头等获取的受光照影响较大图像   </td></tr>
+<tr>
+<td>imageType </td><td>normal, screen </td><td>normal </td><td>图像类型 </td><td>normal: 普通图像<br/>
+ screen: 截屏图像   </td></tr>
+<tr>
+<td>localProcess </td><td>yes, no </td><td>yes </td><td>云端能力，设置图像时 是否先做本地预处理，现在主要是指二值化 </td><td>yes: 二值化<br/>
+ no: 不进行二值化   </td></tr>
+<tr>
+<td rowspan="3">模板识别 </td><td>templateID </td><td>1 </td><td>无 </td><td>模板文件的ID </td><td>本地和云端模板识别支持，即capKey为ocr.local.template和ocr.cloud.template时必选，其他情况忽略。<br/>
+ 本地识别时，本参数是由 <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga42e2397d7e0d5559e6e9da85ceb7cce1" title="OCR Capture加载模板文件">hci_ocr_capture_load_template()</a>返回的ID；<br/>
+ 云端识别时，请咨询捷通华声或从灵云开发者社区了解  </td></tr>
+<tr>
+<td>templateIndex </td><td>0到对应模板文件中的最大模板索引号 </td><td>无 </td><td>只针对模板识别生效，模板文件中的模板索引号 </td><td>模板文件中可能有多个模板，比如身份证、票据等，本参数指定模板在模板文件中的索引号  </td></tr>
+<tr>
+<td>templatePageIndex </td><td>0到对应模板中的最大页索引号 </td><td>无 </td><td>只针对模板识别生效，模板页索引号 </td><td>模板中可能存在多个模板页，比如身份证的正面和反面，本参数指定模板页在模板中的索引号  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab45b6b60677efed7d958941013878dfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR Capture反初始化 </p>
+<p>关闭相机，释放ocr和相机资源 </p>
+
+</div>
+</div>
+<a class="anchor" id="gac950ae2fdb3a15168095ab4b3ae203cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_start </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ const char *&#160;</td>
+          <td class="paramname"><em>pszConfig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR Capture开启扫描并识别 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszConfig</td><td>识别配置项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>配置串定义：</dt><dd>配置串是由"字段=值"的形式给出的一个字符串，多个字段之间以','隔开。字段名不分大小写。并不是每个能力都支持<br/>
+<br/>
+ 列表中的所有配置项，各能力支持的配置项请参考<a class="el" href="hci_ocr_page.html">OCR能力描述</a> <br/>
+<br/>
+ <table class="doxtable">
+<tr>
+<td><b>模块</b> </td><td><b>字段</b> </td><td><b>取值或示例</b> </td><td><b>缺省值</b> </td><td><b>含义</b> </td><td><b>详细说明</b>  </td></tr>
+<tr>
+<td rowspan="3">识别通用 </td><td>deviceName </td><td>S225 </td><td>空 </td><td>设备名称（Windows平台有效） </td><td>该项不填写则使用默认设备（Windows平台有效）  </td></tr>
+<tr>
+<td>showSettingUi </td><td>yes,no </td><td>yes </td><td>是否在start后显示设置界面（Windows平台有效） </td><td>是否在start后显示设置界面（Windows平台有效）  </td></tr>
+<tr>
+<td>capKey </td><td>ocr.cloud </td><td>无 </td><td>OCR识别能力key </td><td>参见 <a class="el" href="hci_ocr_page.html">OCR能力描述</a> 。每个session只能定义一种能力，并且过程中不能改变。  </td></tr>
+<tr>
+<td rowspan="9">文本识别 </td><td>recogRange </td><td>gb, letter </td><td>all </td><td>识别范围 </td><td>number: 数字 0 - 9, 10个<br/>
+ uppercase: 大写英文字母, A - Z, 26个<br/>
+ lowercase: 小写英文字母, a - z, 26个<br/>
+ letter: 大小写字母, 52个<br/>
+ alnum: 大小写字母和数字, 62个<br/>
+ gb: 中文简体汉字<br/>
+ big5: 中文繁体汉字 all: 所有字符集的合集,英文能力时不包含gb和big5<br/>
+   </td></tr>
+<tr>
+<td>autoDeskew </td><td>no, yes </td><td>no </td><td>是否自动倾斜校正，自动识别时才支持 </td><td></td></tr>
+<tr>
+<td>autoLayout </td><td>no, yes </td><td>no </td><td>是否进行自动版面分析，自动识别时才支持 </td><td></td></tr>
+<tr>
+<td>fullHalf </td><td>full, half </td><td>half </td><td>设置中文识别模式下输出英文字母、数字是全角还是半角 </td><td>full: 全角<br/>
+half: 半角  </td></tr>
+<tr>
+<td>dispCode </td><td>nochange, tosimplified </td><td>nochange </td><td>设置输出结果简繁体转换 </td><td>nochange: 简繁体不做变化<br/>
+tosimplified: 繁体转换为简体  </td></tr>
+<tr>
+<td>detailResult </td><td>no, yes </td><td>no </td><td>是否返回详细结果 </td><td>缺省只返回识别结果的文本串，如果设为yes，则会返回详细的节点信息 <a class="el" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html">OCR_RECOG_NODE</a>   </td></tr>
+<tr>
+<td>binarize </td><td>adaptive, global </td><td>adaptive </td><td>二值化方法，仅对灰度或者彩色图像有效 </td><td>global: 全局二值化算法，主要针对通过扫描、截屏等获取的图像<br/>
+ adaptive: 局部自适应二值化算法，主要针对通过拍照、摄像头等获取的受光照影响较大图像   </td></tr>
+<tr>
+<td>imageType </td><td>normal, screen </td><td>normal </td><td>图像类型 </td><td>normal: 普通图像<br/>
+ screen: 截屏图像   </td></tr>
+<tr>
+<td>localProcess </td><td>yes, no </td><td>yes </td><td>云端能力，设置图像时 是否先做本地预处理，现在主要是指二值化 </td><td>yes: 二值化<br/>
+ no: 不进行二值化   </td></tr>
+<tr>
+<td rowspan="3">模板识别 </td><td>templateID </td><td>1 </td><td>无 </td><td>模板文件的ID </td><td>本地和云端模板识别支持，即capKey为ocr.local.template和ocr.cloud.template时必选，其他情况忽略。<br/>
+ 本地识别时，本参数是由 <a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#ga42e2397d7e0d5559e6e9da85ceb7cce1" title="OCR Capture加载模板文件">hci_ocr_capture_load_template()</a>返回的ID；<br/>
+ 云端识别时，请咨询捷通华声或从灵云开发者社区了解  </td></tr>
+<tr>
+<td>templateIndex </td><td>0到对应模板文件中的最大模板索引号 </td><td>无 </td><td>只针对模板识别生效，模板文件中的模板索引号 </td><td>模板文件中可能有多个模板，比如身份证、票据等，本参数指定模板在模板文件中的索引号  </td></tr>
+<tr>
+<td>templatePageIndex </td><td>0到对应模板中的最大页索引号 </td><td>无 </td><td>只针对模板识别生效，模板页索引号 </td><td>模板中可能存在多个模板页，比如身份证的正面和反面，本参数指定模板页在模板中的索引号  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac3b803194f03a8f0fef621954aadb6bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止相机（不识别） </p>
+<p>该接口Windows不支持 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga80cdd9081ac71b323652d806fca2788b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_stop_and_recog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止相机并识别 </p>
+<p>当识别名片和模板时返回图像数据与识别结果，否则仅返回图像数据，该接口Windows不支持 </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf100d8ed06374ffa55aee9d26c7fc4ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___h_c_i__ocr__capture___a_p_i.html#gafab27a10f1a3a3e99d846480387fe1f8">CAPTURE_ERR_CODE</a> HCIAPI hci_ocr_capture_unload_template </td>
+          <td>(</td>
+          <td class="paramtype">_MUST_ _IN_ int&#160;</td>
+          <td class="paramname"><em>nTemplateId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OCR Capture卸载模板文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nTemplateId</td><td>模板标识ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">OCR_Capture_Example</string>
+    
+    <string name="dialog_title_tips">提示</string>
+    <string name="dialog_msg_hcicloud_sysinit">灵云Sys模块初始化中&#8230;</string>
+    
+    <string name="btn_show_camera">启动拍照器</string>
+    <string name="btn_take_picture">拍照</string>
+</resources>

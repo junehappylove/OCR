@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): E:/svn/HCICloud/develop/branches/sdk_3.9.6/sdk/src/c/include/hci_ocr.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci__ocr_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hci_ocr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __HCI_OCR_HEADER__ </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __HCI_OCR_HEADER__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;hci_sys.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __OBJC__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;UIKit/UIImage.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>              </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* @{ */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// 常量定义</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga96a3090e1538685c486988fddec5a2eb">   26</a></span>&#160;<span class="preprocessor">#define OCR_CAP_PROP_LANG               &quot;lang&quot;          </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga3b70c0d2f8d9f27b47553869984819d9">   27</a></span>&#160;<span class="preprocessor">#define OCR_CAP_PROP_DOMAIN             &quot;domain&quot;        </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#pragma pack (push, ocr_api)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma pack (8) </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html">   37</a></span>&#160;        <span class="keyword">typedef</span> <span class="keyword">struct </span>OCR_IMAGE_T</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#a3033f862a8ea8da718113ef466c2bd9e">   39</a></span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___i_m_a_g_e.html#a3033f862a8ea8da718113ef466c2bd9e" title="图像宽度">nWidth</a>;         </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#aebea9d7ca8d78d93c6e4f5839ed18649">   40</a></span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___i_m_a_g_e.html#aebea9d7ca8d78d93c6e4f5839ed18649" title="图像高度">nHeight</a>;                </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#ad37b99a8c0609f0f62a1d599e603ca2d">   43</a></span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___i_m_a_g_e.html#ad37b99a8c0609f0f62a1d599e603ca2d" title="只能取三个值1, 8, 24，分别表示图像为单色图、灰度图、彩色图">nBitsPerPixel</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">   50</a></span>&#160;                _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ** <a class="code" href="struct_o_c_r___i_m_a_g_e.html#af0bc7df9cb37c2e9c415927c99db6b51">pLines</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#a3c50e7f00a3d995a71539ffadd4b2a08">   52</a></span>&#160;                _OPT_ _IN_ <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___i_m_a_g_e.html#a3c50e7f00a3d995a71539ffadd4b2a08" title="x 分辨率(DPI)，如果未知赋0">xResolution</a>;     </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="struct_o_c_r___i_m_a_g_e.html#ada8ec8cd056ec69ea54fc4cab9aa9788">   53</a></span>&#160;                _OPT_ _IN_ <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___i_m_a_g_e.html#ada8ec8cd056ec69ea54fc4cab9aa9788" title="y 分辨率(DPI)，如果未知赋0">yResolution</a>;     </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }<a class="code" href="struct_o_c_r___i_m_a_g_e.html" title="图像结构体.">OCR_IMAGE</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#pragma pack (pop, ocr_api)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga70fa5d4c628e7ddba7e09a5631e48acc">   61</a></span>&#160;<span class="preprocessor">#define CANDIDATE_NUM           5</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span>        </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37">   66</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> _tag_OCR_RECOG_RGNTYPE</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ad66f6668dd2d24fece421dbbfde9b372">   68</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ad66f6668dd2d24fece421dbbfde9b372" title="横排文本">OCR_RECOG_RGNTYPE_HORZTEXT</a> = 0,         </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37a6008b6f4171432e407d66aea66e2b8b7">   69</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37a6008b6f4171432e407d66aea66e2b8b7" title="竖排文本">OCR_RECOG_RGNTYPE_VERTTEXT</a> = 1,         </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37acc5d3b23f990554e9ccc6e5a0f5a9529">   70</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37acc5d3b23f990554e9ccc6e5a0f5a9529" title="表格区域">OCR_RECOG_RGNTYPE_TABLE</a> = 2,            </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae9fad7aa9f2422439baddde008d68dbd">   71</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae9fad7aa9f2422439baddde008d68dbd" title="图片区域，不参与识别">OCR_RECOG_RGNTYPE_GRAPH</a> = 3,            </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae433413778cfd372f314e6889edfe24a">   72</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga4b24478e81899be40504215410db0e37ae433413778cfd372f314e6889edfe24a" title="文本区域，由引擎自动判断横竖排版，当前版本不支持">OCR_RECOG_RGNTYPE_AUTOTEXT</a> = 4,         </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37" title="区域类型">OCR_RECOG_RGNTYPE</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e">   79</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> _tag_OCR_RECOG_LANG</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eae7ce64f81ee0c141ced980b409d97e0a">   81</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eae7ce64f81ee0c141ced980b409d97e0a" title="缺省语言，由识别配置串决定">OCR_RECOG_LANG_DEFAULT</a> = 0,             </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eaca60b2175ad7a756b2cf17c4e3c66e66">   82</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eaca60b2175ad7a756b2cf17c4e3c66e66" title="此区域强制采用简体中文识别">OCR_RECOG_LANG_ZH_CN</a> = 1,               </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eabf1d4956d3784f5c1841033f4600f346">   83</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692eabf1d4956d3784f5c1841033f4600f346" title="此区域强制采用繁体中文识别，与OCR_RECOG_LANG_TW 目前无区别">OCR_RECOG_LANG_ZH_HK</a> = 2,               </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea919ca3830f69884f44624135e0d38cd4">   84</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea919ca3830f69884f44624135e0d38cd4" title="此区域强制采用繁体中文识别，与OCR_RECOG_LANG_HK 目前无区别">OCR_RECOG_LANG_ZH_TW</a> = 3,               </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea1bb713281eb76a736957488f7d916f4b">   85</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ggac92130ff34d5224e8068d3cf520c692ea1bb713281eb76a736957488f7d916f4b" title="此区域强制采用英文引擎识别">OCR_RECOG_LANG_EN</a> = 4                   </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e" title="区域识别的语言控制，此项仅在选择了中文引擎的时候有效">OCR_RECOG_LANG</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd">   92</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> _tag_OCR_TABLE_LINE_TYPE</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda54c0bc9016501d66c63ef4246c84e655">   94</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda54c0bc9016501d66c63ef4246c84e655" title="未知">LINE_TYPE_UNKNOWN</a> = 0,                          </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda95e3ca69b756b0c82c2cac793c521505">   95</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda95e3ca69b756b0c82c2cac793c521505" title="实线">LINE_TYPE_REAL</a>,                                         </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdab0dce87ed4a1d2709564d9f780b7fd3a">   96</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdab0dce87ed4a1d2709564d9f780b7fd3a" title="虚线">LINE_TYPE_DASHED</a>,                                       </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda58860718404053136f7675448f25bb21">   97</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda58860718404053136f7675448f25bb21" title="点线">LINE_TYPE_DOTTED</a>,                                       </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda7505768faaf0fb49dbf0944a0b9dcd36">   98</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bda7505768faaf0fb49dbf0944a0b9dcd36" title="没有实际的线, 但逻辑上有的线">LINE_TYPE_VIRTUAL</a>,                                      </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdaf2d03c82579aa32f35e0572f3dac00ba">   99</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga687fa97e29080d00939afbf3ca4406bdaf2d03c82579aa32f35e0572f3dac00ba" title="没有线，对应于两个表格单元格的合并">LINE_TYPE_EMPTY</a>         = 0x100,                </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<a class="code" href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd" title="线段类型">OCR_TABLE_LINE_TYPE</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95">  106</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> _tag_OCR_RECOG_NODE_TYPE</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95acacf78bcf0a6d9e0dc6d6535d85de5af">  108</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95acacf78bcf0a6d9e0dc6d6535d85de5af" title="页面节点">OCR_RECOG_NODE_PAGE</a>     = 0,            </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a60428e9c666831c276f5e932dd6019cc">  109</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a60428e9c666831c276f5e932dd6019cc" title="区域节点">OCR_RECOG_NODE_REGION</a>,                  </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a9f22d0173498b21eda0447b54fb73b5f">  110</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a9f22d0173498b21eda0447b54fb73b5f" title="表格单元节点">OCR_RECOG_NODE_CELL</a>,                    </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a0a76711ee6c85a5283bcad6ec85e9f03">  111</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a0a76711ee6c85a5283bcad6ec85e9f03" title="文本行节点">OCR_RECOG_NODE_LINE</a>,                    </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a39a79e222bb33251d6dd6ac26ac955ca">  112</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gga37e7cb22f91169c9938a30542abc8f95a39a79e222bb33251d6dd6ac26ac955ca" title="字符节点">OCR_RECOG_NODE_CHAR</a>,                    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<a class="code" href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95" title="识别结果节点类型">OCR_RECOG_NODE_TYPE</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">// 数据结构定义</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html">  122</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_POINT</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html#a6150e0515f7202e2fb518f7206ed97dc">  124</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html#a6150e0515f7202e2fb518f7206ed97dc" title="X坐标">x</a>;                  </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html#a0a2f84ed7838f07779ae24c5a9086d33">  125</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html#a0a2f84ed7838f07779ae24c5a9086d33" title="Y坐标">y</a>;                  </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html">  132</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_CORNERS_RESULT</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a7dd46defd77933b81963f2c62dc8ef2e">  134</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a7dd46defd77933b81963f2c62dc8ef2e" title="左上校点坐标">leftTop</a>;                </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a63bcedc11b4955ddf8e847e3908f0bef">  135</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a63bcedc11b4955ddf8e847e3908f0bef" title="右上校点坐标">rightTop</a>;               </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#aa52d84ec4688ba90a9a63309dab5b81c">  136</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#aa52d84ec4688ba90a9a63309dab5b81c" title="左下校点坐标">leftBottom</a>;             </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#ae3ea68d626dd63c16425a55053400405">  137</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#ae3ea68d626dd63c16425a55053400405" title="右下校点坐标">rightBottom</a>;    </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a63177970cacb40efba67ce501ea89210">  138</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html#a63177970cacb40efba67ce501ea89210" title="倾斜角度">angle</a>;                                          </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<a class="code" href="struct_o_c_r___c_o_r_n_e_r_s___r_e_s_u_l_t.html" title="切边矫正校点结构">OCR_CORNERS_RESULT</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html">  145</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_RECT</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#ad8f5e19e19f12974c9713e920ec54331">  147</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#ad8f5e19e19f12974c9713e920ec54331" title="左">left</a>;               </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#af93f4f37fc2ad9c37af4a715423b110c">  148</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#af93f4f37fc2ad9c37af4a715423b110c" title="上">top</a>;                </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#a2f54f8b71f0d765e2b7dbd9a8b9774ff">  149</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#a2f54f8b71f0d765e2b7dbd9a8b9774ff" title="右">right</a>;              </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#a323a7064fba6e15e3e542e34fb19764e">  150</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html#a323a7064fba6e15e3e542e34fb19764e" title="下">bottom</a>;             </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html" title="矩形结构">OCR_RECOG_RECT</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// 版面相关信息定义</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html">  163</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_LINESEGMENT </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#a8d2b6ac64004295539c65941c96f0817">  166</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#a8d2b6ac64004295539c65941c96f0817" title="当前表格线子线段的起始X坐标">nStartX</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#a49ea63c975db1b1f6d69c72a82bfdb87">  169</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#a49ea63c975db1b1f6d69c72a82bfdb87" title="当前表格线子线段的起始Y坐标">nStartY</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#ad88960fb6161ba976daccb2839e5c5bc">  172</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#ad88960fb6161ba976daccb2839e5c5bc" title="当前表格线子线段的终止X坐标">nEndX</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#aec06d0ec8a6b569fbd781a1ac203a00c">  175</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#aec06d0ec8a6b569fbd781a1ac203a00c" title="当前表格线子线段的终止Y坐标">nEndY</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#ae9df8f64d0d0089e2bbc393a6cd34dab">  178</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#ae9df8f64d0d0089e2bbc393a6cd34dab" title="子线段的宽度">nThickness</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#afbf14a9e58b33e6c0d584d16ae2bbe1d">  181</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ga687fa97e29080d00939afbf3ca4406bd" title="线段类型">OCR_TABLE_LINE_TYPE</a> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html#afbf14a9e58b33e6c0d584d16ae2bbe1d" title="子线段的类型，参见 OCR_TABLE_LINE_TYPE 的定义">nType</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;} </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html" title="表格线子线段的定义">OCR_RECOG_LINESEGMENT</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html">  189</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_FRAMELINE</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{ </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html#ab7332a4e49f841a16813cd86958cf10a">  192</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_s_e_g_m_e_n_t.html" title="表格线子线段的定义">OCR_RECOG_LINESEGMENT</a> * <a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html#ab7332a4e49f841a16813cd86958cf10a" title="详细的表格线子线段信息">pSegment</a>;    <span class="comment">//对应的表格线小段的第一段的指针</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html#ab2d946fb11d09ea9feedc4c2915b1863">  195</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html#ab2d946fb11d09ea9feedc4c2915b1863" title="表格线子线段的数目">nSegmentCount</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html" title="表格线的定义">OCR_RECOG_FRAMELINE</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html">  204</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_TABLECELL </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#abcf0f97dfb60cd5a4baeee6e83aa7992">  207</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#abcf0f97dfb60cd5a4baeee6e83aa7992" title="表格区域的左上角坐标，由于存在倾斜，这个是更为精确的表格单元位置">LT</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a07f09fd59351b2bb76c3b826fc796f27">  210</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a07f09fd59351b2bb76c3b826fc796f27" title="表格区域的左下角坐标，由于存在倾斜，这个是更为精确的表格单元位置">LB</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a2d3e73291d1f40e3f0f12bd6e6869dd3">  213</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a2d3e73291d1f40e3f0f12bd6e6869dd3" title="表格区域的右上角坐标，由于存在倾斜，这个是更为精确的表格单元位置">RT</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a72f0f88c0a3628a90c70723d67a5d4f6">  216</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___p_o_i_n_t.html" title="点结构">OCR_RECOG_POINT</a> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a72f0f88c0a3628a90c70723d67a5d4f6" title="表格区域的左下角坐标，由于存在倾斜，这个是更为精确的表格单元位置">RB</a>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a78881bf65e6de5a47398f7b20055fa16">  219</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html#a78881bf65e6de5a47398f7b20055fa16" title="Cell的编号，从0开始，具有相同编号的SubCell连续排列，合并成一个完整的表格单元">nCellNo</a>;    </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;} </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html" title="表格单元定义">OCR_RECOG_TABLECELL</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html">  226</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_TABLE </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#afbbd4165aafa1be0614304fddc9fc507">  229</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html" title="表格线的定义">OCR_RECOG_FRAMELINE</a>  *<a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#afbbd4165aafa1be0614304fddc9fc507" title="所有的水平线数组">HLines</a>;   </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#ae49d102a5666256809e82c81c3b399a2">  232</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#ae49d102a5666256809e82c81c3b399a2" title="所有的水平直线个数">nHLine</a>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#a06f4111989798a6bfd1827cb6853040f">  235</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___f_r_a_m_e_l_i_n_e.html" title="表格线的定义">OCR_RECOG_FRAMELINE</a>  *<a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#a06f4111989798a6bfd1827cb6853040f" title="所有的垂直线数组">VLines</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#ab9dc1a6e09dc7f09aefdb6d1be16ad2f">  238</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#ab9dc1a6e09dc7f09aefdb6d1be16ad2f" title="所有的垂直直线个数">nVLine</a>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#a431566e40446fc8f90a78f51c7979c7d">  241</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e_c_e_l_l.html" title="表格单元定义">OCR_RECOG_TABLECELL</a>  *<a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#a431566e40446fc8f90a78f51c7979c7d" title="所有的表格单元数组，总数为(nHLine-1)*(nVLine-1)，由于可能有合并单元，因此数目和 nCellNoCount 并不一致">pCell</a>;            </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#af84ef5869dc0d52ae61046a9728b51b1">  244</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html#af84ef5869dc0d52ae61046a9728b51b1" title="所有的CellNo的数目，由于可能有合并单元，此数目并不一定等于(nHLine-1)*(nVLine-1)">nCellNoCount</a>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html" title="表格的定义">OCR_RECOG_TABLE</a>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html">  251</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_REGION</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a8dd70f6eed00cc4923e38f594b00091b">  254</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html" title="矩形结构">OCR_RECOG_RECT</a>  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a8dd70f6eed00cc4923e38f594b00091b" title="区域相对于整个图像的位置，像素单位">rcBound</a>;        </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#abaa2505ddb64ffadaa46c57398dda80f">  258</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ga4b24478e81899be40504215410db0e37" title="区域类型">OCR_RECOG_RGNTYPE</a>       <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#abaa2505ddb64ffadaa46c57398dda80f">wRegionType</a>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a875e5c0816bac3fc831baa3871af4e27">  262</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#gac92130ff34d5224e8068d3cf520c692e" title="区域识别的语言控制，此项仅在选择了中文引擎的时候有效">OCR_RECOG_LANG</a>  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a875e5c0816bac3fc831baa3871af4e27">wRecogLang</a>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a3fe6548924e59269b98c4ab3564c4811">  265</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___t_a_b_l_e.html" title="表格的定义">OCR_RECOG_TABLE</a>  * <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html#a3fe6548924e59269b98c4ab3564c4811" title="如果是表格区域，其表格信息 (此指针总是由引擎来维护，不要试图自己管理)">pTable</a>;              </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html" title="识别区域的定义">OCR_RECOG_REGION</a>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html">  272</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_LAYOUT_RESULT</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html#a99ba18a77487941617a7fa957b7ecb0e">  275</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html" title="识别区域的定义">OCR_RECOG_REGION</a>  * <a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html#a99ba18a77487941617a7fa957b7ecb0e" title="区域列表">pRegionList</a>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html#ad55cbf7ce474163fde2f6dbd71d5471e">  278</a></span>&#160;        <span class="keywordtype">int</span>    <a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html#ad55cbf7ce474163fde2f6dbd71d5471e" title="区域的数目">nRegionCount</a>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html" title="版面分析函数的返回结果">OCR_LAYOUT_RESULT</a>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html">  285</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_DESKEW_RESULT</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html#a769122534008f0381123450220cc44dd">  288</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html#a769122534008f0381123450220cc44dd" title="检测到的倾斜角度, 单位为 1/100度，顺时针为正">nSkewAngle</a>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html" title="倾斜校正函数的返回结果">OCR_DESKEW_RESULT</a>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">// 文档结果定义</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html">  298</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_PAGENODE</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a33cb919769ea09265e03c121e718195e">  301</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a33cb919769ea09265e03c121e718195e" title="页面宽度">nWidth</a>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a17d981419afeee27eb36a8b43183e49a">  304</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a17d981419afeee27eb36a8b43183e49a" title="页面高度">nHeight</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a769122534008f0381123450220cc44dd">  307</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html#a769122534008f0381123450220cc44dd" title="如果进行了自动倾斜校正，其原始的倾斜角度, 单位为 1/100度，顺时针为正">nSkewAngle</a>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html" title="页面节点定义">OCR_RECOG_PAGENODE</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html">  314</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_REGIONNODE</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#a8dd70f6eed00cc4923e38f594b00091b">  317</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html" title="矩形结构">OCR_RECOG_RECT</a>  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#a8dd70f6eed00cc4923e38f594b00091b" title="区域相对于整个图像的位置，像素单位">rcBound</a>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#a9d6152ed68dbb48d3bb5bc11ac21771d">  320</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#a9d6152ed68dbb48d3bb5bc11ac21771d" title="区域的类型 (OCR_RECOG_RGNTYPE_xxx)">wRegionType</a>;    </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#ac252701917e772ac95650ee8498a6eb9">  324</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html#ac252701917e772ac95650ee8498a6eb9">wRecogLang</a>;             </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html" title="区域节点定义">OCR_RECOG_REGIONNODE</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html">  331</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_CELLNODE</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html#afd551a0cb8fd2ecaddaf372e268c6daa">  334</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html" title="矩形结构">OCR_RECOG_RECT</a>  <a class="code" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html#afd551a0cb8fd2ecaddaf372e268c6daa" title="此表格单元的位置">rcCellBound</a>;    </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html" title="表格单元节点定义">OCR_RECOG_CELLNODE</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html">  341</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_LINENODE</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;{</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#a8e2bc85c150424fa3185502f20d7a381">  344</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#a8e2bc85c150424fa3185502f20d7a381" title="此行的基线。横排版中为上边线，竖排版中为左边线">nBaseLine</a>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        </div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#a9835e7440570dc5a0271663a2fe86e33">  347</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#a9835e7440570dc5a0271663a2fe86e33" title="此行的大小，横排版中为行高，竖排版中为行宽">nLineSize</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        </div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#ae1aa1b87791bb239fa9c2469f8ab628c">  350</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#ae1aa1b87791bb239fa9c2469f8ab628c" title="此行的平均字符宽度">xChar</a>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#aaf172a54361e5b16c55d618495cca52c">  353</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html#aaf172a54361e5b16c55d618495cca52c" title="此行的平均字符高度">yChar</a>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html" title="文本行节点定义">OCR_RECOG_LINENODE</a>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html">  360</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_CHARNODE</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{   </div>
+<div class="line"><a name="l00363"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ae9e356782e8ad44abcda88f743deeb86">  363</a></span>&#160;        <span class="keywordtype">char</span> * <a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ae9e356782e8ad44abcda88f743deeb86" title="识别结果单字，UTF-8编码，以&#39;\0&#39;结束">pszChar</a>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a2cc9f0ddeb39774d674b0aaf7fa5d3d0">  367</a></span>&#160;        <span class="keywordtype">char</span> * pszCandidateWords[<a class="code" href="group___h_c_i___o_c_r.html#ga70fa5d4c628e7ddba7e09a5631e48acc" title="字符节点中的候选字最大项目">CANDIDATE_NUM</a>];</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a8a982b12dcdbcd9db8db5df0b936a4d6">  370</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a8a982b12dcdbcd9db8db5df0b936a4d6" title="此字符前面的空格字符数">nSpaceBefore</a>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ace11f807efa313d3477a05f4a3019ad2">  373</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#ace11f807efa313d3477a05f4a3019ad2" title="是否可信">bAccept</a>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a91594373fd35a6de33f8a76d464b095f">  376</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_c_t.html" title="矩形结构">OCR_RECOG_RECT</a>  <a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html#a91594373fd35a6de33f8a76d464b095f" title="此字符在图像中区域">rcBlock</a>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html" title="字符节点定义">OCR_RECOG_CHARNODE</a>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html">  383</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_NODE</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{</div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html#aa1302acee3d7c601bea60e3aac2d07f7">  386</a></span>&#160;        <a class="code" href="group___h_c_i___o_c_r.html#ga37e7cb22f91169c9938a30542abc8f95" title="识别结果节点类型">OCR_RECOG_NODE_TYPE</a>     <a class="code" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html#aa1302acee3d7c601bea60e3aac2d07f7" title="节点类型">wType</a>;                          </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keyword">union </span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <a class="code" href="struct_o_c_r___r_e_c_o_g___p_a_g_e_n_o_d_e.html" title="页面节点定义">OCR_RECOG_PAGENODE</a>              nodePage;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n_n_o_d_e.html" title="区域节点定义">OCR_RECOG_REGIONNODE</a>    nodeRegion;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                <a class="code" href="struct_o_c_r___r_e_c_o_g___c_e_l_l_n_o_d_e.html" title="表格单元节点定义">OCR_RECOG_CELLNODE</a>              nodeCell;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <a class="code" href="struct_o_c_r___r_e_c_o_g___l_i_n_e_n_o_d_e.html" title="文本行节点定义">OCR_RECOG_LINENODE</a>              nodeLine;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <a class="code" href="struct_o_c_r___r_e_c_o_g___c_h_a_r_n_o_d_e.html" title="字符节点定义">OCR_RECOG_CHARNODE</a>              nodeChar;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        };</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;} </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html" title="OCR识别结果的详细节点信息">OCR_RECOG_NODE</a>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html">  403</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_tag_OCR_RECOG_RESULT</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{</div>
+<div class="line"><a name="l00406"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#a3a18626ee1d4900cc90258faaf2099ba">  406</a></span>&#160;        <span class="keywordtype">char</span> *  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#a3a18626ee1d4900cc90258faaf2099ba" title="识别结果文本, UTF-8编码, 以&#39;\0&#39;结束，不管配置项 detailResult 设为是否需要详细信息，这项都会存在">pTextBuf</a>;                       </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#af341bffe4b3616a17558520165ea9cdf">  409</a></span>&#160;        <a class="code" href="struct_o_c_r___r_e_c_o_g___n_o_d_e.html" title="OCR识别结果的详细节点信息">OCR_RECOG_NODE</a> * <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#af341bffe4b3616a17558520165ea9cdf" title="识别结果的详细节点列表，只有在配置项 detailResult 设为 yes 的时候有效，否则为NULL">pNodes</a>;                                </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#ab1c1dba50719c87d06063b747ec69070">  412</a></span>&#160;        <span class="keywordtype">int</span>             <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#ab1c1dba50719c87d06063b747ec69070" title="识别结果的详细节点的数目，只有在配置项 detailResult 设为 yes 的时候有效，否则为0">nNodeCount</a>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#ab0e96234eb649994111c6dddbc00fe4d">  415</a></span>&#160;        <span class="keywordtype">char</span> *  <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#ab0e96234eb649994111c6dddbc00fe4d" title="导出文件内容">pExportFileBuf</a>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#abbafbf67ab7e5a23a6289abff05b9c03">  417</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html#abbafbf67ab7e5a23a6289abff05b9c03" title="导出文件长度">nExportFileBufLen</a>;      </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html" title="OCR识别的返回结果">OCR_RECOG_RESULT</a>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="comment">// 接口API函数定义</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#ga46d3ca0e0d3a5e1f21b7c2fb6470e06d" title="灵云OCR能力 初始化">hci_ocr_init</a>(</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                );</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#ga58be1f5f565711d6be7f9002f8d5a51d" title="开始会话">hci_ocr_session_start</a>(</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                _MUST_ _OUT_ <span class="keywordtype">int</span> *pnSessionId</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                );</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gaeec12309091da3bdb9f574a8470481ec" title="倾斜校正">hci_ocr_deskew</a>(</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId,</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,      </div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                _MUST_ _OUT_ <a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html" title="倾斜校正函数的返回结果">OCR_DESKEW_RESULT</a> * psOcrDeskewResult</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                );</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#ga106cdd52ed73d8719553c0ffe419e879" title="图片美化降噪（暂不支持）">hci_ocr_denoise</a>(_MUST_ _IN_ <span class="keywordtype">int</span> nSessionId, _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gabf5a4ca5527c35d4a80265c310ddb180" title="释放倾斜校正结果内存">hci_ocr_free_deskew_result</a>(</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                _MUST_ _IN_ <a class="code" href="struct_o_c_r___d_e_s_k_e_w___r_e_s_u_l_t.html" title="倾斜校正函数的返回结果">OCR_DESKEW_RESULT</a> * psOcrDeskewResult</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                );</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gae8d40fa264ba8020818fbc979b766bd9" title="进行版面分析">hci_ocr_layout_analysis</a>(</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId,</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,      </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                _MUST_ _OUT_ <a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html" title="版面分析函数的返回结果">OCR_LAYOUT_RESULT</a> * psOcrLayoutResult</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                );</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gae51cf85420e516f4fe89a723708b7235" title="释放版面分析结果的内存">hci_ocr_free_layout_result</a>(</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                _MUST_ _IN_ <a class="code" href="struct_o_c_r___l_a_y_o_u_t___r_e_s_u_l_t.html" title="版面分析函数的返回结果">OCR_LAYOUT_RESULT</a> * psOcrLayoutResult</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                );</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gaeb65abac2be4d772405867a259366d90" title="进行OCR识别">hci_ocr_recog</a>(</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId,     </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                _OPT_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig,                      </div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                _OPT_ _IN_ <span class="keyword">const</span> <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_g_i_o_n.html" title="识别区域的定义">OCR_RECOG_REGION</a> * pRegions, </div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                _OPT_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nRegionCount,</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;                _MUST_ _OUT_ <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html" title="OCR识别的返回结果">OCR_RECOG_RESULT</a> * psOcrRecogResult</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                );</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gacace06d706102e43924f629420ea2a2a" title="释放识别结果内存">hci_ocr_free_recog_result</a>(</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;                _MUST_ _IN_ <a class="code" href="struct_o_c_r___r_e_c_o_g___r_e_s_u_l_t.html" title="OCR识别的返回结果">OCR_RECOG_RESULT</a> * psOcrRecogResult</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                );</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#ga32654a69121f225ce271d8660d4f4683" title="结束会话">hci_ocr_session_stop</a>(</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                );</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gac75629c266eec54dbd59016b5ef78fa8" title="灵云OCR能力 反初始化">hci_ocr_release</a>();</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#ga122f33ed5fb249cd08e30cec4169532d" title="通过内存缓冲设置本会话处理的图像">hci_ocr_set_image_buffer</a>(</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId ,</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * pImageData, </div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                _MUST_ _IN_ <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uiImageDataSize</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                );</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gad09d9a05aff0569d679fd63db100b049" title="通过文件设置本回话处理的图像">hci_ocr_set_image_file</a>(</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionId ,</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszImageFileName</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;                );</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gacda38ba55c696080faeccc300cf7be0f" title="获取会话中的图像数据结构，用户可以用来显示">hci_ocr_get_image</a>( </div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;                                                                          _MUST_ _IN_ <span class="keywordtype">int</span> nSessionID,</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;                                                                          _MUST_ _OUT_ <a class="code" href="struct_o_c_r___i_m_a_g_e.html" title="图像结构体.">OCR_IMAGE</a>* pImage</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;                                                                          );</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___o_c_r.html#gaa2460933fc0c7173bc006ef60b384001" title="保存一个本地文件，文件格式由文件名后缀确定(目前支持bmp、jpg、png、tif)">hci_ocr_save_image_file</a>( </div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;                                                                                        _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszImageFileName,</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;                                                                                        _MUST_ _IN_ <a class="code" href="struct_o_c_r___i_m_a_g_e.html" title="图像结构体.">OCR_IMAGE</a> * pImage</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;                                                                                        );</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> <a class="code" href="group___h_c_i___o_c_r.html#ga052dd13f8325e9dd2d8d85eee673a59f" title="载入一个模板文件，通过参数列表返回其ID">hci_ocr_load_template</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *pszTemplateFile, <span class="keywordtype">int</span> *pnTemplateID);</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> <a class="code" href="group___h_c_i___o_c_r.html#ga33ffd04b5eb95d22079916887ceac2c6" title="卸载一个已经载入的模板文件">hci_ocr_unload_template</a>(<span class="keywordtype">int</span> nTemplateID);</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="preprocessor">#ifdef __OBJC__</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_set_image_by_uiImage( </div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionID,</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                _MUST_ _IN_ UIImage * image</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;                );</div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;</div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;<a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> HCIAPI hci_ocr_get_uiImage( </div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;                _MUST_ _IN_ <span class="keywordtype">int</span> nSessionID,</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;                _MUST_ _OUT_ UIImage ** image</div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;                );</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="comment">/* @} */</span></div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="preprocessor"></span>};</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3b19ecf29356981f494745fbef7e56bf.html">c</a></li><li class="navelem"><a class="el" href="dir_87681be5ca089ff245d0d9f911af7faf.html">include</a></li><li class="navelem"><b>hci_ocr.h</b></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

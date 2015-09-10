@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): FPR能力</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci_fpr_intro_page.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">FPR能力 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>以下描述了如何使用灵云FPR能力。</p>
+<h1><a class="anchor" id="hci_fpr_intro"></a>
+1. FPR简介</h1>
+<p>FPR 指纹识别能力，对特定的指纹数据进行模型注册和训练后，支持对未知指纹数据的校验。</p>
+<h1><a class="anchor" id="hci_fpr_choice"></a>
+2. 选择模块和能力</h1>
+<p>灵云可以提供云端和本地端的指纹识别能力. 无论使用云端或本地端的指纹识别能力，基础模块 hci_fpr都是需要的。 使用云端能力时，需要加上hci_fpr_cloud_recog模块； 使用本地端能力时，需要加上hci_fpr_local_recog模块.</p>
+<h1><a class="anchor" id="hci_fpr_image"></a>
+3. 指纹图像数据格式</h1>
+<p>指纹可以使用不同的文件格式进行存储，例如TIFF, BMP, JPG, PNG, GIF等。这些图像格式具有文件头， 标识了文件格式、图像的基本信息（例如宽、高、图像类型），并且对图像数据进行了压缩。 在使用时，开发者直接将这些格式的数据传给灵云FPR模块，灵云FPR模块会根据文件头自动判断文件格式， 并进行解压缩操作。 目前不支持多页TIFF类型的文件，多页TIFF只会处理第一页的内容。目前Android不支持GIF格式以及TIFF格式文件。 开发者也可以使用raw格式数据给FPR模块，此时需要指定图像的宽高等属性。</p>
+<h1><a class="anchor" id="hci_fpr_enroll"></a>
+4. 指纹特征注册和训练</h1>
+<p>当调用hci_fpr_enroll接口进行注册时，用户唯一标识可以由服务端产生，也可以由用户自己指定，但必须要保证该标识的唯一性。 可以对该指纹模型进行多次注册用以完善模型。</p>
+<p>示例代码如下： </p>
+<div class="fragment"><div class="line"><a class="code" href="struct_f_p_r___e_n_r_o_l_l___f_i_n_g_e_r___d_a_t_a.html" title="FPR图像列表结构体">FPR_ENROLL_FINGER_DATA</a> enrollData;</div>
+<div class="line">enrollData.<a class="code" href="struct_f_p_r___e_n_r_o_l_l___f_i_n_g_e_r___d_a_t_a.html#a8016559b2aa099855e2f77fa4f05c3d8" title="图像段数目">uiFingerDataCount</a> = nEnrollDataCount;</div>
+<div class="line">enrollData.<a class="code" href="struct_f_p_r___e_n_r_o_l_l___f_i_n_g_e_r___d_a_t_a.html#a6d9d6944cb1d2f622b0a1c3809680ae5" title="图像段列表">psFingerDataList</a> = enrollItemArray;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//userID为非必填项，但要注意，开发者需要确保userID的唯一性。 </span></div>
+<div class="line"><span class="keywordtype">string</span> enrollConfig = <span class="stringliteral">&quot;imageType=raw,bgColor=white,dpi=500&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="struct_f_p_r___e_n_r_o_l_l___r_e_s_u_l_t.html" title="用户注册结果">FPR_ENROLL_RESULT</a> enrollResult;</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> errCode = <a class="code" href="group___h_c_i___f_p_r.html#gaa4e509ffdd13b35c4164b49660ba6869" title="FPR指纹特征注册或训练">hci_fpr_enroll</a>(nSessionId,&amp;enrollData,enrollConfig.c_str(),&amp;enrollResult);</div>
+<div class="line"><span class="keywordflow">if</span> (errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a>)</div>
+<div class="line">{</div>
+<div class="line">        printf(<span class="stringliteral">&quot;hci_fpr_enroll return %d\n&quot;</span>,errCode);</div>
+<div class="line">        <a class="code" href="group___h_c_i___f_p_r.html#ga06764974a646d38aa98bc921e7562528" title="结束会话">hci_fpr_session_stop</a>(nSessionId);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"><a class="code" href="group___h_c_i___f_p_r.html#ga650346b6536d354e5520c785e290f58d" title="释放注册的结果结构体">hci_fpr_free_enroll_result</a>(&amp;enrollResult);</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_fpr_verify"></a>
+5. 指纹特征确认</h1>
+<p>指纹模型注册和训练成功后，可以对指纹数据进行校验，以判断用户唯一标识和指纹数据是否相符。</p>
+<p>示例代码如下： </p>
+<div class="fragment"><div class="line"><span class="comment">//userID 为必填项，判断指纹数据特征与此 userID对应的模型是否相同。</span></div>
+<div class="line"><span class="keywordtype">string</span> verifyConfig = <span class="stringliteral">&quot;userid=&quot;</span> + userID;</div>
+<div class="line">verifyConfig += <span class="stringliteral">&quot;,imageType=raw,dpi=500,bgColor=white&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="struct_f_p_r___v_e_r_i_f_y___r_e_s_u_l_t.html" title="指纹确认结果">FPR_VERIFY_RESULT</a> pVerifyResult;</div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___f_p_r.html#ga3f87085c7ae7f3e66bf3505c077acda8" title="FPR指纹特征确认">hci_fpr_verify</a>(nSessionId, FingerData.m_pBuf, FingerData.m_nLen, verifyConfig.c_str(), &amp;pVerifyResult);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_fpr_verify return %d\n&quot;</span>, errCode );</div>
+<div class="line">        <a class="code" href="group___h_c_i___f_p_r.html#ga06764974a646d38aa98bc921e7562528" title="结束会话">hci_fpr_session_stop</a>(nSessionId);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_fpr_verify success\n&quot;</span> );</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span> (pVerifyResult.eStatus == <a class="code" href="group___h_c_i___f_p_r.html#gga823c5db127694f3d7dc3bd9f11de93a2a24cd1af9645ff33885f7650691478885" title="匹配">FPR_VERIFY_STATUS_MATCH</a>)</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;Finger data matches with user id:%s!\n&quot;</span>,userID.c_str() );</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Finger data doesn&#39;t match with  user id:%s!\n&quot;</span>,userID.c_str());</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___f_p_r.html#gabbd36d4f1a4f55edb815ecc919f1455b" title="释放校验结果">hci_fpr_free_verify_result</a>(&amp;pVerifyResult);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_fpr_free_verify_result return %d\n&quot;</span>, errCode );</div>
+<div class="line">        <a class="code" href="group___h_c_i___f_p_r.html#ga06764974a646d38aa98bc921e7562528" title="结束会话">hci_fpr_session_stop</a>(nSessionId);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_fpr_free_verify_result success\n&quot;</span> );</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="hci_dev_content.html">开发指南</a></li><li class="navelem"><a class="el" href="hci_dev_capability_api.html">能力API</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

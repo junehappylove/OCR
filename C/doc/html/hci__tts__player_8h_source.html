@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): E:/svn/HCICloud/develop/branches/sdk_3.9.6/sdk/src/c/include/hci_tts_player.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci__tts__player_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hci_tts_player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __HCI_TTS_PLAYER_HEADER__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __HCI_TTS_PLAYER_HEADER__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;hci_sys.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* @{ */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// 常量定义</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a4c0e045574c05bc9510010c042efd637">   28</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a4c0e045574c05bc9510010c042efd637" title="开始播放">PLAYER_EVENT_BEGIN</a>,                             </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a56d0eb2f491beff010e9b13331a4d181">   29</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a56d0eb2f491beff010e9b13331a4d181" title="暂停播放">PLAYER_EVENT_PAUSE</a>,                             </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a6ac170347869bfe5947a26ce68288e47">   30</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a6ac170347869bfe5947a26ce68288e47" title="恢复播放">PLAYER_EVENT_RESUME</a>,                    </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a68f31d1af1c2812e2b10f4f739d44d73">   31</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a68f31d1af1c2812e2b10f4f739d44d73" title="播放进度">PLAYER_EVENT_PROGRESS</a>,                  </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0a6839a69f761d6d6a8d81ded5713adb">   32</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0a6839a69f761d6d6a8d81ded5713adb" title="播放缓冲,等待合成数据">PLAYER_EVENT_BUFFERING</a>,                 </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391af3d8520086ab5db7f56f8f8a7b812417">   33</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391af3d8520086ab5db7f56f8f8a7b812417" title="播放完毕">PLAYER_EVENT_END</a>,                               </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0f4e3954294bc7b6f06214ecbdc94aa5">   34</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a0f4e3954294bc7b6f06214ecbdc94aa5" title="引擎出错">PLAYER_EVENT_ENGINE_ERROR</a>,              </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a78c40eee13d4f621f840998848d7f411">   35</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391a78c40eee13d4f621f840998848d7f411" title="设备出错">PLAYER_EVENT_DEVICE_ERROR</a>,              </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391ab2df0e523e8594f87998a59d18f7a0d0">   36</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391ab2df0e523e8594f87998a59d18f7a0d0" title="分配空间失败">PLAYER_EVENT_MALLOC_ERROR</a>,              </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391aaf55abe6166a748c9335d15e811317a2">   37</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga975a75bb66d9eab5d3df72ad5f065391aaf55abe6166a748c9335d15e811317a2" title="缓冲结束，继续播放">PLAYER_EVENT_BUFFERING_END</a>      </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5baccd10d2f9116585c878821a80cc94">   44</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa585aaac672daeed076673ef65330c65">   46</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa585aaac672daeed076673ef65330c65" title="没有初始化">PLAYER_STATE_NOT_INIT</a>,                  </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa4bec034ec362c9c61de07fc35a2b65a">   47</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94aa4bec034ec362c9c61de07fc35a2b65a" title="空闲状态，可以启动播放">PLAYER_STATE_IDLE</a>,                              </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a0d5fd6f0cce5c928750fcbd44156891d">   48</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a0d5fd6f0cce5c928750fcbd44156891d" title="正在播放状态">PLAYER_STATE_PLAYING</a>,                   </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a5299c9e558466dbaf3af8d1117c80f81">   49</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a5299c9e558466dbaf3af8d1117c80f81" title="暂停播放状态">PLAYER_STATE_PAUSE</a>,                             </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a742953138d3ba74f4d1866a8ae70749a">   50</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga5baccd10d2f9116585c878821a80cc94a742953138d3ba74f4d1866a8ae70749a" title="错误状态">PLAYER_STATE_ERROR</a>,                             </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5baccd10d2f9116585c878821a80cc94" title="播放机状态">PLAYER_STATE</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e">   57</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf42f025717331c89d6ef57f9b8fcd9cb">   59</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf42f025717331c89d6ef57f9b8fcd9cb" title="-1: 未知错误，不会出现">PLAYER_ERR_UNKNOWN</a> = -1,                                        </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271">   61</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea1ac222d3329af4122205a28f5c340271" title="0: 成功">PLAYER_ERR_NONE</a> = 0,                                            </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea6e08769a40bc166657a380e9537297f9">   63</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea6e08769a40bc166657a380e9537297f9" title="1: 没有初始化">PLAYER_ERR_NOT_INIT</a>,                                            </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eab7437cf68df550d993a8eee4a81c008f">   64</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eab7437cf68df550d993a8eee4a81c008f" title="2: 已经初始化">PLAYER_ERR_ALREADY_INIT</a>,                                        </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea18b711e8ea173cd0f6c40886bdbb76d8">   65</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea18b711e8ea173cd0f6c40886bdbb76d8" title="3: 打开设备出错">PLAYER_ERR_OPEN_DEVICE</a>,                                         </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf109a8fbd5f4593d28c9ffa7d77cfff6">   66</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eaf109a8fbd5f4593d28c9ffa7d77cfff6" title="4: 已经开始">PLAYER_ERR_ALREADY_BEGIN</a>,                                       </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0d57671977466a3ab7febeee112aa811">   67</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0d57671977466a3ab7febeee112aa811" title="5: 没有开始">PLAYER_ERR_NOT_BEGIN</a>,                                           </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0f9cea22af4d9715b2524c895c1b1c23">   68</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8ea0f9cea22af4d9715b2524c895c1b1c23" title="6: 分配空间失败">PLAYER_ERR_OUT_OF_MEMORY</a>,                                       </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eae6cfd1b143c5606a0ee2dd7634164d4d">   69</a></span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gga37c6e6c59bf92ce540086f8963f3dc8eae6cfd1b143c5606a0ee2dd7634164d4d" title="7: 初始化 TTS SDK 出错">PLAYER_ERR_ENGINE_ERROR</a>,                                        </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// 回调函数定义</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga39927b8214a4ab8ae21e9b5f803636ab">   83</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga39927b8214a4ab8ae21e9b5f803636ab" title="播放器事件变化回调">Callback_PlayerEventStateChange</a>)(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8f161a58411abd3a923abbd5b7bb296a">   96</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8f161a58411abd3a923abbd5b7bb296a" title="播放进度变化通知">Callback_PlayerEventProgressChange</a>)(</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        _MUST_ _IN_ <span class="keywordtype">int</span> nStart,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        _MUST_ _IN_ <span class="keywordtype">int</span> nStop,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga19046ce33e848ca72a43e0c408b5e320">  109</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga19046ce33e848ca72a43e0c408b5e320" title="出错状态的回调 只会触发 PLAYER_EVENT_ENGINE_ERROR 事件">Callback_PlayerEventPlayerError</a>)(</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        _MUST_ _IN_ <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga975a75bb66d9eab5d3df72ad5f065391" title="播放器回调时的通知事件">PLAYER_EVENT</a> ePlayerEvent,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        _MUST_ _IN_ <a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> eErrorCode,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">typedef</span> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga3b5f970c84d6645893cbc61fd267fd9b" title="audiosession回调">void</a> (HCIAPI * Callback_PlayerSetAudioSession)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    (_MUST_ _IN_ <span class="keywordtype">void</span> * pExtendParam,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="struct_p_l_a_y_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html">  128</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_PLAYER_CALLBACK_PARAM {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga39927b8214a4ab8ae21e9b5f803636ab" title="播放器事件变化回调">Callback_PlayerEventStateChange</a> pfnStateChange;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">void</span> * pvStateChangeUsrParam;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8f161a58411abd3a923abbd5b7bb296a" title="播放进度变化通知">Callback_PlayerEventProgressChange</a> pfnProgressChange;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> * pvProgressChangeUsrParam;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga19046ce33e848ca72a43e0c408b5e320" title="出错状态的回调 只会触发 PLAYER_EVENT_ENGINE_ERROR 事件">Callback_PlayerEventPlayerError</a> pfnPlayerError;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> * pvPlayerErrorUsrParam;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <a class="code" href="struct_p_l_a_y_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="播放器回调函数的结构体">PLAYER_CALLBACK_PARAM</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// 接口API函数定义</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga03f715f74a21a09bc23e930f86697c7e" title="播放器SDK初始化">hci_tts_player_init</a>(</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszSdkConfig,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                _MUST_ _IN_ <a class="code" href="struct_p_l_a_y_e_r___c_a_l_l_b_a_c_k___p_a_r_a_m.html" title="播放器回调函数的结构体">PLAYER_CALLBACK_PARAM</a> *pCallbackParam);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gaaa5c8c64250c18c7c3df576da46d53de" title="设置audiosession回调">hci_tts_player_set_audio_session_callback</a>(</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    _MUST_ _IN_ Callback_PlayerSetAudioSession pfnCallBack ,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    _OPT_ _IN_ <span class="keywordtype">void</span> * pUsrParam);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5baccd10d2f9116585c878821a80cc94" title="播放机状态">PLAYER_STATE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga73c02f6b000a0f216df36630a94cbee7" title="得到播放器的当前状态">hci_tts_player_get_state</a>();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">bool</span> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga5b19ae3f94fa94e62d6dfbaff648a0d0" title="播放器当前是否可以停止">hci_tts_player_can_stop</a>();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8c27ae3158b2ec30172cdaec813f3367" title="启动播放器，播放一串文本">hci_tts_player_start</a>(</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszText,</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        _MUST_ _IN_ <span class="keyword">const</span> <span class="keywordtype">char</span> * pszConfig);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga8b053895b81753af3fa143b3754a3079" title="暂停播放器">hci_tts_player_pause</a>();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gad163cd1ab824863c33271f85d92dc970" title="恢复播放器播放">hci_tts_player_resume</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#gad7c7064946e00ffe8e155de9989a712d" title="停止播放器">hci_tts_player_stop</a>();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga37c6e6c59bf92ce540086f8963f3dc8e" title="播放器错误码">PLAYER_ERR_CODE</a> HCIAPI <a class="code" href="group___h_c_i___t_t_s___p_l_a_y_e_r___a_p_i.html#ga07990ed092827e393be87d4e4cde7936" title="播放器SDK反初始化">hci_tts_player_release</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">/* @} */</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#endif // _hci_cloud_tts_player_api_header_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3b19ecf29356981f494745fbef7e56bf.html">c</a></li><li class="navelem"><a class="el" href="dir_87681be5ca089ff245d0d9f911af7faf.html">include</a></li><li class="navelem"><b>hci_tts_player.h</b></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

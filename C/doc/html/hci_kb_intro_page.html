@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>灵云SDK开发手册(C API): KB能力</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">灵云SDK开发手册(C API)
+   &#160;<span id="projectnumber">3.9</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="pages.html"><span>开发指南</span></a></li>
+      <li><a href="modules.html"><span>API参考手册</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hci_kb_intro_page.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>结构体</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>类型定义</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">KB能力 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>以下描述了如何使用灵云KB能力。</p>
+<h1><a class="anchor" id="hci_kb_intro"></a>
+1. KB简介</h1>
+<p>KB 键盘输入识别能力，支持中文，外文，韩文，日文等识别，同时支持多种键盘（T9，Qwerty以及容错键盘）以及多种输入模式（拼音，五笔，笔画等）。</p>
+<h1><a class="anchor" id="hci_kb_choice"></a>
+2. 选择模块和能力</h1>
+<p>灵云目前可以提供本地端能力:<br/>
+ kb.local.* : 本地识别<br/>
+</p>
+<p>使用本地的识别能力，需要基础模块hci_kb，以及hci_kb_local_recog模块。</p>
+<h1><a class="anchor" id="hci_kb_recog"></a>
+3. 键盘识别</h1>
+<p>调用识别接口进行识别，识别接口支持设置输入模式，键盘以及返回结果数据大小等,示例代码如下： </p>
+<div class="fragment"><div class="line"><span class="comment">//识别</span></div>
+<div class="line"><span class="keywordtype">char</span> *gbk = <span class="stringliteral">&quot;ad&quot;</span>;</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *utf8;</div>
+<div class="line">GBKToUTF8((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)gbk,&amp;utf8);</div>
+<div class="line"><a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> errCode = <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a>;</div>
+<div class="line"><a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html" title="键盘查询结构体">KB_QUERY_INFO</a> queryInfo;</div>
+<div class="line"><a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html" title="键盘识别结果">KB_RECOG_RESULT</a> result;</div>
+<div class="line">queryInfo.<a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html#aa6a02ce9be5af9fcf639ef4c902f3b7c" title="键盘输入序列，字符数不能够超过31个，超过则自动忽略">pszQuery</a> = (<span class="keywordtype">char</span>*)utf8;</div>
+<div class="line">queryInfo.<a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html#ac71e3e18e5fe8b36bd4eb591d2b7a494" title="滑动输入数目,中日韩文识别自动忽略，外文状态下等于pszQuery的字符数">uiSlideInfoItemCount</a> = 0;</div>
+<div class="line">queryInfo.<a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html#ab284f82a045eacf18636bc90ca92ac75" title="滑动输入列表,中日韩文识别自动忽略">psSlideInfoItemList</a> = NULL;</div>
+<div class="line">queryInfo.<a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html#ad57e9c2149957e004405d27b078c7b06" title="已选择识别条目数目">uiSelectedItemCount</a> = 0;</div>
+<div class="line">queryInfo.<a class="code" href="struct_k_b___q_u_e_r_y___i_n_f_o.html#ae06bba44969dc7fe931dc6ba416a67ed" title="已选择识别条目列表">psSelectedItemList</a> = NULL;</div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#ga157acdad577420252d0a4df4359e9047" title="键盘识别接口">hci_kb_recog</a>(nSessionId,pszRecogConfig,&amp;queryInfo,&amp;result);</div>
+<div class="line">free(utf8);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_kb_recog ret:%d\n&quot;</span>,errCode);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_kb_recog success\n&quot;</span>);</div>
+<div class="line">PrintKbResult(result);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//提交确认结果</span></div>
+<div class="line"><a class="code" href="struct_k_b___c_o_n_f_i_r_m___r_e_s_u_l_t.html" title="确认结果结构体">KB_CONFIRM_RESULT</a> confirm;</div>
+<div class="line">confirm.<a class="code" href="struct_k_b___c_o_n_f_i_r_m___r_e_s_u_l_t.html#aab6f6f57e683e6a8d71dfb47bcbf9114" title="最终识别结果字符串">pszResult</a> = result.<a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html#a11a53d15e9ea81b419ce2f0b5e6ca44b" title="键盘识别候选结果列表">psResultItemList</a>[0].<a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#aab6f6f57e683e6a8d71dfb47bcbf9114" title="识别结果字符串，在非输入过程或者不知道候选音节情况下字符数长度必须大于2">pszResult</a>;</div>
+<div class="line"><a class="code" href="group___h_c_i___k_b.html#gaaa993c8eece0f89f47157f198ef6f9cc" title="提交识别结果接口">hci_kb_confirm</a>(nSessionId,&amp;confirm);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//获取多页结果</span></div>
+<div class="line"><span class="keywordflow">while</span> (bReturnAll &amp;&amp; result.<a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html#ad9a5d0a553f48d15026b45769ae40369" title="是否还有识别结果">bMore</a>)</div>
+<div class="line">{</div>
+<div class="line">        <a class="code" href="group___h_c_i___k_b.html#ga92da04ef1c974145e8d3efedd985df3d" title="释放键盘识别结果">hci_kb_free_recog_result</a>(&amp;result);</div>
+<div class="line">        errCode = <a class="code" href="group___h_c_i___k_b.html#ga157acdad577420252d0a4df4359e9047" title="键盘识别接口">hci_kb_recog</a>(nSessionId,pszRecogConfig,NULL,&amp;result);</div>
+<div class="line">        <span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">        {</div>
+<div class="line">                printf( <span class="stringliteral">&quot;hci_kb_recog ret:%d\n&quot;</span>,errCode);</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_kb_recog success\n&quot;</span>);</div>
+<div class="line">        PrintKbResult(result);</div>
+<div class="line">}</div>
+<div class="line"><a class="code" href="group___h_c_i___k_b.html#ga92da04ef1c974145e8d3efedd985df3d" title="释放键盘识别结果">hci_kb_free_recog_result</a>(&amp;result);</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_kb_udb"></a>
+4. 用户自定义词条编辑</h1>
+<p>支持用户自定义词条的添加删除和遍历，调用示例如下： </p>
+<div class="fragment"><div class="line"><span class="comment">//提交</span></div>
+<div class="line"><a class="code" href="struct_k_b___u_d_b___i_t_e_m___i_n_f_o.html" title="用户自造词信息">KB_UDB_ITEM_INFO</a> udbItem;</div>
+<div class="line">udbItem.<a class="code" href="struct_k_b___u_d_b___i_t_e_m___i_n_f_o.html#ad8517b5683847ee222b8e62d70ae8aff" title="识别结果">pUdbItem</a>.<a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#aab6f6f57e683e6a8d71dfb47bcbf9114" title="识别结果字符串，在非输入过程或者不知道候选音节情况下字符数长度必须大于2">pszResult</a> = <span class="stringliteral">&quot;beautiful&quot;</span>;</div>
+<div class="line"><a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> errCode = <a class="code" href="group___h_c_i___k_b.html#gad56544b6862063de657a7511e7e35b02" title="添加用户自定义词典">hci_kb_udb_commit</a>(nSessionId,<span class="stringliteral">&quot;&quot;</span>,&amp;udbItem);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_kb_udb_commit ret:%d\n&quot;</span>,errCode);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_kb_udb_commit success\n&quot;</span>);</div>
+<div class="line"><span class="comment">//遍历</span></div>
+<div class="line"><a class="code" href="group___h_c_i___k_b.html#ga2690de5d8b9cf12c55f835fe1bbc2fc6" title="遍历用户自定义词典接口">hci_kb_udb_iterate</a>(nSessionId,CallbackKbUdbIterate,NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//删除</span></div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#ga87fc61df91d9197d7a7b5fea78733cc8" title="删除用户自定义词典">hci_kb_udb_delete</a>(nSessionId,<span class="stringliteral">&quot;&quot;</span>,&amp;udbItem);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_kb_udb_delete ret:%d\n&quot;</span>,errCode);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_kb_udb_delete success\n&quot;</span>);</div>
+</div><!-- fragment --><p> 目前只有中文和英文支持该接口，中文提交时还可以根据识别结果进行提交，示例如下： </p>
+<div class="fragment"><div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#ga157acdad577420252d0a4df4359e9047" title="键盘识别接口">hci_kb_recog</a>(nSessionId,<span class="stringliteral">&quot;inputmode=pinyin&quot;</span>,&amp;queryInfo,&amp;result);</div>
+<div class="line"><span class="comment">//提交</span></div>
+<div class="line"><a class="code" href="struct_k_b___u_d_b___i_t_e_m___i_n_f_o.html" title="用户自造词信息">KB_UDB_ITEM_INFO</a> udbItem;</div>
+<div class="line">udbItem.<a class="code" href="struct_k_b___u_d_b___i_t_e_m___i_n_f_o.html#ad8517b5683847ee222b8e62d70ae8aff" title="识别结果">pUdbItem</a> = result.<a class="code" href="struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html#a11a53d15e9ea81b419ce2f0b5e6ca44b" title="键盘识别候选结果列表">psResultItemList</a>[0];</div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#gad56544b6862063de657a7511e7e35b02" title="添加用户自定义词典">hci_kb_udb_commit</a>(nSessionId,<span class="stringliteral">&quot;inputmode=pinyin&quot;</span>,&amp;udbItem);</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_kb_conv"></a>
+5. 编码转化</h1>
+<p>可以通过输入需要转化的模式，将字符串转化为键盘序列。目前日文不支持该接口。 如下： </p>
+<div class="fragment"><div class="line"><a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> errCode = <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a>;</div>
+<div class="line"><span class="comment">//输入要求是UTF-8</span></div>
+<div class="line"><span class="keywordtype">char</span> *gbk = <span class="stringliteral">&quot;你&quot;</span>;</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *utf8;</div>
+<div class="line">GBKToUTF8((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)gbk,&amp;utf8);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//调用转码接口</span></div>
+<div class="line"><a class="code" href="struct_k_b___c_o_n_v___r_e_s_u_l_t.html" title="键盘识别功能转化结果">KB_CONV_RESULT</a> result;</div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#ga56612010efad8f4625957691f99e8b95" title="键盘转码函数">hci_kb_conv</a>(nSessionId,pszConvConfig,(<span class="keywordtype">char</span>*)utf8,&amp;result);</div>
+<div class="line">free(utf8);</div>
+<div class="line"><span class="keywordflow">if</span>( errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a> )</div>
+<div class="line">{</div>
+<div class="line">        printf( <span class="stringliteral">&quot;hci_kb_conv failed ret:%d\n&quot;</span>,errCode);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line">printf( <span class="stringliteral">&quot;hci_kb_conv success\n&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//打印键盘序列</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> iTmp = 0;iTmp&lt;result.<a class="code" href="struct_k_b___c_o_n_v___r_e_s_u_l_t.html#adb6e584580cceb48aff65fbc533f0c02" title="转化候选结果数目">uiConvItemCount</a>;iTmp++)</div>
+<div class="line">{</div>
+<div class="line">        printf(<span class="stringliteral">&quot;syllable[%d]:%s\n&quot;</span>,iTmp,result.<a class="code" href="struct_k_b___c_o_n_v___r_e_s_u_l_t.html#a487f9b1043f2c9eda35ffea84a93bc5a" title="转化候选结果列表">psConvItemList</a>[iTmp].<a class="code" href="struct_k_b___c_o_n_v___r_e_s_u_l_t___i_t_e_m.html#a4f1b89587e89fd251cde4d9ce72320dd" title="键盘输入字符序列，UTF-8编码，以&#39;\0&#39;结束">pszSymbols</a>);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="group___h_c_i___k_b.html#gae2b1d9b2505dd0e97dfc04be63ed786e" title="释放键盘转码结果">hci_kb_free_conv_result</a>(&amp;result);</div>
+</div><!-- fragment --><h1><a class="anchor" id="hci_kb_fuzzy"></a>
+6. 音节容错</h1>
+<p>中文识别支持音节容错设置，即可以将容易混淆的音节进行设置，以此提高输入的识别率。 如下： </p>
+<div class="fragment"><div class="line"><a class="code" href="group___h_c_i___s_y_s.html#ga9f643809ebea695fef3003df5d31b591">HCI_ERR_CODE</a> errCode = <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a>;</div>
+<div class="line"><span class="keywordtype">char</span>* b = <span class="stringliteral">&quot;b&quot;</span>;<span class="keywordtype">char</span> *p = <span class="stringliteral">&quot;p&quot;</span>; <span class="keywordtype">char</span> *m = <span class="stringliteral">&quot;m&quot;</span>; <span class="keywordtype">char</span> *n = <span class="stringliteral">&quot;n&quot;</span>;</div>
+<div class="line"><a class="code" href="struct_k_b___f_u_z_z_y___s_y_l_l_a_b_l_e.html" title="模糊音节">KB_FUZZY_SYLLABLE</a> fuzzyData[2] = {</div>
+<div class="line">        {<a class="code" href="group___h_c_i___k_b.html#gga85b18af57ac2ad396a2c2ec8409069b4abf01e4df60be49220e765b17728e4118" title="声母模糊">KB_FUZZY_SYLLABLE_TYPE_INITIAL</a>,b,p},</div>
+<div class="line">        {<a class="code" href="group___h_c_i___k_b.html#gga85b18af57ac2ad396a2c2ec8409069b4abf01e4df60be49220e765b17728e4118" title="声母模糊">KB_FUZZY_SYLLABLE_TYPE_INITIAL</a>,m,n}</div>
+<div class="line">};</div>
+<div class="line">errCode = <a class="code" href="group___h_c_i___k_b.html#gae74b980d9ee8613a9237edcbf159aab8" title="音节模糊函数,该接口只能在中文拼音输入时有效">hci_kb_fuzzy_syllable</a>(nSessionId,fuzzyData,2);</div>
+<div class="line"><span class="keywordflow">if</span> (errCode != <a class="code" href="group___h_c_i___s_y_s.html#gga9f643809ebea695fef3003df5d31b591a8ba5db93033e78f0ff463777572c7018" title="0: 正确">HCI_ERR_NONE</a>)</div>
+<div class="line">{</div>
+<div class="line">        printf(<span class="stringliteral">&quot;hci_kb_fuzzy_syllable failed! errCode:%d\n&quot;</span>,errCode);</div>
+<div class="line">        <span class="keywordflow">return</span> errCode;</div>
+<div class="line">}</div>
+<div class="line">printf(<span class="stringliteral">&quot;hci_kb_fuzzy_syllable success！\n&quot;</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="hci_dev_content.html">开发指南</a></li><li class="navelem"><a class="el" href="hci_dev_capability_api.html">能力API</a></li>
+    <li class="footer">生成于 2015年 七月 23日 星期四 17:55:40 , 为 灵云SDK开发手册(C API)使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
+  </ul>
+</div>
+</body>
+</html>

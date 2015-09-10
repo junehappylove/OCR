@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['uiconvitemcount',['uiConvItemCount',['../struct_k_b___c_o_n_v___r_e_s_u_l_t.html#adb6e584580cceb48aff65fbc533f0c02',1,'KB_CONV_RESULT']]],
+  ['uifingerdatacount',['uiFingerDataCount',['../struct_f_p_r___e_n_r_o_l_l___f_i_n_g_e_r___d_a_t_a.html#a8016559b2aa099855e2f77fa4f05c3d8',1,'FPR_ENROLL_FINGER_DATA']]],
+  ['uifingerlength',['uiFingerLength',['../struct_f_p_r___e_n_r_o_l_l___f_i_n_g_e_r___d_a_t_a___i_t_e_m.html#a8fb5373a01af1b7ec9f96e0e878f6fa0',1,'FPR_ENROLL_FINGER_DATA_ITEM']]],
+  ['uiitemcount',['uiItemCount',['../struct_p_i_n_y_i_n___r_e_s_u_l_t.html#ad3119b45158aa6dda0077ef201467b18',1,'PINYIN_RESULT::uiItemCount()'],['../struct_a_s_s_o_c_i_a_t_e___w_o_r_d_s___r_e_s_u_l_t.html#ad3119b45158aa6dda0077ef201467b18',1,'ASSOCIATE_WORDS_RESULT::uiItemCount()'],['../struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t.html#ad3119b45158aa6dda0077ef201467b18',1,'PEN_SCRIPT_RESULT::uiItemCount()'],['../struct_c_h_e_c_k___u_p_d_a_t_e___r_e_s_u_l_t.html#ad3119b45158aa6dda0077ef201467b18',1,'CHECK_UPDATE_RESULT::uiItemCount()'],['../struct_c_a_p_a_b_i_l_i_t_y___l_i_s_t.html#ad3119b45158aa6dda0077ef201467b18',1,'CAPABILITY_LIST::uiItemCount()']]],
+  ['uimatchitemcount',['uiMatchItemCount',['../struct_k_b___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#a262014d3ceffc0c6cf05c68e71578859',1,'KB_RECOG_RESULT_ITEM']]],
+  ['uioffsetcount',['uiOffsetCount',['../struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#ace3a5f1ca340a6fac4e830b4b09b4d44',1,'HWR_RECOG_RESULT_ITEM']]],
+  ['uipercent',['uiPercent',['../struct_k_b___s_l_i_d_e___i_n_f_o___i_t_e_m.html#a682f30dd491296e716b15bea64e955d7',1,'KB_SLIDE_INFO_ITEM']]],
+  ['uipropertycount',['uiPropertyCount',['../struct_c_a_p_a_b_i_l_i_t_y___i_t_e_m.html#aa842f5e8df64101805ceba1c6cdece7b',1,'CAPABILITY_ITEM']]],
+  ['uiresultitemcount',['uiResultItemCount',['../struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t.html#a12969761398b9e0f6cfa11287fcb5099',1,'ASR_RECOG_RESULT::uiResultItemCount()'],['../struct_h_w_r___r_e_c_o_g___r_e_s_u_l_t.html#a12969761398b9e0f6cfa11287fcb5099',1,'HWR_RECOG_RESULT::uiResultItemCount()'],['../struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html#a12969761398b9e0f6cfa11287fcb5099',1,'KB_RECOG_RESULT::uiResultItemCount()']]],
+  ['uiscore',['uiScore',['../struct_a_s_r___r_e_c_o_g___r_e_s_u_l_t___i_t_e_m.html#a372e5c4398d5518c3d79de2dfefd047e',1,'ASR_RECOG_RESULT_ITEM::uiScore()'],['../struct_m_t___t_r_a_n_s___r_e_s_u_l_t.html#a3fe38e3ffe0f5fc4f0fca6a09119cffd',1,'MT_TRANS_RESULT::uiScore()']]],
+  ['uiselecteditemcount',['uiSelectedItemCount',['../struct_k_b___q_u_e_r_y___i_n_f_o.html#ad57e9c2149957e004405d27b078c7b06',1,'KB_QUERY_INFO']]],
+  ['uislideinfoitemcount',['uiSlideInfoItemCount',['../struct_k_b___q_u_e_r_y___i_n_f_o.html#ac71e3e18e5fe8b36bd4eb591d2b7a494',1,'KB_QUERY_INFO']]],
+  ['uisyllableitemcount',['uiSyllableItemCount',['../struct_k_b___r_e_c_o_g___r_e_s_u_l_t.html#afdf3c410e5c459315a0026fd5ca7e1d9',1,'KB_RECOG_RESULT']]],
+  ['uitextlen',['uiTextLen',['../struct_t_t_s___s_y_n_t_h___r_e_s_u_l_t.html#a2ecb689333d64d21217875bdad2e3eee',1,'TTS_SYNTH_RESULT']]],
+  ['uivoicedatacount',['uiVoiceDataCount',['../struct_v_p_r___e_n_r_o_l_l___v_o_i_c_e___d_a_t_a.html#a43fc8b5c3a0cce550c7a4ca5c15a2cb6',1,'VPR_ENROLL_VOICE_DATA']]],
+  ['uivoicedatalen',['uiVoiceDataLen',['../struct_a_s_r___v_o_i_c_e___c_h_e_c_k___r_e_s_u_l_t.html#ab18aed5cce8bc27765e14c346a4b57a6',1,'ASR_VOICE_CHECK_RESULT']]],
+  ['uivoicelength',['uiVoiceLength',['../struct_v_p_r___e_n_r_o_l_l___v_o_i_c_e___d_a_t_a___i_t_e_m.html#ac941a6f5e83a81eadbb5f77df5ab9831',1,'VPR_ENROLL_VOICE_DATA_ITEM']]],
+  ['uivoicesize',['uiVoiceSize',['../struct_t_t_s___s_y_n_t_h___r_e_s_u_l_t.html#a176044092ff2cee8a39849a6ffd2dfcb',1,'TTS_SYNTH_RESULT']]],
+  ['unpencolor',['unPenColor',['../struct_p_e_n___s_c_r_i_p_t___r_e_s_u_l_t___i_t_e_m.html#a741fc89423a7d7b727f1e80fe9b0c4ec',1,'PEN_SCRIPT_RESULT_ITEM']]],
+  ['userhisitem',['UserHisItem',['../struct_user_his_item.html',1,'']]]
+];
